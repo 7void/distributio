@@ -28,7 +28,7 @@
     "incomeScoreAdjustment": 0,
     "internetScoreAdjustment": 0,
     "competitorSaturation": {},
-    "lastEnriched": ""
+    "lastEnriched": "2026-07-08T20:13:47.187Z"
   },
   {
     "id": "mumbai",
@@ -52,14 +52,40 @@
       "premium apparel",
       "gourmet groceries"
     ],
-    "competitorPresence": {},
-    "recentDevelopments": [],
-    "retailScoreAdjustment": 0,
+    "competitorPresence": {
+      "retail": [
+        "DMart",
+        "Reliance Retail"
+      ]
+    },
+    "recentDevelopments": [
+      {
+        "type": "retail_expansion",
+        "description": "Gross retail leasing in Mumbai and other top seven cities reached 5.3 million sq ft during the first nine months of 2024.",
+        "impact": "retail",
+        "direction": "positive",
+        "magnitude": 3,
+        "date": "2024-09",
+        "source": "unknown"
+      },
+      {
+        "type": "economic",
+        "description": "Mumbai is identified as a frontrunner among Tier-I cities for retail leasing activity in 2024.",
+        "impact": "retail",
+        "direction": "positive",
+        "magnitude": 3,
+        "date": "2024-00",
+        "source": "unknown"
+      }
+    ],
+    "retailScoreAdjustment": 3,
     "coldScoreAdjustment": 0,
     "incomeScoreAdjustment": 0,
     "internetScoreAdjustment": 0,
-    "competitorSaturation": {},
-    "lastEnriched": ""
+    "competitorSaturation": {
+      "retail": "high"
+    },
+    "lastEnriched": "2026-07-08T20:13:31.902Z"
   },
   {
     "id": "bengaluru",
@@ -84,13 +110,23 @@
       "consumer electronics"
     ],
     "competitorPresence": {},
-    "recentDevelopments": [],
-    "retailScoreAdjustment": 0,
+    "recentDevelopments": [
+      {
+        "type": "retail_expansion",
+        "description": "Bengaluru was a frontrunner in gross retail leasing activity, contributing to 59% of the 5.3 million sq ft leased across top seven cities in the first nine months of 2024.",
+        "impact": "retail",
+        "direction": "positive",
+        "magnitude": 3,
+        "date": "2024-09",
+        "source": "unknown"
+      }
+    ],
+    "retailScoreAdjustment": 3,
     "coldScoreAdjustment": 0,
     "incomeScoreAdjustment": 0,
     "internetScoreAdjustment": 0,
     "competitorSaturation": {},
-    "lastEnriched": ""
+    "lastEnriched": "2026-07-08T20:14:10.508Z"
   },
   {
     "id": "pune",
@@ -114,14 +150,40 @@
       "apparel",
       "premium FMCG"
     ],
-    "competitorPresence": {},
-    "recentDevelopments": [],
-    "retailScoreAdjustment": 0,
+    "competitorPresence": {
+      "retail": [
+        "DMart",
+        "Reliance Retail"
+      ]
+    },
+    "recentDevelopments": [
+      {
+        "type": "retail_expansion",
+        "description": "DMart, operated by Avenue Supermarts Ltd., has added new stores in Pune as part of its recent expansion strategy encompassing the 2024-2026 period.",
+        "impact": "retail",
+        "direction": "positive",
+        "magnitude": 3,
+        "date": "2024-01",
+        "source": "unknown"
+      },
+      {
+        "type": "economic",
+        "description": "Pune was among the top seven Indian cities that experienced strong gross retail leasing activity, reaching 5.3 million sq ft during the first nine months of 2024.",
+        "impact": "retail",
+        "direction": "positive",
+        "magnitude": 4,
+        "date": "2024-09",
+        "source": "unknown"
+      }
+    ],
+    "retailScoreAdjustment": 4,
     "coldScoreAdjustment": 0,
     "incomeScoreAdjustment": 0,
     "internetScoreAdjustment": 0,
-    "competitorSaturation": {},
-    "lastEnriched": ""
+    "competitorSaturation": {
+      "retail": "medium"
+    },
+    "lastEnriched": "2026-07-08T20:11:26.943Z"
   },
   {
     "id": "hyderabad",
@@ -152,7 +214,7 @@
     "incomeScoreAdjustment": 0,
     "internetScoreAdjustment": 0,
     "competitorSaturation": {},
-    "lastEnriched": ""
+    "lastEnriched": "2026-07-08T20:14:50.273Z"
   },
   {
     "id": "chennai",
@@ -176,14 +238,40 @@
       "gold jewelry",
       "traditional FMCG"
     ],
-    "competitorPresence": {},
-    "recentDevelopments": [],
-    "retailScoreAdjustment": 0,
+    "competitorPresence": {
+      "retail": [
+        "DMart",
+        "Reliance Retail"
+      ]
+    },
+    "recentDevelopments": [
+      {
+        "type": "retail_expansion",
+        "description": "DMart has added new stores in Chennai as part of its expansion strategy during the 2024-2026 period.",
+        "impact": "retail",
+        "direction": "positive",
+        "magnitude": 3,
+        "date": "2024-01",
+        "source": "unknown"
+      },
+      {
+        "type": "retail_expansion",
+        "description": "Chennai is among the top seven Indian cities that saw significant gross retail leasing activity in the first nine months of 2024.",
+        "impact": "retail",
+        "direction": "positive",
+        "magnitude": 3,
+        "date": "2024-01",
+        "source": "unknown"
+      }
+    ],
+    "retailScoreAdjustment": 2,
     "coldScoreAdjustment": 0,
     "incomeScoreAdjustment": 0,
     "internetScoreAdjustment": 0,
-    "competitorSaturation": {},
-    "lastEnriched": ""
+    "competitorSaturation": {
+      "retail": "medium"
+    },
+    "lastEnriched": "2026-07-08T20:12:23.410Z"
   },
   {
     "id": "kolkata",
@@ -208,13 +296,23 @@
       "budget apparel"
     ],
     "competitorPresence": {},
-    "recentDevelopments": [],
-    "retailScoreAdjustment": 0,
+    "recentDevelopments": [
+      {
+        "type": "retail_expansion",
+        "description": "Kolkata was among the top seven Indian cities that collectively recorded 5.3 million sq ft of gross retail leasing in the first nine months of 2024.",
+        "impact": "retail",
+        "direction": "positive",
+        "magnitude": 3,
+        "date": "2024-09",
+        "source": "unknown"
+      }
+    ],
+    "retailScoreAdjustment": 3,
     "coldScoreAdjustment": 0,
     "incomeScoreAdjustment": 0,
     "internetScoreAdjustment": 0,
     "competitorSaturation": {},
-    "lastEnriched": ""
+    "lastEnriched": "2026-07-08T20:14:36.871Z"
   },
   {
     "id": "ahmedabad",
@@ -238,14 +336,40 @@
       "dairy products",
       "consumer electronics"
     ],
-    "competitorPresence": {},
-    "recentDevelopments": [],
-    "retailScoreAdjustment": 0,
+    "competitorPresence": {
+      "retail": [
+        "DMart",
+        "Reliance Retail"
+      ]
+    },
+    "recentDevelopments": [
+      {
+        "type": "retail_expansion",
+        "description": "DMart, a major retail chain, opened new stores in Ahmedabad as part of its significant expansion efforts across various cities.",
+        "impact": "retail",
+        "direction": "positive",
+        "magnitude": 3,
+        "date": "2024-01",
+        "source": "unknown"
+      },
+      {
+        "type": "economic",
+        "description": "The Indian retail sector is experiencing robust growth in 2024, with strong leasing activity particularly in Tier-I cities like Ahmedabad.",
+        "impact": "retail",
+        "direction": "positive",
+        "magnitude": 4,
+        "date": "2024-01",
+        "source": "unknown"
+      }
+    ],
+    "retailScoreAdjustment": 4,
     "coldScoreAdjustment": 0,
-    "incomeScoreAdjustment": 0,
+    "incomeScoreAdjustment": 3,
     "internetScoreAdjustment": 0,
-    "competitorSaturation": {},
-    "lastEnriched": ""
+    "competitorSaturation": {
+      "retail": "high"
+    },
+    "lastEnriched": "2026-07-08T20:13:07.605Z"
   },
   {
     "id": "surat",
@@ -338,7 +462,7 @@
     "incomeScoreAdjustment": 0,
     "internetScoreAdjustment": 0,
     "competitorSaturation": {},
-    "lastEnriched": ""
+    "lastEnriched": "2026-07-08T20:12:36.905Z"
   },
   {
     "id": "jaipur",
@@ -424,14 +548,48 @@
       "logistics services",
       "consumer durables"
     ],
-    "competitorPresence": {},
-    "recentDevelopments": [],
-    "retailScoreAdjustment": 0,
+    "competitorPresence": {
+      "Retail": [
+        "DMart"
+      ]
+    },
+    "recentDevelopments": [
+      {
+        "type": "retail_expansion",
+        "description": "DMart, a major retail player, has added new stores in Nagpur as part of its record expansion during the 2024-2026 period.",
+        "impact": "retail",
+        "direction": "positive",
+        "magnitude": 3,
+        "date": "2024-XX",
+        "source": "unknown"
+      },
+      {
+        "type": "economic",
+        "description": "Tier-II markets, including Nagpur, are becoming increasingly attractive destinations for retail development in India in 2024.",
+        "impact": "retail",
+        "direction": "positive",
+        "magnitude": 3,
+        "date": "2024-XX",
+        "source": "unknown"
+      },
+      {
+        "type": "economic",
+        "description": "E-commerce adoption is rapidly increasing in smaller cities, including Tier-II cities like Nagpur, driving further growth in these regions in 2024.",
+        "impact": "internet",
+        "direction": "positive",
+        "magnitude": 3,
+        "date": "2024-XX",
+        "source": "unknown"
+      }
+    ],
+    "retailScoreAdjustment": 3,
     "coldScoreAdjustment": 0,
     "incomeScoreAdjustment": 0,
-    "internetScoreAdjustment": 0,
-    "competitorSaturation": {},
-    "lastEnriched": ""
+    "internetScoreAdjustment": 3,
+    "competitorSaturation": {
+      "Retail": "medium"
+    },
+    "lastEnriched": "2026-07-08T20:11:58.150Z"
   },
   {
     "id": "indore",
