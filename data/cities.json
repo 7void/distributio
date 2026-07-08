@@ -6,7 +6,7 @@
     "tier": 1,
     "population": 32.9,
     "lat": 28.6139,
-    "lng": 77.2090,
+    "lng": 77.209,
     "income": 96,
     "retail": 99,
     "internet": 93,
@@ -16,7 +16,19 @@
       "extreme seasonal demand volatility driven by harsh summers and winters",
       "complex multi-zone city structure requiring decentralized warehouse strategy"
     ],
-    "strongCategories": ["premium FMCG", "consumer electronics", "luxury fashion"]
+    "strongCategories": [
+      "premium FMCG",
+      "consumer electronics",
+      "luxury fashion"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "mumbai",
@@ -24,7 +36,7 @@
     "state": "Maharashtra",
     "tier": 1,
     "population": 21.3,
-    "lat": 19.0760,
+    "lat": 19.076,
     "lng": 72.8777,
     "income": 95,
     "retail": 100,
@@ -35,7 +47,19 @@
       "severe space constraints limiting in-city storage capabilities",
       "chronic traffic congestion inflating last-mile delivery costs"
     ],
-    "strongCategories": ["health and wellness", "premium apparel", "gourmet groceries"]
+    "strongCategories": [
+      "health and wellness",
+      "premium apparel",
+      "gourmet groceries"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "bengaluru",
@@ -54,7 +78,19 @@
       "unpredictable urban traffic bottlenecks delaying fleet turnaround",
       "rapid unplanned peripheral expansion complicating route optimization"
     ],
-    "strongCategories": ["premium FMCG", "quick commerce", "consumer electronics"]
+    "strongCategories": [
+      "premium FMCG",
+      "quick commerce",
+      "consumer electronics"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "pune",
@@ -73,7 +109,19 @@
       "unpredictable urban traffic bottlenecks delaying fleet turnaround",
       "rapid unplanned peripheral expansion complicating route optimization"
     ],
-    "strongCategories": ["consumer durables", "apparel", "premium FMCG"]
+    "strongCategories": [
+      "consumer durables",
+      "apparel",
+      "premium FMCG"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "hyderabad",
@@ -81,7 +129,7 @@
     "state": "Telangana",
     "tier": 1,
     "population": 10.8,
-    "lat": 17.3850,
+    "lat": 17.385,
     "lng": 78.4867,
     "income": 91,
     "retail": 95,
@@ -92,7 +140,19 @@
       "sprawling city limits requiring highly dispersed distribution hubs",
       "varying socio-economic zones requiring diverse brand stocking"
     ],
-    "strongCategories": ["pharmaceuticals", "consumer durables", "apparel"]
+    "strongCategories": [
+      "pharmaceuticals",
+      "consumer durables",
+      "apparel"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "chennai",
@@ -111,7 +171,19 @@
       "monsoon-related flooding disrupting peripheral warehouse operations",
       "high regional brand loyalty creating barriers for national entrants"
     ],
-    "strongCategories": ["automotive accessories", "gold jewelry", "traditional FMCG"]
+    "strongCategories": [
+      "automotive accessories",
+      "gold jewelry",
+      "traditional FMCG"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "kolkata",
@@ -130,7 +202,19 @@
       "archaic road networks in central zones preventing large vehicle entry",
       "regulatory complexities in labor and unionized logistics"
     ],
-    "strongCategories": ["value FMCG", "sweets and confectionery", "budget apparel"]
+    "strongCategories": [
+      "value FMCG",
+      "sweets and confectionery",
+      "budget apparel"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "ahmedabad",
@@ -149,7 +233,19 @@
       "extreme summer heat necessitating specialized transport for FMCG",
       "sprawling suburban growth complicating last-mile reach"
     ],
-    "strongCategories": ["textiles", "dairy products", "consumer electronics"]
+    "strongCategories": [
+      "textiles",
+      "dairy products",
+      "consumer electronics"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "surat",
@@ -168,7 +264,19 @@
       "industrial traffic overlapping with retail delivery routes",
       "shortage of Grade A warehousing within central city limits"
     ],
-    "strongCategories": ["diamonds and jewelry", "premium textiles", "electronics"]
+    "strongCategories": [
+      "diamonds and jewelry",
+      "premium textiles",
+      "electronics"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "chandigarh",
@@ -187,7 +295,19 @@
       "strict zoning laws limiting commercial warehousing inside the city",
       "high inter-state taxation boundaries in the immediate periphery"
     ],
-    "strongCategories": ["luxury fashion", "automobiles", "premium liquor"]
+    "strongCategories": [
+      "luxury fashion",
+      "automobiles",
+      "premium liquor"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "lucknow",
@@ -206,7 +326,19 @@
       "narrow legacy roads in the old city restricting freight movement",
       "fluctuating demand cycles tied closely to festival seasons"
     ],
-    "strongCategories": ["personal care", "ethnic apparel", "home appliances"]
+    "strongCategories": [
+      "personal care",
+      "ethnic apparel",
+      "home appliances"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "jaipur",
@@ -225,7 +357,19 @@
       "tourist season traffic spikes disrupting normal supply chains",
       "arid climate affecting shelf life of non-refrigerated perishables"
     ],
-    "strongCategories": ["handicrafts", "gemstones", "tourism-related FMCG"]
+    "strongCategories": [
+      "handicrafts",
+      "gemstones",
+      "tourism-related FMCG"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "kanpur",
@@ -244,14 +388,26 @@
       "poor civic infrastructure leading to slow intra-city transit",
       "heavy industrial focus historically detracting from retail logistics"
     ],
-    "strongCategories": ["leather goods", "value FMCG", "two-wheelers"]
+    "strongCategories": [
+      "leather goods",
+      "value FMCG",
+      "two-wheelers"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "nagpur",
     "name": "Nagpur",
     "state": "Maharashtra",
     "tier": 2,
-    "population": 3.0,
+    "population": 3,
     "lat": 21.1458,
     "lng": 79.0882,
     "income": 81,
@@ -263,7 +419,19 @@
       "oversupply of mall space leading to fragmented footfalls",
       "extreme summer temperatures requiring robust cold-chain for transit"
     ],
-    "strongCategories": ["agricultural inputs", "logistics services", "consumer durables"]
+    "strongCategories": [
+      "agricultural inputs",
+      "logistics services",
+      "consumer durables"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "indore",
@@ -282,7 +450,19 @@
       "rising land costs pushing warehousing to distant industrial zones",
       "high competition from well-established local regional brands"
     ],
-    "strongCategories": ["food processing", "apparel", "automobile accessories"]
+    "strongCategories": [
+      "food processing",
+      "apparel",
+      "automobile accessories"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "bhopal",
@@ -301,7 +481,19 @@
       "lake-divided topography complicating cross-city transport routes",
       "lower commercial velocity compared to neighboring Indore"
     ],
-    "strongCategories": ["value apparel", "basic FMCG", "educational supplies"]
+    "strongCategories": [
+      "value apparel",
+      "basic FMCG",
+      "educational supplies"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "visakhapatnam",
@@ -320,7 +512,19 @@
       "cyclonic weather threats requiring resilient warehousing",
       "linear city geography increasing average delivery distances"
     ],
-    "strongCategories": ["seafood products", "electronics", "pharmaceuticals"]
+    "strongCategories": [
+      "seafood products",
+      "electronics",
+      "pharmaceuticals"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "patna",
@@ -339,7 +543,19 @@
       "severe infrastructure deficits leading to logistics delays",
       "high dependency on cash-on-delivery limiting digital velocity"
     ],
-    "strongCategories": ["essential groceries", "agricultural supplies", "value clothing"]
+    "strongCategories": [
+      "essential groceries",
+      "agricultural supplies",
+      "value clothing"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "vadodara",
@@ -358,7 +574,19 @@
       "heavy industrial traffic on peripheral corridors",
       "seasonal monsoon disruptions affecting stock movement"
     ],
-    "strongCategories": ["home decor", "premium FMCG", "electronics"]
+    "strongCategories": [
+      "home decor",
+      "premium FMCG",
+      "electronics"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "coimbatore",
@@ -377,7 +605,19 @@
       "complex local taxation variations for inter-district movement",
       "shortage of skilled logistics labor due to manufacturing drain"
     ],
-    "strongCategories": ["textiles", "industrial tools", "automobile parts"]
+    "strongCategories": [
+      "textiles",
+      "industrial tools",
+      "automobile parts"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "kochi",
@@ -396,7 +636,19 @@
       "coastal geography restricting expansion of large-format warehouses",
       "high labor costs impacting logistics margins"
     ],
-    "strongCategories": ["gold jewelry", "premium consumer electronics", "spices"]
+    "strongCategories": [
+      "gold jewelry",
+      "premium consumer electronics",
+      "spices"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "thiruvananthapuram",
@@ -415,7 +667,19 @@
       "hilly terrain in the outskirts slowing commercial transport",
       "stringent local regulations on commercial vehicle movement"
     ],
-    "strongCategories": ["gold jewelry", "health and wellness", "traditional FMCG"]
+    "strongCategories": [
+      "gold jewelry",
+      "health and wellness",
+      "traditional FMCG"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "bhubaneswar",
@@ -434,7 +698,19 @@
       "frequent cyclonic activity threatening warehousing infrastructure",
       "lower per capita income capping premium product velocity"
     ],
-    "strongCategories": ["handlooms", "basic consumer durables", "FMCG"]
+    "strongCategories": [
+      "handlooms",
+      "basic consumer durables",
+      "FMCG"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "guwahati",
@@ -453,7 +729,19 @@
       "seasonal flooding cuts road access to surrounding districts for weeks at a time",
       "limited cold chain and Grade A warehousing constrains perishable distribution across the Northeast"
     ],
-    "strongCategories": ["tea", "winter apparel", "essential FMCG"]
+    "strongCategories": [
+      "tea",
+      "winter apparel",
+      "essential FMCG"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "dehradun",
@@ -472,7 +760,19 @@
       "hilly terrain restricting heavy commercial vehicle movement",
       "seasonal tourist influx causing erratic supply chain demands"
     ],
-    "strongCategories": ["educational materials", "packaged foods", "woolen wear"]
+    "strongCategories": [
+      "educational materials",
+      "packaged foods",
+      "woolen wear"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "amritsar",
@@ -480,7 +780,7 @@
     "state": "Punjab",
     "tier": 2,
     "population": 1.4,
-    "lat": 31.6340,
+    "lat": 31.634,
     "lng": 74.8723,
     "income": 49,
     "retail": 71,
@@ -491,7 +791,19 @@
       "oversupply of fragmented retail spaces reducing footfall density",
       "border proximity restricting certain industrial expansions"
     ],
-    "strongCategories": ["textiles", "food products", "agricultural implements"]
+    "strongCategories": [
+      "textiles",
+      "food products",
+      "agricultural implements"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "ludhiana",
@@ -499,7 +811,7 @@
     "state": "Punjab",
     "tier": 2,
     "population": 1.9,
-    "lat": 30.9010,
+    "lat": 30.901,
     "lng": 75.8573,
     "income": 88,
     "retail": 83,
@@ -510,7 +822,19 @@
       "shortage of Grade A warehousing for non-agricultural goods",
       "traffic congestion in legacy wholesale markets"
     ],
-    "strongCategories": ["hosiery and knitwear", "bicycles", "agricultural machinery"]
+    "strongCategories": [
+      "hosiery and knitwear",
+      "bicycles",
+      "agricultural machinery"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "agra",
@@ -529,7 +853,19 @@
       "environmental regulations limiting commercial vehicle movement near heritage sites",
       "stark contrast between tourist zones and under-developed local zones"
     ],
-    "strongCategories": ["leather footwear", "handicrafts", "agricultural produce"]
+    "strongCategories": [
+      "leather footwear",
+      "handicrafts",
+      "agricultural produce"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "varanasi",
@@ -548,7 +884,19 @@
       "impenetrable narrow lanes requiring non-motorized last-mile delivery",
       "massive floating tourist population causing erratic demand spikes"
     ],
-    "strongCategories": ["silk textiles", "religious goods", "traditional FMCG"]
+    "strongCategories": [
+      "silk textiles",
+      "religious goods",
+      "traditional FMCG"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "meerut",
@@ -567,7 +915,19 @@
       "unorganized traffic affecting timely delivery to central markets",
       "limited cold storage for non-horticultural goods"
     ],
-    "strongCategories": ["sports goods", "musical instruments", "agricultural produce"]
+    "strongCategories": [
+      "sports goods",
+      "musical instruments",
+      "agricultural produce"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "nashik",
@@ -586,7 +946,19 @@
       "logistics heavily prioritized for agricultural exports over inbound retail",
       "varying infrastructure quality between industrial and residential zones"
     ],
-    "strongCategories": ["fresh produce", "wine and spirits", "auto components"]
+    "strongCategories": [
+      "fresh produce",
+      "wine and spirits",
+      "auto components"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "aurangabad",
@@ -605,14 +977,26 @@
       "inconsistent regional power supply affecting cold storage",
       "poor quality of secondary road networks into rural peripheries"
     ],
-    "strongCategories": ["industrial supplies", "basic apparel", "value groceries"]
+    "strongCategories": [
+      "industrial supplies",
+      "basic apparel",
+      "value groceries"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "rajkot",
     "name": "Rajkot",
     "state": "Gujarat",
     "tier": 2,
-    "population": 2.0,
+    "population": 2,
     "lat": 22.3039,
     "lng": 70.8022,
     "income": 77,
@@ -624,7 +1008,19 @@
       "high dependency on road transport with limited rail freight integration",
       "water scarcity impacting certain commercial operations"
     ],
-    "strongCategories": ["engineering goods", "jewelry", "textiles"]
+    "strongCategories": [
+      "engineering goods",
+      "jewelry",
+      "textiles"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "jodhpur",
@@ -643,7 +1039,19 @@
       "desert climate drastically reducing shelf life of perishables",
       "long transit distances from national manufacturing hubs"
     ],
-    "strongCategories": ["handicrafts", "traditional apparel", "tourism FMCG"]
+    "strongCategories": [
+      "handicrafts",
+      "traditional apparel",
+      "tourism FMCG"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "madurai",
@@ -662,7 +1070,19 @@
       "archaic urban planning preventing large truck access to central markets",
       "high dependency on regional wholesalers over direct brand distribution"
     ],
-    "strongCategories": ["cotton textiles", "religious goods", "essential groceries"]
+    "strongCategories": [
+      "cotton textiles",
+      "religious goods",
+      "essential groceries"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "tiruchirappalli",
@@ -681,7 +1101,19 @@
       "fragmented retail structures lowering drop sizes",
       "competition from nearby larger hubs like Coimbatore"
     ],
-    "strongCategories": ["engineering tools", "gold jewelry", "value FMCG"]
+    "strongCategories": [
+      "engineering tools",
+      "gold jewelry",
+      "value FMCG"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "mysuru",
@@ -700,7 +1132,19 @@
       "proximity to Bengaluru pulls premium retail demand away from local distribution",
       "heritage zoning restrictions limit commercial vehicle access to central markets"
     ],
-    "strongCategories": ["silk products", "sandalwood items", "tourism hospitality goods"]
+    "strongCategories": [
+      "silk products",
+      "sandalwood items",
+      "tourism hospitality goods"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "jammu",
@@ -709,7 +1153,7 @@
     "tier": 3,
     "population": 0.7,
     "lat": 32.7266,
-    "lng": 74.8570,
+    "lng": 74.857,
     "income": 31,
     "retail": 45,
     "internet": 53,
@@ -719,7 +1163,19 @@
       "security protocols frequently disrupting supply chain movement",
       "harsh winter conditions impacting logistics reliability"
     ],
-    "strongCategories": ["dry fruits", "heavy winter wear", "essential FMCG"]
+    "strongCategories": [
+      "dry fruits",
+      "heavy winter wear",
+      "essential FMCG"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "shimla",
@@ -738,7 +1194,19 @@
       "extreme topography preventing entry of heavy commercial vehicles",
       "frequent winter supply line cuts due to heavy snowfall"
     ],
-    "strongCategories": ["tourism FMCG", "woolen garments", "horticultural tools"]
+    "strongCategories": [
+      "tourism FMCG",
+      "woolen garments",
+      "horticultural tools"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "ranchi",
@@ -757,7 +1225,19 @@
       "poor quality of peripheral road networks",
       "lower digital payment penetration among traditional retailers"
     ],
-    "strongCategories": ["heavy machinery parts", "value apparel", "basic groceries"]
+    "strongCategories": [
+      "heavy machinery parts",
+      "value apparel",
+      "basic groceries"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "raipur",
@@ -776,7 +1256,19 @@
       "industrial focus overshadowing retail supply chain investments",
       "extreme heat waves affecting non-AC transport operations"
     ],
-    "strongCategories": ["steel products", "two-wheelers", "value FMCG"]
+    "strongCategories": [
+      "steel products",
+      "two-wheelers",
+      "value FMCG"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "vijayawada",
@@ -785,7 +1277,7 @@
     "tier": 3,
     "population": 1.9,
     "lat": 16.5062,
-    "lng": 80.6480,
+    "lng": 80.648,
     "income": 64,
     "retail": 75,
     "internet": 72,
@@ -795,7 +1287,19 @@
       "traffic congestion across river bridges",
       "high competition for warehouse space from agricultural sector"
     ],
-    "strongCategories": ["agricultural hardware", "textiles", "automobile spares"]
+    "strongCategories": [
+      "agricultural hardware",
+      "textiles",
+      "automobile spares"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "guntur",
@@ -814,7 +1318,19 @@
       "infrastructure heavily skewed toward chilly export over domestic retail",
       "unorganized last-mile delivery mechanisms"
     ],
-    "strongCategories": ["spices", "agricultural inputs", "cotton textiles"]
+    "strongCategories": [
+      "spices",
+      "agricultural inputs",
+      "cotton textiles"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "warangal",
@@ -833,7 +1349,19 @@
       "dependency on Hyderabad for premium goods supply",
       "lack of organized Grade A warehousing"
     ],
-    "strongCategories": ["cotton garments", "farming equipment", "essential FMCG"]
+    "strongCategories": [
+      "cotton garments",
+      "farming equipment",
+      "essential FMCG"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "mangaluru",
@@ -842,7 +1370,7 @@
     "tier": 3,
     "population": 0.7,
     "lat": 12.9141,
-    "lng": 74.8560,
+    "lng": 74.856,
     "income": 72,
     "retail": 77,
     "internet": 76,
@@ -852,7 +1380,19 @@
       "heavy monsoons routinely disrupting coastal road networks",
       "hilly urban topology slowing intra-city transport"
     ],
-    "strongCategories": ["seafood exports", "premium FMCG", "gold jewelry"]
+    "strongCategories": [
+      "seafood exports",
+      "premium FMCG",
+      "gold jewelry"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "hublidharwad",
@@ -861,7 +1401,7 @@
     "tier": 3,
     "population": 1.1,
     "lat": 15.3647,
-    "lng": 75.1240,
+    "lng": 75.124,
     "income": 61,
     "retail": 65,
     "internet": 67,
@@ -871,7 +1411,19 @@
       "navigating the twin-city sprawl efficiently",
       "competition for logistics resources with heavy industries"
     ],
-    "strongCategories": ["commercial vehicles", "agricultural produce", "textiles"]
+    "strongCategories": [
+      "commercial vehicles",
+      "agricultural produce",
+      "textiles"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "belgaum",
@@ -890,16 +1442,28 @@
       "inter-state taxation issues given proximity to Maharashtra border",
       "limited local adoption of advanced digital inventory systems"
     ],
-    "strongCategories": ["foundry products", "handlooms", "basic FMCG"]
+    "strongCategories": [
+      "foundry products",
+      "handlooms",
+      "basic FMCG"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "salem",
     "name": "Salem",
     "state": "Tamil Nadu",
     "tier": 3,
-    "population": 1.0,
+    "population": 1,
     "lat": 11.6643,
-    "lng": 78.1460,
+    "lng": 78.146,
     "income": 52,
     "retail": 59,
     "internet": 64,
@@ -909,7 +1473,19 @@
       "heavy reliance on unorganized transport unions",
       "frequent disruptions from regional political demonstrations"
     ],
-    "strongCategories": ["steel products", "silver anklets", "textiles"]
+    "strongCategories": [
+      "steel products",
+      "silver anklets",
+      "textiles"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "tirunelveli",
@@ -928,7 +1504,19 @@
       "extreme heat impacting non-refrigerated perishables",
       "limited purchasing power capping premium product distribution"
     ],
-    "strongCategories": ["agricultural inputs", "basic textiles", "educational materials"]
+    "strongCategories": [
+      "agricultural inputs",
+      "basic textiles",
+      "educational materials"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "kozhikode",
@@ -947,7 +1535,19 @@
       "narrow coastal roads causing severe traffic bottlenecks",
       "high real estate costs preventing large central warehousing"
     ],
-    "strongCategories": ["premium apparel", "electronics", "spices"]
+    "strongCategories": [
+      "premium apparel",
+      "electronics",
+      "spices"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "thrissur",
@@ -966,7 +1566,19 @@
       "massive festival-driven demand spikes creating supply chain whiplash",
       "space constraints for commercial vehicle parking"
     ],
-    "strongCategories": ["gold jewelry", "silk apparel", "ayurvedic products"]
+    "strongCategories": [
+      "gold jewelry",
+      "silk apparel",
+      "ayurvedic products"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "jabalpur",
@@ -985,7 +1597,19 @@
       "poor connectivity to national highway networks",
       "low adoption of modern supply chain tracking technologies"
     ],
-    "strongCategories": ["ready-made garments", "agricultural produce", "defense sector supplies"]
+    "strongCategories": [
+      "ready-made garments",
+      "agricultural produce",
+      "defense sector supplies"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "gwalior",
@@ -1004,7 +1628,19 @@
       "heritage city layout severely restricting heavy freight",
       "lower disposable income limiting modern trade viability"
     ],
-    "strongCategories": ["stone carvings", "handicrafts", "essential groceries"]
+    "strongCategories": [
+      "stone carvings",
+      "handicrafts",
+      "essential groceries"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "udaipur",
@@ -1023,7 +1659,19 @@
       "lake-centric geography making intra-city routing inefficient",
       "heavy reliance on tourism making retail demand volatile"
     ],
-    "strongCategories": ["luxury hospitality supplies", "handicrafts", "marble products"]
+    "strongCategories": [
+      "luxury hospitality supplies",
+      "handicrafts",
+      "marble products"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "ajmer",
@@ -1042,7 +1690,19 @@
       "extreme crowding near heritage sites halting delivery vehicles",
       "limited space for modern warehousing expansion"
     ],
-    "strongCategories": ["religious artifacts", "budget hospitality supplies", "traditional FMCG"]
+    "strongCategories": [
+      "religious artifacts",
+      "budget hospitality supplies",
+      "traditional FMCG"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "siliguri",
@@ -1061,7 +1721,19 @@
       "massive geopolitical and logistical congestion at the corridor",
       "frequent political strikes halting regional transport"
     ],
-    "strongCategories": ["tea", "timber", "transit FMCG"]
+    "strongCategories": [
+      "tea",
+      "timber",
+      "transit FMCG"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   },
   {
     "id": "dhanbad",
@@ -1080,6 +1752,18 @@
       "severe dust and pollution affecting product packaging and transport",
       "poor quality of secondary road networks"
     ],
-    "strongCategories": ["mining equipment", "value apparel", "basic food staples"]
+    "strongCategories": [
+      "mining equipment",
+      "value apparel",
+      "basic food staples"
+    ],
+    "competitorPresence": {},
+    "recentDevelopments": [],
+    "retailScoreAdjustment": 0,
+    "coldScoreAdjustment": 0,
+    "incomeScoreAdjustment": 0,
+    "internetScoreAdjustment": 0,
+    "competitorSaturation": {},
+    "lastEnriched": ""
   }
 ]

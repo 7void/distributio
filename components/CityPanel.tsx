@@ -1,9 +1,11 @@
 "use client";
 
 import type { ScoreBand, ScoredCity } from "@/lib/types";
+import { mapCategoryToKey } from "@/lib/score";
 
 interface CityPanelProps {
   city: ScoredCity;
+  category?: string;
 }
 
 const bandClasses: Record<ScoreBand, string> = {
@@ -36,7 +38,32 @@ function titleCase(value: string) {
   return value.charAt(0).toUpperCase() + value.slice(1);
 }
 
-export default function CityPanel({ city }: CityPanelProps) {
+export default function CityPanel({ city, category }: CityPanelProps) {
+  const recentDevelopments = city.recentDevelopments || [];
+  const competitorSaturation = city.competitorSaturation || {};
+  const categoryKey = category ? mapCategoryToKey(category) : "";
+  const saturation = categoryKey ? competitorSaturation[categoryKey] : undefined;
+
+  const saturationLabels = {
+    low: "border-[#00ff88]/20 bg-[#00ff88]/10 text-accent",
+    medium: "border-[#ffcc00]/20 bg-[#ffcc00]/10 text-[#ffcc00]",
+    high: "border-[#ff3355]/20 bg-[#ff3355]/10 text-[#ff3355]"
+  };
+
+  const saturationText = {
+    low: "LOW COMPETITION",
+    medium: "MODERATE COMPETITION",
+    high: "HIGH COMPETITION"
+  };
+
+  const formattedDate = city.lastEnriched
+    ? new Date(city.lastEnriched).toLocaleDateString("en-IN", {
+        day: "numeric",
+        month: "short",
+        year: "numeric"
+      })
+    : "";
+
   return (
     <section className="border border-[#0f1a10] bg-[#0a1210] p-5">
       <div className="flex items-start justify-between gap-4">
@@ -138,6 +165,60 @@ export default function CityPanel({ city }: CityPanelProps) {
           </div>
         </div>
       </div>
+
+      {(recentDevelopments.length > 0 || (saturation && (saturation === "low" || saturation === "medium" || saturation === "high"))) && (
+        <div className="mt-6 border-t border-[#0f1a10] pt-5 grid gap-5">
+          {recentDevelopments.length > 0 && (
+            <div>
+              <p className="mb-3 text-[9px] uppercase tracking-[0.2em] text-[#2e4d30]">
+                MARKET SIGNALS
+              </p>
+              <div className="grid gap-3">
+                {recentDevelopments.slice(0, 3).map((dev, i) => (
+                  <div key={i} className="flex flex-col">
+                    <div className="flex items-start">
+                      <span
+                        className={`inline-block w-1.5 h-1.5 rounded-full mr-2 mt-1.5 shrink-0 ${
+                          dev.direction === "positive" ? "bg-[#00ff88]" : "bg-[#ff3355]"
+                        }`}
+                      />
+                      <span className="text-[11px] leading-snug text-[#8aaa8a]">
+                        {dev.description}
+                      </span>
+                    </div>
+                    <span className="text-[9px] text-[#2e4d30] ml-3.5 mt-0.5 uppercase tracking-[0.05em]">
+                      {dev.date} · {dev.source}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {saturation && (saturation === "low" || saturation === "medium" || saturation === "high") && (
+            <div>
+              <p className="mb-3 text-[9px] uppercase tracking-[0.2em] text-[#2e4d30]">
+                COMPETITOR DENSITY
+              </p>
+              <div className="flex">
+                <span
+                  className={`border px-2 py-1 text-[9px] uppercase tracking-[0.2em] font-semibold ${
+                    saturationLabels[saturation]
+                  }`}
+                >
+                  {saturationText[saturation]}
+                </span>
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+
+      {city.lastEnriched && (
+        <div className="mt-5 border-t border-[#0f1a10] pt-4 text-[9px] text-[#1e3020] uppercase tracking-[0.1em]">
+          Signals last updated: {formattedDate}
+        </div>
+      )}
     </section>
   );
 }

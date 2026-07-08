@@ -29,6 +29,26 @@ export interface City {
   primaryRetailFormat: string;
   topDistributionChallenges: string[];
   strongCategories: string[];
+  competitorPresence?: {
+    [category: string]: string[];
+  };
+  recentDevelopments?: Array<{
+    type: "retail_expansion" | "infrastructure" | "economic" | "competitor";
+    description: string;
+    impact: "income" | "retail" | "internet" | "cold" | "competitor";
+    direction: "positive" | "negative";
+    magnitude: number;
+    date: string;
+    source: string;
+  }>;
+  retailScoreAdjustment?: number;
+  coldScoreAdjustment?: number;
+  incomeScoreAdjustment?: number;
+  internetScoreAdjustment?: number;
+  competitorSaturation?: {
+    [category: string]: "low" | "medium" | "high";
+  };
+  lastEnriched?: string;
 }
 
 export interface ScoreBreakdown {
@@ -49,6 +69,9 @@ export interface ScoredCity extends City {
   distributionType: DistributionType;
   distributorProfile: DistributorProfile;
   cityRecommendation: string;
+  recentDevelopments: City["recentDevelopments"];
+  competitorSaturation: City["competitorSaturation"];
+  lastEnriched: string;
 }
 
 export interface ExtractedFeatures {
@@ -75,4 +98,27 @@ export interface AnalysisResult {
   scores: ScoredCity[];
   memo: string;
   prompt: string;
+}
+
+export interface CityEnrichment {
+  developments: Array<{
+    type: "retail_expansion" | "infrastructure" | "economic" | "competitor";
+    description: string;
+    impact: "income" | "retail" | "internet" | "cold" | "competitor";
+    direction: "positive" | "negative";
+    magnitude: number;
+    date: string;
+    source: string;
+  }>;
+  scoreAdjustments: {
+    retail: number;
+    cold: number;
+    income: number;
+    internet: number;
+  };
+  competitorMentions: {
+    category: string;
+    brands: string[];
+    saturation: "low" | "medium" | "high";
+  } | null;
 }

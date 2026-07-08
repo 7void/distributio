@@ -182,7 +182,7 @@ export default function ResultsPage() {
               selectedCityId={selectedCity.id}
               onCitySelect={setSelectedCity}
             />
-            <CityPanel city={selectedCity} />
+            <CityPanel city={selectedCity} category={result.features.category} />
           </aside>
         </section>
       </div>

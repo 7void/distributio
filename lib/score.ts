@@ -137,6 +137,28 @@ function getRecommendation(
   return "Defer. Revisit in 12-18 months.";
 }
 
+export function mapCategoryToKey(category: string): string {
+  const cat = category.toLowerCase();
+  if (cat.includes("energy") || cat.includes("beverage")) {
+    if (cat.includes("premium") || cat.includes("craft")) 
+      return "premium_beverage";
+    return "mass_fmcg";
+  }
+  if (cat.includes("skin") || cat.includes("beauty") || 
+      cat.includes("cosmetic")) return "d2c_skincare";
+  if (cat.includes("dairy") || cat.includes("milk")) return "dairy";
+  if (cat.includes("electronic") || cat.includes("phone") || 
+      cat.includes("laptop")) return "electronics";
+  if (cat.includes("luxury") || cat.includes("watch") || 
+      cat.includes("handbag")) return "luxury";
+  if (cat.includes("agri") || cat.includes("farm") || 
+      cat.includes("pesticide") || cat.includes("fertiliser")) 
+    return "agri_input";
+  if (cat.includes("health") || cat.includes("supplement") || 
+      cat.includes("protein")) return "health_wellness";
+  return "mass_fmcg";
+}
+
 export function scoreCities(features: ExtractedFeatures): ScoredCity[] {
   return cityData
     .map((city) => {
@@ -148,11 +170,16 @@ export function scoreCities(features: ExtractedFeatures): ScoredCity[] {
         adjustedColdWeight = 0;
       }
 
+      const adjustedIncome = Math.min(Math.max(city.income + (city.incomeScoreAdjustment ?? 0), 0), 100);
+      const adjustedRetail = Math.min(Math.max(city.retail + (city.retailScoreAdjustment ?? 0), 0), 100);
+      const adjustedInternet = Math.min(Math.max(city.internet + (city.internetScoreAdjustment ?? 0), 0), 100);
+      const adjustedCold = Math.min(Math.max(city.cold + (city.coldScoreAdjustment ?? 0), 0), 100);
+
       let raw =
-        city.income * features.incomeWeight +
-        city.retail * adjustedRetailWeight +
-        city.internet * features.internetWeight +
-        city.cold * adjustedColdWeight;
+        adjustedIncome * features.incomeWeight +
+        adjustedRetail * adjustedRetailWeight +
+        adjustedInternet * features.internetWeight +
+        adjustedCold * adjustedColdWeight;
 
       raw *= features.affordability;
 
@@ -191,6 +218,20 @@ export function scoreCities(features: ExtractedFeatures): ScoredCity[] {
         raw *= 1.04;
       }
 
+      // Competitor saturation penalty
+      const productCategoryKey = mapCategoryToKey(features.category);
+      const saturation = city.competitorSaturation?.[productCategoryKey];
+      if (saturation === "high" && features.priceSegment !== "mass") {
+        raw *= 0.94;
+      }
+      if (
+        saturation === "medium" &&
+        (features.priceSegment === "premium" ||
+          features.priceSegment === "luxury")
+      ) {
+        raw *= 0.97;
+      }
+
       const score = Math.min(Math.round(raw), 100);
       const band = getBand(score);
       const architecture = getCityArchitecture(features, city);
@@ -207,16 +248,16 @@ export function scoreCities(features: ExtractedFeatures): ScoredCity[] {
         band,
         scoreBreakdown: {
           incomeContribution: Math.round(
-            city.income * features.incomeWeight * features.affordability
+            adjustedIncome * features.incomeWeight * features.affordability
           ),
           retailContribution: Math.round(
-            city.retail * adjustedRetailWeight * features.affordability
+            adjustedRetail * adjustedRetailWeight * features.affordability
           ),
           internetContribution: Math.round(
-            city.internet * features.internetWeight * features.affordability
+            adjustedInternet * features.internetWeight * features.affordability
           ),
           coldContribution: Math.round(
-            city.cold * adjustedColdWeight * features.affordability
+            adjustedCold * adjustedColdWeight * features.affordability
           )
         },
         distributionLevel: architecture.distributionLevel,
@@ -225,7 +266,10 @@ export function scoreCities(features: ExtractedFeatures): ScoredCity[] {
         cityRecommendation: getRecommendation(
           band,
           architecture.distributionType
-        )
+        ),
+        recentDevelopments: city.recentDevelopments ?? [],
+        competitorSaturation: city.competitorSaturation ?? {},
+        lastEnriched: city.lastEnriched ?? ""
       };
     })
     .sort((a, b) => b.score - a.score);
