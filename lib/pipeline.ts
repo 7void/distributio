@@ -57,7 +57,7 @@ export async function runEnrichmentPipeline(): Promise<void> {
 
   const signals: string[] = [];
   const searchModel = genAI.getGenerativeModel({
-    model: "gemini-1.5-flash",
+    model: "gemini-2.5-flash",
     tools: [{ googleSearchRetrieval: {} }]
   });
 
@@ -94,7 +94,7 @@ export async function runEnrichmentPipeline(): Promise<void> {
   const cityNamesList = cities.map((c) => c.name).join(", ");
   const cityIdsList = cities.map((c) => c.id).join(", ");
 
-  const matcherModel = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+  const matcherModel = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
   // 2. MATCH SIGNALS TO CITIES AND ENRICH
   for (let i = 0; i < signals.length; i++) {
