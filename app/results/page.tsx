@@ -7,7 +7,9 @@ import { useRouter } from "next/navigation";
 import CityPanel from "@/components/CityPanel";
 import MemoBox from "@/components/MemoBox";
 import RankingList from "@/components/RankingList";
+import RiskCard from "@/components/RiskCard";
 import ScoreBreakdown from "@/components/ScoreBreakdown";
+import { calculateRisk } from "@/lib/risk";
 import type { AnalysisResult, ScoredCity } from "@/lib/types";
 
 const DistributionMap = dynamic(() => import("@/components/Map"), {
@@ -90,7 +92,15 @@ export default function ResultsPage() {
     };
   }, [result]);
 
-  if (!result || !selectedCity || !metrics) {
+  const risk = useMemo(() => {
+    if (!result || !selectedCity) {
+      return null;
+    }
+
+    return calculateRisk(result.features, selectedCity);
+  }, [result, selectedCity]);
+
+  if (!result || !selectedCity || !metrics || !risk) {
     return <ResultsSkeleton />;
   }
 
@@ -173,6 +183,7 @@ export default function ResultsPage() {
               />
             </div>
             <ScoreBreakdown city={selectedCity} />
+            <RiskCard risk={risk} />
             <MemoBox memo={result.memo} />
           </div>
 

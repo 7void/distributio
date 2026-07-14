@@ -2,6 +2,8 @@ export type CityTier = 1 | 2 | 3;
 
 export type ScoreBand = "PRIME" | "STRONG" | "MODERATE" | "WEAK" | "AVOID";
 
+export type RiskLevel = "LOW" | "MEDIUM" | "HIGH" | "CRITICAL";
+
 export type PriceSegment = "mass" | "mid" | "premium" | "luxury";
 
 export type DistributionLevel = 0 | 1 | 2 | 3;
@@ -36,6 +38,13 @@ export interface ScoreBreakdown {
   retailContribution: number;
   internetContribution: number;
   coldContribution: number;
+}
+
+export interface RiskAssessment {
+  score: number;
+  level: RiskLevel;
+  drivers: string[];
+  mitigations: string[];
 }
 
 export interface ScoredCity extends City {
