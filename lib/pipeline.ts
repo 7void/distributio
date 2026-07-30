@@ -2,16 +2,18 @@
 // with header x-pipeline-secret: [your secret]
 // Recommended: run weekly via cron or manually before demos
 
-import fs from "fs";
-import path from "path";
+import { getCities, updateCity } from "@/db/queries";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import type { City } from "./types";
 import { enrichCity, applyEnrichment } from "./enrich";
+import { invalidate } from "./cache";
 
 function logPipeline(msg: string) {
   const time = new Date().toTimeString().split(" ")[0]; // HH:MM:SS
   console.log(`[PIPELINE ${time}] ${msg}`);
 }
+
+const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 function parseCityIds(text: string, validIds: string[]): string[] {
   try {
@@ -58,7 +60,7 @@ export async function runEnrichmentPipeline(): Promise<void> {
   const signals: string[] = [];
   const searchModel = genAI.getGenerativeModel({
     model: "gemini-2.5-flash",
-    tools: [{ googleSearchRetrieval: {} }]
+    tools: [{ googleSearch: {} } as any]
   });
 
   for (const query of queries) {
@@ -76,18 +78,17 @@ export async function runEnrichmentPipeline(): Promise<void> {
     } catch (error) {
       logPipeline(`Error fetching signal for query "${query}": ${error instanceof Error ? error.message : error}`);
     }
+    await sleep(13000);
   }
 
   logPipeline(`Fetched ${signals.length} signals in total.`);
 
-  // Load current cities dataset
-  const citiesPath = path.join(process.cwd(), "data", "cities.json");
+  // Load current cities dataset from database
   let cities: City[] = [];
   try {
-    const rawData = fs.readFileSync(citiesPath, "utf8");
-    cities = JSON.parse(rawData);
+    cities = await getCities();
   } catch (error) {
-    throw new Error(`Failed to read or parse cities.json: ${error instanceof Error ? error.message : error}`);
+    throw new Error(`Failed to load cities from database: ${error instanceof Error ? error.message : error}`);
   }
 
   const validIds = cities.map((c) => c.id.toLowerCase());
@@ -113,6 +114,7 @@ Return empty array if none are relevant.`;
       const matchText = matchResult.response.text();
       matchedIds = parseCityIds(matchText, validIds);
       logPipeline(`Signal ${i + 1} matched cities: [${matchedIds.join(", ")}]`);
+      await sleep(13000);
     } catch (error) {
       logPipeline(`Error matching signal ${i + 1} to cities: ${error instanceof Error ? error.message : error}`);
       continue;
@@ -128,20 +130,17 @@ Return empty array if none are relevant.`;
 
       try {
         const enrichment = await enrichCity(targetCity, signal);
-        cities[cityIndex] = applyEnrichment(targetCity, enrichment);
-        logPipeline(`Successfully enriched and updated ${targetCity.name}.`);
+        const enrichedCity = applyEnrichment(targetCity, enrichment);
+        await updateCity(targetCity.id, enrichedCity);
+        await invalidate("cities:all");
+        cities[cityIndex] = enrichedCity;
+        logPipeline(`Successfully enriched and updated ${targetCity.name} in the database.`);
       } catch (error) {
         logPipeline(`Failed to enrich city ${targetCity.name}: ${error instanceof Error ? error.message : error}`);
       }
+      await sleep(13000);
     }
   }
 
-  // 4. WRITE UPDATED DATASET
-  try {
-    logPipeline("Writing updated dataset to cities.json...");
-    fs.writeFileSync(citiesPath, JSON.stringify(cities, null, 2), "utf8");
-    logPipeline("Pipeline run completed successfully!");
-  } catch (error) {
-    throw new Error(`Failed to write updated cities to cities.json: ${error instanceof Error ? error.message : error}`);
-  }
+  logPipeline("Pipeline run completed successfully!");
 }

@@ -21,6 +21,10 @@
       "consumer electronics",
       "luxury fashion"
     ],
+    "quickCommerceScore": 95,
+    "logisticsScore": 98,
+    "modernTradeScore": 88,
+    "kiranaScore": 80,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -52,6 +56,10 @@
       "premium apparel",
       "gourmet groceries"
     ],
+    "quickCommerceScore": 93,
+    "logisticsScore": 95,
+    "modernTradeScore": 90,
+    "kiranaScore": 78,
     "competitorPresence": {
       "retail": [
         "DMart",
@@ -109,6 +117,10 @@
       "quick commerce",
       "consumer electronics"
     ],
+    "quickCommerceScore": 97,
+    "logisticsScore": 90,
+    "modernTradeScore": 85,
+    "kiranaScore": 75,
     "competitorPresence": {},
     "recentDevelopments": [
       {
@@ -150,6 +162,10 @@
       "apparel",
       "premium FMCG"
     ],
+    "quickCommerceScore": 88,
+    "logisticsScore": 85,
+    "modernTradeScore": 75,
+    "kiranaScore": 85,
     "competitorPresence": {
       "retail": [
         "DMart",
@@ -207,6 +223,10 @@
       "consumer durables",
       "apparel"
     ],
+    "quickCommerceScore": 90,
+    "logisticsScore": 88,
+    "modernTradeScore": 82,
+    "kiranaScore": 80,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -238,6 +258,10 @@
       "gold jewelry",
       "traditional FMCG"
     ],
+    "quickCommerceScore": 87,
+    "logisticsScore": 92,
+    "modernTradeScore": 80,
+    "kiranaScore": 83,
     "competitorPresence": {
       "retail": [
         "DMart",
@@ -295,6 +319,10 @@
       "sweets and confectionery",
       "budget apparel"
     ],
+    "quickCommerceScore": 85,
+    "logisticsScore": 85,
+    "modernTradeScore": 70,
+    "kiranaScore": 90,
     "competitorPresence": {},
     "recentDevelopments": [
       {
@@ -336,6 +364,10 @@
       "dairy products",
       "consumer electronics"
     ],
+    "quickCommerceScore": 70,
+    "logisticsScore": 90,
+    "modernTradeScore": 78,
+    "kiranaScore": 85,
     "competitorPresence": {
       "retail": [
         "DMart",
@@ -393,6 +425,10 @@
       "premium textiles",
       "electronics"
     ],
+    "quickCommerceScore": 60,
+    "logisticsScore": 80,
+    "modernTradeScore": 65,
+    "kiranaScore": 92,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -424,6 +460,10 @@
       "automobiles",
       "premium liquor"
     ],
+    "quickCommerceScore": 65,
+    "logisticsScore": 75,
+    "modernTradeScore": 70,
+    "kiranaScore": 88,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -455,6 +495,10 @@
       "ethnic apparel",
       "home appliances"
     ],
+    "quickCommerceScore": 65,
+    "logisticsScore": 68,
+    "modernTradeScore": 60,
+    "kiranaScore": 88,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -486,6 +530,10 @@
       "gemstones",
       "tourism-related FMCG"
     ],
+    "quickCommerceScore": 70,
+    "logisticsScore": 72,
+    "modernTradeScore": 65,
+    "kiranaScore": 85,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -517,6 +565,10 @@
       "value FMCG",
       "two-wheelers"
     ],
+    "quickCommerceScore": 58,
+    "logisticsScore": 75,
+    "modernTradeScore": 55,
+    "kiranaScore": 90,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -548,6 +600,10 @@
       "logistics services",
       "consumer durables"
     ],
+    "quickCommerceScore": 60,
+    "logisticsScore": 78,
+    "modernTradeScore": 62,
+    "kiranaScore": 87,
     "competitorPresence": {
       "Retail": [
         "DMart"
@@ -613,6 +669,10 @@
       "apparel",
       "automobile accessories"
     ],
+    "quickCommerceScore": 72,
+    "logisticsScore": 70,
+    "modernTradeScore": 68,
+    "kiranaScore": 83,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -644,6 +704,10 @@
       "basic FMCG",
       "educational supplies"
     ],
+    "quickCommerceScore": 55,
+    "logisticsScore": 62,
+    "modernTradeScore": 58,
+    "kiranaScore": 92,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -675,6 +739,10 @@
       "electronics",
       "pharmaceuticals"
     ],
+    "quickCommerceScore": 60,
+    "logisticsScore": 77,
+    "modernTradeScore": 60,
+    "kiranaScore": 88,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -706,6 +774,10 @@
       "agricultural supplies",
       "value clothing"
     ],
+    "quickCommerceScore": 48,
+    "logisticsScore": 60,
+    "modernTradeScore": 50,
+    "kiranaScore": 95,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -737,6 +809,10 @@
       "premium FMCG",
       "electronics"
     ],
+    "quickCommerceScore": 68,
+    "logisticsScore": 73,
+    "modernTradeScore": 63,
+    "kiranaScore": 86,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -768,6 +844,10 @@
       "industrial tools",
       "automobile parts"
     ],
+    "quickCommerceScore": 75,
+    "logisticsScore": 76,
+    "modernTradeScore": 70,
+    "kiranaScore": 82,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -799,6 +879,10 @@
       "premium consumer electronics",
       "spices"
     ],
+    "quickCommerceScore": 70,
+    "logisticsScore": 78,
+    "modernTradeScore": 72,
+    "kiranaScore": 80,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -830,6 +914,10 @@
       "health and wellness",
       "traditional FMCG"
     ],
+    "quickCommerceScore": 65,
+    "logisticsScore": 70,
+    "modernTradeScore": 68,
+    "kiranaScore": 85,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -861,6 +949,10 @@
       "basic consumer durables",
       "FMCG"
     ],
+    "quickCommerceScore": 55,
+    "logisticsScore": 65,
+    "modernTradeScore": 60,
+    "kiranaScore": 90,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -892,6 +984,10 @@
       "winter apparel",
       "essential FMCG"
     ],
+    "quickCommerceScore": 50,
+    "logisticsScore": 75,
+    "modernTradeScore": 55,
+    "kiranaScore": 92,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -923,6 +1019,10 @@
       "packaged foods",
       "woolen wear"
     ],
+    "quickCommerceScore": 45,
+    "logisticsScore": 60,
+    "modernTradeScore": 50,
+    "kiranaScore": 95,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -954,6 +1054,10 @@
       "food products",
       "agricultural implements"
     ],
+    "quickCommerceScore": 58,
+    "logisticsScore": 68,
+    "modernTradeScore": 65,
+    "kiranaScore": 88,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -985,6 +1089,10 @@
       "bicycles",
       "agricultural machinery"
     ],
+    "quickCommerceScore": 65,
+    "logisticsScore": 82,
+    "modernTradeScore": 70,
+    "kiranaScore": 80,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -1016,6 +1124,10 @@
       "handicrafts",
       "agricultural produce"
     ],
+    "quickCommerceScore": 60,
+    "logisticsScore": 70,
+    "modernTradeScore": 58,
+    "kiranaScore": 90,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -1047,6 +1159,10 @@
       "religious goods",
       "traditional FMCG"
     ],
+    "quickCommerceScore": 55,
+    "logisticsScore": 65,
+    "modernTradeScore": 55,
+    "kiranaScore": 93,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -1078,6 +1194,10 @@
       "musical instruments",
       "agricultural produce"
     ],
+    "quickCommerceScore": 62,
+    "logisticsScore": 68,
+    "modernTradeScore": 60,
+    "kiranaScore": 88,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -1109,6 +1229,10 @@
       "wine and spirits",
       "auto components"
     ],
+    "quickCommerceScore": 65,
+    "logisticsScore": 75,
+    "modernTradeScore": 68,
+    "kiranaScore": 82,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -1140,6 +1264,10 @@
       "basic apparel",
       "value groceries"
     ],
+    "quickCommerceScore": 50,
+    "logisticsScore": 70,
+    "modernTradeScore": 60,
+    "kiranaScore": 90,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -1171,6 +1299,10 @@
       "jewelry",
       "textiles"
     ],
+    "quickCommerceScore": 55,
+    "logisticsScore": 72,
+    "modernTradeScore": 65,
+    "kiranaScore": 85,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -1202,6 +1334,10 @@
       "traditional apparel",
       "tourism FMCG"
     ],
+    "quickCommerceScore": 45,
+    "logisticsScore": 65,
+    "modernTradeScore": 55,
+    "kiranaScore": 92,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -1233,6 +1369,10 @@
       "religious goods",
       "essential groceries"
     ],
+    "quickCommerceScore": 60,
+    "logisticsScore": 75,
+    "modernTradeScore": 70,
+    "kiranaScore": 80,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -1264,6 +1404,10 @@
       "gold jewelry",
       "value FMCG"
     ],
+    "quickCommerceScore": 50,
+    "logisticsScore": 70,
+    "modernTradeScore": 65,
+    "kiranaScore": 90,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -1295,6 +1439,10 @@
       "sandalwood items",
       "tourism hospitality goods"
     ],
+    "quickCommerceScore": 60,
+    "logisticsScore": 70,
+    "modernTradeScore": 68,
+    "kiranaScore": 82,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -1326,6 +1474,10 @@
       "heavy winter wear",
       "essential FMCG"
     ],
+    "quickCommerceScore": 15,
+    "logisticsScore": 60,
+    "modernTradeScore": 35,
+    "kiranaScore": 95,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -1357,6 +1509,10 @@
       "woolen garments",
       "horticultural tools"
     ],
+    "quickCommerceScore": 5,
+    "logisticsScore": 45,
+    "modernTradeScore": 15,
+    "kiranaScore": 98,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -1388,6 +1544,10 @@
       "value apparel",
       "basic groceries"
     ],
+    "quickCommerceScore": 30,
+    "logisticsScore": 65,
+    "modernTradeScore": 50,
+    "kiranaScore": 90,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -1419,6 +1579,10 @@
       "two-wheelers",
       "value FMCG"
     ],
+    "quickCommerceScore": 30,
+    "logisticsScore": 70,
+    "modernTradeScore": 60,
+    "kiranaScore": 85,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -1450,6 +1614,10 @@
       "textiles",
       "automobile spares"
     ],
+    "quickCommerceScore": 35,
+    "logisticsScore": 75,
+    "modernTradeScore": 65,
+    "kiranaScore": 80,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -1481,6 +1649,10 @@
       "agricultural inputs",
       "cotton textiles"
     ],
+    "quickCommerceScore": 25,
+    "logisticsScore": 65,
+    "modernTradeScore": 55,
+    "kiranaScore": 90,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -1512,6 +1684,10 @@
       "farming equipment",
       "essential FMCG"
     ],
+    "quickCommerceScore": 20,
+    "logisticsScore": 60,
+    "modernTradeScore": 50,
+    "kiranaScore": 92,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -1543,6 +1719,10 @@
       "premium FMCG",
       "gold jewelry"
     ],
+    "quickCommerceScore": 35,
+    "logisticsScore": 72,
+    "modernTradeScore": 68,
+    "kiranaScore": 78,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -1574,6 +1754,10 @@
       "agricultural produce",
       "textiles"
     ],
+    "quickCommerceScore": 30,
+    "logisticsScore": 70,
+    "modernTradeScore": 60,
+    "kiranaScore": 88,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -1605,6 +1789,10 @@
       "handlooms",
       "basic FMCG"
     ],
+    "quickCommerceScore": 25,
+    "logisticsScore": 65,
+    "modernTradeScore": 55,
+    "kiranaScore": 90,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -1636,6 +1824,10 @@
       "silver anklets",
       "textiles"
     ],
+    "quickCommerceScore": 35,
+    "logisticsScore": 70,
+    "modernTradeScore": 65,
+    "kiranaScore": 80,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -1667,6 +1859,10 @@
       "basic textiles",
       "educational materials"
     ],
+    "quickCommerceScore": 20,
+    "logisticsScore": 60,
+    "modernTradeScore": 50,
+    "kiranaScore": 93,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -1698,6 +1894,10 @@
       "electronics",
       "spices"
     ],
+    "quickCommerceScore": 38,
+    "logisticsScore": 75,
+    "modernTradeScore": 70,
+    "kiranaScore": 75,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -1729,6 +1929,10 @@
       "silk apparel",
       "ayurvedic products"
     ],
+    "quickCommerceScore": 30,
+    "logisticsScore": 60,
+    "modernTradeScore": 45,
+    "kiranaScore": 92,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -1760,6 +1964,10 @@
       "agricultural produce",
       "defense sector supplies"
     ],
+    "quickCommerceScore": 20,
+    "logisticsScore": 65,
+    "modernTradeScore": 40,
+    "kiranaScore": 93,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -1791,6 +1999,10 @@
       "handicrafts",
       "essential groceries"
     ],
+    "quickCommerceScore": 18,
+    "logisticsScore": 62,
+    "modernTradeScore": 35,
+    "kiranaScore": 94,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -1822,6 +2034,10 @@
       "handicrafts",
       "marble products"
     ],
+    "quickCommerceScore": 25,
+    "logisticsScore": 55,
+    "modernTradeScore": 48,
+    "kiranaScore": 88,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -1853,6 +2069,10 @@
       "budget hospitality supplies",
       "traditional FMCG"
     ],
+    "quickCommerceScore": 15,
+    "logisticsScore": 60,
+    "modernTradeScore": 38,
+    "kiranaScore": 93,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -1884,6 +2104,10 @@
       "timber",
       "transit FMCG"
     ],
+    "quickCommerceScore": 28,
+    "logisticsScore": 80,
+    "modernTradeScore": 50,
+    "kiranaScore": 88,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,
@@ -1915,6 +2139,10 @@
       "value apparel",
       "basic food staples"
     ],
+    "quickCommerceScore": 15,
+    "logisticsScore": 70,
+    "modernTradeScore": 40,
+    "kiranaScore": 93,
     "competitorPresence": {},
     "recentDevelopments": [],
     "retailScoreAdjustment": 0,

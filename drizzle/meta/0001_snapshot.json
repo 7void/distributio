@@ -1,0 +1,267 @@
+{
+  "id": "b725b6b5-f77a-4873-8ab1-b21d4e7106f5",
+  "prevId": "cc4ed357-12a6-426f-b416-0a68e18cd0ea",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.analyses": {
+      "name": "analyses",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "prompt": {
+          "name": "prompt",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "extracted_features": {
+          "name": "extracted_features",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "memo": {
+          "name": "memo",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "model_version": {
+          "name": "model_version",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'gemini-2.5-flash'"
+        },
+        "embedding": {
+          "name": "embedding",
+          "type": "vector(768)",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {
+        "analyses_embedding_idx": {
+          "name": "analyses_embedding_idx",
+          "columns": [
+            {
+              "expression": "embedding",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last",
+              "opclass": "vector_cosine_ops"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "hnsw",
+          "with": {}
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.cities": {
+      "name": "cities",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "state": {
+          "name": "state",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "tier": {
+          "name": "tier",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "population": {
+          "name": "population",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "lat": {
+          "name": "lat",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "lng": {
+          "name": "lng",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "income": {
+          "name": "income",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "retail": {
+          "name": "retail",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "internet": {
+          "name": "internet",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "cold": {
+          "name": "cold",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "primary_retail_format": {
+          "name": "primary_retail_format",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "top_distribution_challenges": {
+          "name": "top_distribution_challenges",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "strong_categories": {
+          "name": "strong_categories",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "competitor_presence": {
+          "name": "competitor_presence",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "recent_developments": {
+          "name": "recent_developments",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "retail_score_adjustment": {
+          "name": "retail_score_adjustment",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "default": 0
+        },
+        "cold_score_adjustment": {
+          "name": "cold_score_adjustment",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "default": 0
+        },
+        "income_score_adjustment": {
+          "name": "income_score_adjustment",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "default": 0
+        },
+        "internet_score_adjustment": {
+          "name": "internet_score_adjustment",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "default": 0
+        },
+        "competitor_saturation": {
+          "name": "competitor_saturation",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "last_enriched": {
+          "name": "last_enriched",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "quick_commerce_score": {
+          "name": "quick_commerce_score",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "logistics_score": {
+          "name": "logistics_score",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "modern_trade_score": {
+          "name": "modern_trade_score",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "kirana_score": {
+          "name": "kirana_score",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "sequences": {},
+  "roles": {},
+  "policies": {},
+  "views": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}

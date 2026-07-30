@@ -16,6 +16,12 @@ const bandClasses: Record<ScoreBand, string> = {
   AVOID: "border-[#ff3355]/20 bg-[#ff3355]/10 text-[#ff3355]"
 };
 
+const confidenceClasses = {
+  high: "border-[#00ff88]/20 bg-[#00ff88]/5 text-[#00ff88]",
+  medium: "border-[#ffcc00]/20 bg-[#ffcc00]/5 text-[#ffcc00]",
+  low: "border-[#ff3355]/20 bg-[#ff3355]/5 text-[#ff3355]"
+};
+
 const levelLabels: Record<ScoredCity["distributionLevel"], string> = {
   0: "Level 0 — Direct flagship or owned channel",
   1: "Level 1 — Distributor to retailer",
@@ -75,11 +81,18 @@ export default function CityPanel({ city, category }: CityPanelProps) {
             {city.state} · Tier {city.tier}
           </p>
         </div>
-        <span
-          className={`border px-2 py-1 text-[9px] uppercase tracking-[0.2em] ${bandClasses[city.band]}`}
-        >
-          {city.band}
-        </span>
+        <div className="flex flex-col items-end gap-1.5">
+          <span
+            className={`border px-2 py-0.5 text-[9px] uppercase tracking-[0.2em] ${bandClasses[city.band]}`}
+          >
+            {city.band}
+          </span>
+          <span
+            className={`border px-2 py-0.5 text-[8px] uppercase tracking-[0.15em] ${confidenceClasses[city.confidenceLevel]}`}
+          >
+            {city.confidenceLevel} confidence
+          </span>
+        </div>
       </div>
 
       <div className="mt-6 grid grid-cols-2 gap-3">
@@ -93,7 +106,7 @@ export default function CityPanel({ city, category }: CityPanelProps) {
         </div>
         <div className="border border-[#0f1a10] p-3">
           <p className="text-[9px] uppercase tracking-[0.2em] text-[#2e4d30]">
-            Demand
+            Est. Demand
           </p>
           <p className="mt-2 text-lg text-foreground">
             {formatNumber(city.demand)}
@@ -101,6 +114,33 @@ export default function CityPanel({ city, category }: CityPanelProps) {
           <p className="text-[10px] uppercase tracking-[0.12em] text-[#7a9678]">
             units/mo
           </p>
+        </div>
+      </div>
+
+      {/* Phase 2: Unit Economics & Feasibility section */}
+      <div className="mt-4 border border-[#0f1a10] bg-[#050810] p-4">
+        <h3 className="mb-3 text-[9px] uppercase tracking-[0.2em] text-[#2e4d30] font-semibold">
+          UNIT ECONOMICS & FEASIBILITY
+        </h3>
+        <div className="grid grid-cols-3 gap-2 text-center">
+          <div className="border border-[#0f1a10] py-2">
+            <span className="block text-[8px] uppercase tracking-[0.1em] text-[#7a9678]">Est. Freight</span>
+            <span className="block text-sm font-semibold text-[#c8e8c0] mt-1">₹{city.logisticsCostPerUnit}/unit</span>
+          </div>
+          <div className="border border-[#0f1a10] py-2">
+            <span className="block text-[8px] uppercase tracking-[0.1em] text-[#7a9678]">Net Margin</span>
+            <span className="block text-sm font-semibold text-accent mt-1">₹{city.marginPerUnit}/unit</span>
+          </div>
+          <div className="border border-[#0f1a10] py-2">
+            <span className="block text-[8px] uppercase tracking-[0.1em] text-[#7a9678]">Break-even</span>
+            <span className="block text-xs font-semibold text-[#c8e8c0] mt-1.5">
+              {city.breakEvenUnits === 999999 ? "N/A" : `${formatNumber(city.breakEvenUnits)} u`}
+            </span>
+          </div>
+        </div>
+        <div className="mt-3 text-[11px] text-[#7a9678] leading-relaxed">
+          <span className="text-[#2e4d30] font-semibold uppercase tracking-[0.1em] text-[8px] block">Seasonality Bias</span>
+          {city.seasonalityImpact}
         </div>
       </div>
 

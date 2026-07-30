@@ -1,9 +1,13 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import type { ExtractedFeatures, ScoredCity } from "@/lib/types";
+import { createAnalysis } from "@/db/queries";
+import { getOrSet, generateCacheKey } from "@/lib/cache";
+import { generateEmbedding } from "@/lib/embeddings";
 
 interface MemoPayload {
   features: ExtractedFeatures;
   scores: ScoredCity[];
+  prompt?: string;
 }
 
 function isMemoPayload(payload: unknown): payload is MemoPayload {
@@ -68,13 +72,40 @@ export async function POST(request: Request) {
       );
     }
 
-    const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
-    const result = await model.generateContent(
-      buildMemoPrompt(payload.features, payload.scores)
+    const memoPrompt = buildMemoPrompt(payload.features, payload.scores);
+    const cacheKey = generateCacheKey("memo", memoPrompt);
+    const TWENTY_FOUR_HOURS_IN_SECONDS = 24 * 60 * 60;
+
+    const memo = await getOrSet<string>(
+      cacheKey,
+      TWENTY_FOUR_HOURS_IN_SECONDS,
+      async () => {
+        const genAI = new GoogleGenerativeAI(apiKey);
+        const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
+        const result = await model.generateContent(memoPrompt);
+        return result.response.text().trim();
+      }
     );
 
-    return Response.json({ memo: result.response.text().trim() });
+    // Persist analysis in the database asynchronously in the background
+    const prompt = payload.prompt || `${payload.features.productName} — ${payload.features.category} at ₹${payload.features.priceINR}`;
+    
+    (async () => {
+      let embedding: number[] | undefined;
+      if (process.env.PGVECTOR_DISABLED !== "true") {
+        try {
+          const embedText = `Product: ${payload.features.productName}\nCategory: ${payload.features.category}\nPrice: ₹${payload.features.priceINR}\nCold chain: ${payload.features.needsColdChain ? "Required" : "Not required"}\nTarget customer: ${payload.features.targetAudience}`;
+          embedding = await generateEmbedding(embedText);
+        } catch (err) {
+          console.error("[PGVECTOR] Failed to generate embedding for analysis persistence:", err);
+        }
+      }
+      await createAnalysis(prompt, payload.features, memo, "gemini-2.5-flash", embedding);
+    })().catch((err) => {
+      console.error("Failed to persist analysis to database:", err);
+    });
+
+    return Response.json({ memo });
   } catch (error) {
     const message =
       error instanceof Error ? error.message : "Strategy memo failed.";
@@ -82,3 +113,4 @@ export async function POST(request: Request) {
     return Response.json({ message }, { status: 500 });
   }
 }
+

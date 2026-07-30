@@ -1,37 +1,115 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import type { ExtractedFeatures } from "@/lib/types";
+import type { ExtractedFeatures, ProductProfile } from "@/lib/types";
+import { generateCacheKey } from "@/lib/cache";
+import { redis } from "@/lib/redis";
+import { buildEmbeddingInput, generateEmbedding } from "@/lib/embeddings";
+import { findSimilarAnalysis } from "@/db/queries";
 
-const systemPrompt = `You are a distribution intelligence engine for India. Extract structured product features from the user description. Return ONLY valid JSON with no explanation, no markdown, no code fences. Use exactly this schema:
+// ─── System prompt ────────────────────────────────────────────────────────────
+
+const systemPrompt = `You are a distribution intelligence engine for Indian consumer markets.
+
+You receive a structured product profile and must return calibrated scoring parameters.
+Return ONLY valid JSON — no explanation, no markdown, no code fences.
+
+OUTPUT SCHEMA (return exactly this):
 {
-  productName, category, priceINR, priceSegment (mass/mid/premium/luxury),
-  incomeWeight, retailWeight, internetWeight, coldWeight (all 0-1, sum to 1.0),
-  affordability (0.5-1.1), targetAudience, needsColdChain (boolean),
-  distributionLevel (0/1/2/3), distributionType (intensive/selective/exclusive),
-  distributorProfile (direct/retailer/wholesaler/broker-agent),
-  channels (string array), keyInsight (string)
+  "productName": string,
+  "category": string,
+  "priceINR": number,
+  "priceSegment": "mass" | "mid" | "premium" | "luxury",
+  "incomeWeight": number,
+  "retailWeight": number,
+  "internetWeight": number,
+  "coldWeight": number,
+  "logisticsWeight": number,
+  "affordability": number,
+  "targetAudience": string,
+  "needsColdChain": boolean,
+  "distributionLevel": 0 | 1 | 2 | 3,
+  "distributionType": "intensive" | "selective" | "exclusive",
+  "distributorProfile": "direct" | "retailer" | "wholesaler" | "broker-agent",
+  "channels": string[],
+  "keyInsight": string,
+  "seasonality": string
 }
-Weight rules: high price = high incomeWeight. Cold chain product = high coldWeight. Online/D2C = high internetWeight. Mass FMCG = high retailWeight. Affordability: under ₹100=1.1, ₹100-500=1.0, ₹500-2000=0.85, ₹2000-10000=0.70, above ₹10000=0.55
 
-PRICE SEGMENT WEIGHT GUIDANCE (these are soft guidelines, not hard overrides — use judgment based on the full product context):
+━━━ PRICE SEGMENT RULES ━━━
+mass    → priceINR < 100
+mid     → priceINR 100–500
+premium → priceINR 500–5,000
+luxury  → priceINR > 5,000
 
-- luxury (typically above ₹50,000): incomeWeight should almost always be highest. These products are genuinely gated by purchasing power. Exception: a luxury product sold purely online may share top weight with internetWeight.
+━━━ WEIGHT CALIBRATION RULES ━━━
+All five weights (incomeWeight, retailWeight, internetWeight, coldWeight, logisticsWeight) must sum exactly to 1.0.
+If needsColdChain is false, set coldWeight to 0.
 
-- premium (₹2,000–₹50,000): incomeWeight should be significant (0.25–0.40) but does not need to be the single highest weight. A ₹15,000 phone sold via EMI through retail stores should weight retailWeight and internetWeight competitively alongside income. A ₹15,000 luxury handbag should weight income higher.
+incomeWeight:
+  HIGH (0.30–0.40) → luxury or premium products where purchasing power is a genuine barrier.
+  MEDIUM (0.15–0.29) → standard consumer goods.
+  LOW (0.05–0.14) → mass FMCG or daily essentials.
 
-- mid and mass: incomeWeight can be low. Distribution reach (retailWeight) and channel (internetWeight, coldWeight) should dominate based on product type.
+retailWeight:
+  HIGH (0.25–0.35) → physical shelf-dependent items: fresh food, beverages, daily hygiene.
+  MEDIUM (0.15–0.24) → hybrid offline/online items.
+  LOW (0.05–0.14) → digital-first or online-only items.
 
-Use the product description, category, and channel context — not price alone — to determine the dominant weight.`;
+internetWeight:
+  HIGH (0.25–0.35) → products relying heavily on e-commerce or quick commerce.
+  MEDIUM (0.15–0.24) → products sold both online and offline.
+  LOW (0.05–0.14) → traditional offline-heavy distribution.
 
-function getPrompt(payload: unknown): string | null {
+coldWeight (only if needsColdChain is true):
+  HIGH (0.20–0.30) → highly perishable, critical refrigeration (dairy, fresh juices).
+  MEDIUM (0.10–0.19) → refrigeration beneficial but not immediately fatal (chilled energy drinks, cosmetics).
+  Set to 0 if needsColdChain is false.
+
+logisticsWeight:
+  HIGH (0.20–0.30) → low margin, bulky or heavy items (atta, water bottles, bulky home appliances) where shipping is expensive relative to product value.
+  MEDIUM (0.10–0.19) → standard logistics complexity items.
+  LOW (0.05–0.09) → lightweight, high-value electronics (smartwatches, jewelry, premium perfumes) where logistics cost is trivial.
+
+━━━ AFFORDABILITY MULTIPLIER ━━━
+Applied as a penalty scaler to income and retail scoring signals only (not the whole score).
+Reflects how price constrains the addressable consumer base and retail shelf willingness.
+Under ₹100   → 1.10 (cheap products boost accessibility)
+₹100–500     → 1.00 (neutral)
+₹500–2,000   → 0.85 (moderate income gate)
+₹2,000–10,000 → 0.70 (strong income gate, limits to metro/affluent T2)
+Above ₹10,000 → 0.55 (severe income gate, viable only in top metros)
+
+━━━ DISTRIBUTION LEVEL ━━━
+0 → Brand sells direct only (luxury D2C, flagship store, no intermediaries)
+1 → One intermediary (brand → retailer direct, or brand → marketplace FBA)
+2 → Two levels (brand → regional distributor → retailer)
+3 → Three levels (brand → super-stockist → sub-distributor → retailer)
+
+━━━ DISTRIBUTION TYPE ━━━
+exclusive  → very few points of sale, brand experience paramount (luxury)
+selective  → quality outlets in right formats (premium gyms, pharmacies, modern trade)
+intensive  → maximum reach, everywhere the target buyer shops (mass FMCG)
+
+━━━ DISTRIBUTOR PROFILE ━━━
+direct         → brand-owned sales or key account direct
+retailer       → modern trade and priority multi-brand retailers
+wholesaler     → regional wholesalers covering sub-distributors
+broker-agent   → broker-agent network for last-mile market activation
+
+━━━ SEASONALITY ━━━
+A short phrase describing the seasonality of demand for this product category in India (e.g. "Peak demand during summer (April-June)", "No seasonal bias", "Peak demand during winter/festive season").`;
+
+// ─── Helpers ─────────────────────────────────────────────────────────────────
+
+function getProfile(payload: unknown): ProductProfile | null {
   if (
     typeof payload === "object" &&
     payload !== null &&
-    "prompt" in payload &&
-    typeof payload.prompt === "string"
+    "profile" in payload &&
+    typeof (payload as any).profile === "object" &&
+    (payload as any).profile !== null
   ) {
-    return payload.prompt;
+    return (payload as any).profile as ProductProfile;
   }
-
   return null;
 }
 
@@ -47,6 +125,54 @@ function parseJson(text: string): ExtractedFeatures {
   return JSON.parse(trimmed.slice(start, end + 1)) as ExtractedFeatures;
 }
 
+function buildPrompt(profile: ProductProfile): string {
+  const lines = [
+    `PRODUCT PROFILE TO ANALYSE:`,
+    ``,
+    `Product:      ${profile.productName} (${profile.subcategory} · ${profile.category})`,
+    `Price:        ₹${profile.priceINR} per ${profile.packSize}`,
+    `Margin:       ${profile.marginPercent}%`,
+    `Cold chain:   ${profile.needsColdChain ? "Required" : "Not required"}`,
+    profile.shelfLifeDays
+      ? `Shelf life:   ${profile.shelfLifeDays} days`
+      : `Shelf life:   Not applicable`,
+    ``,
+    `Brand:        ${profile.brandName} (${profile.brandMaturity} brand)`,
+    `Current channels: ${profile.currentChannels.length ? profile.currentChannels.join(", ") : "None yet"}`,
+    `Current cities:   ${profile.currentCities || "None yet"}`,
+    `Capacity:     ${profile.monthlyCapacityUnits}`,
+    `Launch budget: ${profile.launchBudgetINR}`,
+    `Warehouse:    ${profile.warehouseCity || "Not specified"}`,
+    `Delivery Radius: ${profile.deliveryRadiusKM} km`,
+    ``,
+    `Target customer: ${profile.targetCustomer}`,
+    `Income target:   ${profile.incomeTarget} (${
+      profile.incomeTarget === "mass"
+        ? "₹3–8L/yr"
+        : profile.incomeTarget === "mid"
+        ? "₹8–20L/yr"
+        : "₹20L+/yr"
+    })`,
+    `Preferred region: ${profile.preferredRegion}${
+      profile.specificRegion ? ` (${profile.specificRegion})` : ""
+    }`,
+    ``,
+    `Preferred channels: ${profile.preferredChannels.join(", ")}`,
+    `Distributor status: ${profile.hasDistributor}`,
+    ``,
+    `Primary goal:   ${profile.primaryGoal}`,
+    `Launch timeline: ${profile.launchTimeline}`,
+    `Success metric:  ${profile.successMetric}`,
+    profile.competitors
+      ? `Known competitors: ${profile.competitors}`
+      : `Known competitors: Not specified`,
+  ];
+
+  return lines.join("\n");
+}
+
+// ─── Route handler ────────────────────────────────────────────────────────────
+
 export async function POST(request: Request) {
   try {
     const apiKey = process.env.GEMINI_API_KEY;
@@ -55,26 +181,82 @@ export async function POST(request: Request) {
       throw new Error("Missing GEMINI_API_KEY in .env.local.");
     }
 
-    const prompt = getPrompt(await request.json());
+    const profile = getProfile(await request.json());
 
-    if (!prompt) {
-      return Response.json({ message: "Prompt is required." }, { status: 400 });
+    if (!profile) {
+      return Response.json(
+        { message: "A valid product profile object is required." },
+        { status: 400 }
+      );
     }
 
+    const promptText = buildPrompt(profile);
+    const cacheKey = generateCacheKey("extract", promptText);
+
+    // 1. EXACT MATCH CHECK (Redis Tier)
+    if (redis) {
+      try {
+        const cached = await redis.get<ExtractedFeatures>(cacheKey);
+        if (cached !== null && cached !== undefined) {
+          console.log(`[CACHE EXACT HIT] ${cacheKey}`);
+          return Response.json(cached);
+        }
+      } catch (error) {
+        console.error(`[CACHE ERROR] Exact match read error for ${cacheKey}:`, error);
+      }
+    }
+
+    // 2. SIMILARITY CHECK (pgvector Tier)
+    let similarMatch: { features: ExtractedFeatures; similarity: number } | null = null;
+
+    if (process.env.PGVECTOR_DISABLED !== "true") {
+      try {
+        const embeddingInput = buildEmbeddingInput(profile);
+        const embedding = await generateEmbedding(embeddingInput);
+        similarMatch = await findSimilarAnalysis(embedding, 0.90);
+      } catch (error) {
+        console.error("[CACHE SIMILARITY ERROR] Failed semantic match check:", error);
+      }
+    }
+
+    let activeSystemPrompt = systemPrompt;
+    if (similarMatch) {
+      console.log(`[CACHE SIMILAR MATCH] similarity score: ${similarMatch.similarity.toFixed(4)}`);
+      activeSystemPrompt = `${systemPrompt}
+
+REFERENCE CONTEXT: A similar product was previously analyzed with this extracted profile:
+${JSON.stringify(similarMatch.features, null, 2)}
+Use this as a starting reference for consistency, but adjust every field based on what is actually different in the new product description below — particularly any differences in price, target audience, distribution channels, or product specifics. Do not copy the reference blindly; it exists only to keep similar products scored consistently, not to override genuine differences.`;
+    } else {
+      console.log(`[CACHE MISS - FRESH EXTRACTION]`);
+    }
+
+    // 3. CALL GEMINI FOR EXTRACTION
     const genAI = new GoogleGenerativeAI(apiKey);
     const model = genAI.getGenerativeModel({
       model: "gemini-2.5-flash",
-      systemInstruction: systemPrompt
+      systemInstruction: activeSystemPrompt
     });
 
-    const result = await model.generateContent(prompt);
+    const result = await model.generateContent(promptText);
     const text = result.response.text();
+    const extractedFeatures = parseJson(text);
 
-    return Response.json(parseJson(text));
+    // 4. STORE EXACT MATCH IN REDIS
+    if (redis) {
+      try {
+        const SEVEN_DAYS_IN_SECONDS = 7 * 24 * 60 * 60;
+        await redis.set(cacheKey, extractedFeatures, { ex: SEVEN_DAYS_IN_SECONDS });
+      } catch (error) {
+        console.error(`[CACHE ERROR] Failed to set Redis exact key ${cacheKey}:`, error);
+      }
+    }
+
+    return Response.json(extractedFeatures);
   } catch (error) {
     const message =
       error instanceof Error ? error.message : "Feature extraction failed.";
-
     return Response.json({ message }, { status: 500 });
   }
 }
+
