@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 import { ArrowLeft, Filter } from "lucide-react";
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import CityPanel from "@/components/CityPanel";
 import MemoBox from "@/components/MemoBox";
@@ -11,6 +11,8 @@ import ScoreBreakdown from "@/components/ScoreBreakdown";
 import ChannelMixCard from "@/components/ChannelMixCard";
 import RiskRegisterCard from "@/components/RiskRegister";
 import GtmPlanCard from "@/components/GtmPlan";
+import ScenarioSimulator from "@/components/ScenarioSimulator";
+import CompetitionCard from "@/components/CompetitionCard";
 import type { AnalysisResult, ScoredCity } from "@/lib/types";
 
 const DistributionMap = dynamic(() => import("@/components/Map"), {
@@ -53,6 +55,15 @@ export default function ResultsPage() {
   const router = useRouter();
   const [result, setResult] = useState<AnalysisResult | null>(null);
   const [selectedCity, setSelectedCity] = useState<ScoredCity | null>(null);
+  // Scenario simulator override — null means use original scores
+  const [simulatedScores, setSimulatedScores] = useState<ScoredCity[] | null>(null);
+
+  const handleSimulatedScores = useCallback((scores: ScoredCity[] | null) => {
+    setSimulatedScores(scores);
+    // When simulator activates, reset city selection to the new top city
+    if (scores && scores.length > 0) setSelectedCity(scores[0]);
+    else if (result) setSelectedCity(result.scores[0] ?? null);
+  }, [result]);
 
   // Filter States
   const [regionFilter, setRegionFilter] = useState<"all" | "metro" | "tier2">("all");
@@ -77,11 +88,14 @@ export default function ResultsPage() {
     }
   }, [router]);
 
+  // Use simulated scores when simulator is active, otherwise original
+  const activeScores = simulatedScores ?? result?.scores ?? [];
+
   // Apply filters to city rankings
   const filteredScores = useMemo(() => {
     if (!result) return [];
     
-    return result.scores.filter((city) => {
+    return activeScores.filter((city) => {
       // 1. Region / Tier filter
       if (regionFilter === "metro" && city.tier !== 1) return false;
       if (regionFilter === "tier2" && city.tier === 1) return false;
@@ -98,7 +112,7 @@ export default function ResultsPage() {
 
       return true;
     });
-  }, [result, regionFilter, radiusFilter, confidenceFilter]);
+  }, [result, activeScores, regionFilter, radiusFilter, confidenceFilter]);
 
   // Sync selected city when filters change so we don't display a filtered-out city
   useEffect(() => {
@@ -253,6 +267,12 @@ export default function ResultsPage() {
           </span>
         </section>
 
+        {/* Scenario Simulator */}
+        <ScenarioSimulator
+          originalResult={result}
+          onSimulatedScores={handleSimulatedScores}
+        />
+
         {/* Map & Listings panel */}
         <section className="grid gap-5 md:grid-cols-[minmax(0,1.55fr)_minmax(320px,0.75fr)]">
           <div className="grid min-w-0 gap-5">
@@ -287,6 +307,11 @@ export default function ResultsPage() {
             <RiskRegisterCard result={result} />
             <GtmPlanCard result={result} />
           </section>
+          {result.competitionIntelligence && (
+            <div className="mt-5">
+              <CompetitionCard data={result.competitionIntelligence} />
+            </div>
+          )}
         </div>
       </div>
     </main>

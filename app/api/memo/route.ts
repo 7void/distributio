@@ -3,6 +3,7 @@ import type { ExtractedFeatures, ScoredCity } from "@/lib/types";
 import { createAnalysis } from "@/db/queries";
 import { getOrSet, generateCacheKey } from "@/lib/cache";
 import { generateEmbedding } from "@/lib/embeddings";
+import { generateContentWithRetry } from "@/lib/gemini-retry";
 
 interface MemoPayload {
   features: ExtractedFeatures;
@@ -81,8 +82,9 @@ export async function POST(request: Request) {
       TWENTY_FOUR_HOURS_IN_SECONDS,
       async () => {
         const genAI = new GoogleGenerativeAI(apiKey);
-        const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
-        const result = await model.generateContent(memoPrompt);
+        const modelName = process.env.GEMINI_MODEL || "gemini-2.5-flash";
+        const model = genAI.getGenerativeModel({ model: modelName });
+        const result = await generateContentWithRetry(model, memoPrompt);
         return result.response.text().trim();
       }
     );

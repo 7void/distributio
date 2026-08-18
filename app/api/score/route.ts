@@ -1,9 +1,11 @@
 import { scoreCities } from "@/lib/score";
-import type { ExtractedFeatures, ProductProfile } from "@/lib/types";
+import type { CompetitionIntelligence, ExtractedFeatures, ProductProfile } from "@/lib/types";
+import { getCities } from "@/db/queries";
 
 interface ScorePayload {
   features: ExtractedFeatures;
   profile?: ProductProfile;
+  competitionIntelligence?: CompetitionIntelligence;
 }
 
 function isScorePayload(payload: unknown): payload is ScorePayload {
@@ -26,7 +28,19 @@ export async function POST(request: Request) {
       );
     }
 
-    const scores = await scoreCities(payload.features, payload.profile);
+    let cityData;
+    try {
+      cityData = await getCities();
+    } catch {
+      // Fallback handled inside scoreCities default parameter
+    }
+
+    const scores = scoreCities(
+      payload.features,
+      payload.profile,
+      payload.competitionIntelligence,
+      cityData
+    );
     return Response.json(scores);
   } catch (error) {
     const message =

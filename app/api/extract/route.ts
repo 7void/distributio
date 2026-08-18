@@ -4,6 +4,7 @@ import { generateCacheKey } from "@/lib/cache";
 import { redis } from "@/lib/redis";
 import { buildEmbeddingInput, generateEmbedding } from "@/lib/embeddings";
 import { findSimilarAnalysis } from "@/db/queries";
+import { generateContentWithRetry } from "@/lib/gemini-retry";
 
 // ─── System prompt ────────────────────────────────────────────────────────────
 
@@ -35,10 +36,24 @@ OUTPUT SCHEMA (return exactly this):
 }
 
 ━━━ PRICE SEGMENT RULES ━━━
-mass    → priceINR < 100
-mid     → priceINR 100–500
-premium → priceINR 500–5,000
-luxury  → priceINR > 5,000
+Do NOT use absolute price thresholds alone. You MUST evaluate priceINR relative to BOTH the product category AND the packSize (quantity).
+The absolute ranges below are general starting guidelines for standard bulk FMCG only. Override them using category and pack size context.
+
+Critical Examples to calibrate your judgment:
+  - ₹90 / 500g Family Pack Biscuits      → mass    (high quantity, staple FMCG)
+  - ₹90 / Single 15g Artisanal Cookie    → premium (tiny quantity, indulgence)
+  - ₹90 / Single Ice Cream Cone (90ml)   → premium (small indulgence, not daily staple)
+  - ₹90 / 1-Litre Ice Cream Tub          → mid     (standard family-size unit)
+  - ₹500 / Basic Cotton T-Shirt          → mass    (standard apparel price point)
+  - ₹500 / 10ml Perfume Vial             → premium (small luxury)
+  - ₹200 / 1kg Atta (Wheat Flour)        → mass    (staple commodity)
+  - ₹200 / 200ml Craft Cold Brew Coffee  → premium (urban lifestyle product)
+
+General Guidelines (override with context):
+mass    → cheap relative to category norms and pack size; daily staple; accessible to bottom 60% of India
+mid     → standard pricing for the category; accessible to middle class
+premium → expensive relative to category norms or small pack size; aspirational
+luxury  → extreme status symbol; priceINR > 5,000 OR ultra-small quantity of rare goods
 
 ━━━ WEIGHT CALIBRATION RULES ━━━
 All five weights (incomeWeight, retailWeight, internetWeight, coldWeight, logisticsWeight) must sum exactly to 1.0.
@@ -72,11 +87,19 @@ logisticsWeight:
 ━━━ AFFORDABILITY MULTIPLIER ━━━
 Applied as a penalty scaler to income and retail scoring signals only (not the whole score).
 Reflects how price constrains the addressable consumer base and retail shelf willingness.
-Under ₹100   → 1.10 (cheap products boost accessibility)
-₹100–500     → 1.00 (neutral)
-₹500–2,000   → 0.85 (moderate income gate)
-₹2,000–10,000 → 0.70 (strong income gate, limits to metro/affluent T2)
-Above ₹10,000 → 0.55 (severe income gate, viable only in top metros)
+Do NOT derive this from absolute price alone. Derive it from the priceSegment you assigned above (which already accounts for category and pack size).
+
+mass    → 1.10 (product is cheap for its category; sachet/bulk pricing expands addressable market)
+mid     → 1.00 (neutral; standard pricing for the category)
+premium → 0.85 (moderate income gate; restricts to upper-middle class and metros)
+premium (high) → 0.70 (strong income gate; if product is highly expensive for its category)
+luxury  → 0.55 (severe income gate; viable only in top 8 metros)
+
+Examples:
+  - ₹90 Single Ice Cream Cone → priceSegment: premium → affordability: 0.85
+  - ₹90 500g Biscuit Pack     → priceSegment: mass    → affordability: 1.10
+  - ₹500 Basic T-Shirt        → priceSegment: mass    → affordability: 1.10
+  - ₹500 10ml Perfume Vial    → priceSegment: premium → affordability: 0.85
 
 ━━━ DISTRIBUTION LEVEL ━━━
 0 → Brand sells direct only (luxury D2C, flagship store, no intermediaries)
@@ -233,12 +256,17 @@ Use this as a starting reference for consistency, but adjust every field based o
 
     // 3. CALL GEMINI FOR EXTRACTION
     const genAI = new GoogleGenerativeAI(apiKey);
+    const modelName = process.env.GEMINI_MODEL || "gemini-1.5-flash";
     const model = genAI.getGenerativeModel({
-      model: "gemini-2.5-flash",
-      systemInstruction: activeSystemPrompt
+      model: modelName,
+      systemInstruction: activeSystemPrompt,
+      generationConfig: {
+        temperature: 0.1,
+        responseMimeType: "application/json",
+      },
     });
 
-    const result = await model.generateContent(promptText);
+    const result = await generateContentWithRetry(model, promptText);
     const text = result.response.text();
     const extractedFeatures = parseJson(text);
 
