@@ -7,6 +7,7 @@ import { scoreCities } from "@/lib/score";
 import type {
   AnalysisResult,
   BrandMaturity,
+  CompetitionIntelligence,
   ExtractedFeatures,
   IncomeTarget,
   ProductProfile
@@ -106,7 +107,7 @@ const RADIUS_OPTIONS = [
 
 const LOADING_PHASES = [
   "READING PRODUCT PROFILE",
-  "CALIBRATING WEIGHTS",
+  "RESEARCHING COMPETITION",
   "SCORING 50+ MARKETS",
   "WRITING STRATEGY"
 ];
@@ -752,6 +753,9 @@ function Step5({
           onChange={(v) => onChange({ competitors: v })}
           placeholder="e.g. Red Bull, Monster, Sting"
         />
+        <p className="mt-1 text-[9px] text-[#7a9678]">
+          Gemini will automatically research the competitive landscape for your exact price point. Named competitors above are used as additional hints.
+        </p>
       </FieldWrap>
     </div>
   );
@@ -825,10 +829,25 @@ export default function OnboardingPage() {
       const features = (await extractRes.json()) as ExtractedFeatures;
       setPhaseIndex(1);
 
-      // Phase 2-3: Score all cities locally using dynamic data & profiles
-      await new Promise((r) => setTimeout(r, 400)); // UX pause
-      const scores = scoreCities(features, data);
+      // Phase 2: Gemini researches competition at the exact price-point sub-segment
+      // Runs in parallel with a UX pause so the loading phase is visible
+      const [competitionRes] = await Promise.all([
+        fetch("/api/competition", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ features, profile: data })
+        }),
+        new Promise((r) => setTimeout(r, 600)) // minimum phase visibility
+      ]);
+
+      // Competition API never throws — it returns a safe fallback on error
+      const competitionIntelligence = (await competitionRes.json()) as CompetitionIntelligence;
       setPhaseIndex(2);
+
+      // Phase 3: Score all cities using features + dynamic competition penalties
+      await new Promise((r) => setTimeout(r, 300));
+      const scores = scoreCities(features, data, competitionIntelligence);
+      setPhaseIndex(3);
 
       // Phase 4: Generate strategy memo
       const memoRes = await fetch("/api/memo", {
@@ -843,7 +862,6 @@ export default function OnboardingPage() {
       }
 
       const { memo } = (await memoRes.json()) as { memo: string };
-      setPhaseIndex(3);
 
       const promptSummary = `${data.productName} — ${data.subcategory} at ₹${data.priceINR} (${data.marginPercent}% margin). dispatch from: ${data.warehouseCity}. Target: ${data.targetCustomer}.`;
 
@@ -852,7 +870,8 @@ export default function OnboardingPage() {
         scores,
         memo,
         prompt: promptSummary,
-        profile: data
+        profile: data,
+        competitionIntelligence
       };
 
       window.localStorage.setItem("distributio_result", JSON.stringify(result));

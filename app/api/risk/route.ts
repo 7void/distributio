@@ -1,5 +1,6 @@
 import { GoogleGenerativeAI, Schema, SchemaType } from "@google/generative-ai";
 import type { ExtractedFeatures, ScoredCity } from "@/lib/types";
+import { generateContentWithRetry } from "@/lib/gemini-retry";
 
 interface Payload {
   features: ExtractedFeatures;
@@ -58,15 +59,16 @@ export async function POST(request: Request) {
     const payload = (await request.json()) as Payload;
 
     const genAI = new GoogleGenerativeAI(apiKey);
+    const modelName = process.env.GEMINI_MODEL || "gemini-1.5-flash";
     const model = genAI.getGenerativeModel({
-      model: "gemini-2.5-flash",
+      model: modelName,
       generationConfig: {
         responseMimeType: "application/json",
         responseSchema: riskSchema,
       },
     });
 
-    const result = await model.generateContent(buildPrompt(payload.features, payload.scores));
+    const result = await generateContentWithRetry(model, buildPrompt(payload.features, payload.scores));
     return new Response(result.response.text(), {
       headers: { "Content-Type": "application/json" },
     });

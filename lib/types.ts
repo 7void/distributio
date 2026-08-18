@@ -45,6 +45,8 @@ export interface ScoreBreakdown {
   logisticsContribution: number;
   // Strategic adjustment total (tier, brand maturity, goal alignment, etc.)
   adjustmentContribution: number;
+  // Competition penalty deducted (Competitor Intelligence Layer)
+  competitionPenalty: number;
   // How much % the margin feasibility multiplier scaled the score (e.g. 18 means -18%)
   feasibilityImpactPct: number;
   // Points lost due to exceeding delivery radius (0 if within radius)
@@ -94,12 +96,26 @@ export interface ExtractedFeatures {
   seasonality: string;
 }
 
+export interface CompetitionIntelligence {
+  hhi_estimate: number;                 // Herfindahl–Hirschman Index (0–10000)
+  market_concentration: "low" | "medium" | "high";
+  top_competitors: { name: string; estimated_share_pct: number }[];
+  entry_barrier: "low" | "medium" | "high";
+  competition_penalty: {
+    tier1: number;    // pts deducted for Tier-1 metros
+    tier2: number;    // pts deducted for Tier-2 cities
+    tier3: number;    // pts deducted for Tier-3 cities
+  };
+  reasoning: string; // Gemini's natural-language explanation
+}
+
 export interface AnalysisResult {
   features: ExtractedFeatures;
   scores: ScoredCity[];
   memo: string;
   prompt: string;
   profile?: ProductProfile;
+  competitionIntelligence?: CompetitionIntelligence;
 }
 
 // ─── Product Profile (structured onboarding form) ────────────────────────────

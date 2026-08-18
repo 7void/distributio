@@ -90,6 +90,25 @@ export default function ScoreBreakdown({ city }: ScoreBreakdownProps) {
         </p>
       </div>
 
+      {/* Competition penalty — only shown when nonzero */}
+      {bd.competitionPenalty > 0 && (
+        <div className="mt-3 grid gap-3">
+          <div className="flex items-center justify-between text-xs">
+            <span className="text-[#7a9678]">Competition Penalty</span>
+            <span className="text-[#ff6644]">-{bd.competitionPenalty} pts</span>
+          </div>
+          <div className="h-1.5 bg-[#111c12]">
+            <div
+              className="h-full bg-[#ff9933] transition-all duration-500"
+              style={{ width: `${Math.min(bd.competitionPenalty * 10, 100)}%` }}
+            />
+          </div>
+          <p className="text-[10px] text-[#2e4d30]">
+            Competitive rivalry intensity (Porter 1980) — harder shelf entry in saturated metros
+          </p>
+        </div>
+      )}
+
       {/* Logistics feasibility impact */}
       <div className="mt-3 grid gap-3">
         <div className="flex items-center justify-between text-xs">
