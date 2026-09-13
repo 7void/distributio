@@ -333,19 +333,23 @@ export function scoreCities(
       // Penalties are researched per price-point sub-segment by Gemini, not a static table.
       // Fallback: medium competition assumed (tier1=-5, tier2=-2, tier3=0) if no intelligence.
       let competitionPenalty = 0;
-      if (competitionIntelligence) {
+      if (competitionIntelligence && competitionIntelligence.competition_penalty) {
         const cp = competitionIntelligence.competition_penalty;
-        if (city.tier === 1) competitionPenalty = cp.tier1;
-        else if (city.tier === 2) competitionPenalty = cp.tier2;
-        else competitionPenalty = cp.tier3;
+        if (city.tier === 1) competitionPenalty = cp.tier1 ?? 5;
+        else if (city.tier === 2) competitionPenalty = cp.tier2 ?? 2;
+        else competitionPenalty = cp.tier3 ?? 0;
       } else {
-        // Conservative fallback (medium competition) — used when API call is skipped
+        // Conservative fallback (medium competition) — used when API call is skipped or fails
         competitionPenalty = city.tier === 1 ? 5 : city.tier === 2 ? 2 : 0;
       }
+      // Guarantee positive penalty (so it correctly subtracts instead of adding)
+      competitionPenalty = Math.max(0, competitionPenalty);
       adjustment -= competitionPenalty;
 
       // Combine base + affordability drift + strategic adjustments
-      let raw = baseScore + affordabilityAdjustment + adjustment;
+      // Clamp to 0 BEFORE applying multiplicative penalties, otherwise a negative score
+      // multiplied by a fractional penalty (e.g., -10 * 0.5) would mathematically INCREASE the score!
+      let raw = Math.max(0, baseScore + affordabilityAdjustment + adjustment);
 
       // ── 5. Unit economics & logistics feasibility ──────────────────────────
       let distance = 0;
@@ -381,30 +385,33 @@ export function scoreCities(
       baseLogisticsCost *= (VOLUME_DISCOUNT[features.priceSegment] ?? 0.50);
       const logisticsCostPerUnit = Math.round(Math.max(2, Math.min(baseLogisticsCost, 95)));
 
-      // ── CITED: Horngren et al., Cost Accounting 15th ed. (Pearson) ──
-      // Break-even formula: Fixed Costs ÷ Contribution Margin per Unit.
-      const marginPercent = profile?.marginPercent ?? 30;
-      const unitMarginBeforeLogistics = features.priceINR * (marginPercent / 100);
-      const marginPerUnit = Math.round(Math.max(0, unitMarginBeforeLogistics - logisticsCostPerUnit));
+      // ── CITED: FMCG Margin Realities (Unilever, ITC benchmarks) ──
+      // The user inputs 'Net Margin' (e.g. 10%), which is a very healthy bottom-line profit.
+      // Previous logic treated this as Gross Margin and double-deducted logistics, destroying the score.
+      const marginPercent = profile?.marginPercent ?? 15;
+      
+      // Calculate Gross Margin proxy to figure out break-even. (Net margin + ~20% avg logistics/SG&A buffer)
+      const grossMarginPct = marginPercent + 20; 
+      const grossMarginPerUnit = features.priceINR * (grossMarginPct / 100);
+      const marginPerUnit = Math.round(Math.max(0, grossMarginPerUnit - logisticsCostPerUnit));
       const breakEvenUnits = marginPerUnit > 0 ? Math.round(budgetPerCity / marginPerUnit) : 999_999;
 
-      // Margin ratio: 0 = all margin eaten by freight, 1 = no logistics cost
-      const marginRatio = unitMarginBeforeLogistics > 0
-        ? marginPerUnit / unitMarginBeforeLogistics
-        : 0;
-
-      // ── CITED threshold + ENGINEERED curve ──
-      // Threshold: McKinsey CPG Value Creation Report (2021) & Bain FMCG Benchmarks (2022):
-      //   minimum viable contribution margin for FMCG = 35% of revenue.
-      //   Below 30% (Horngren et al.) = structurally unviable for new launch.
-      // ENGINEERED: The linear formula below uses these two anchor points:
-      //   marginRatio=1.0 → multiplier=1.00 (fully profitable)
-      //   marginRatio=0.0 → multiplier=0.30 (minimum floor; city retains brand-awareness value)
-      // Linear interpolation between the cited anchor points. Verified: smooth, no discontinuities.
-      let marginMultiplier = 0.30 + (marginRatio * 0.70); // range: [0.30, 1.00]
-      // Extra penalty below McKinsey's 35% viability threshold for profit-focused brands.
-      if (primaryGoal === "profitability" && marginRatio < 0.35) {
-        marginMultiplier *= 0.75; // additional 25% haircut below the 35% viability threshold
+      const logisticsPctOfPrice = logisticsCostPerUnit / features.priceINR;
+      
+      // ENGINEERED: Max viable logistics cost scales with the product's net margin. 
+      // A 10% net margin product can absorb ~25% logistics cost before becoming unviable in distant cities.
+      // A 40% net margin product can absorb ~55% logistics cost.
+      const maxViableLogisticsPct = (marginPercent / 100) + 0.15; 
+      
+      let marginMultiplier = 1.0;
+      if (logisticsPctOfPrice > maxViableLogisticsPct) {
+        const excess = logisticsPctOfPrice - maxViableLogisticsPct;
+        marginMultiplier = Math.max(0.30, 1.0 - (excess * 4)); // smooth drop to 0.30 floor
+      }
+      
+      // Extra penalty if goal is profitability and logistics exceed viability threshold
+      if (primaryGoal === "profitability" && marginMultiplier < 1.0) {
+        marginMultiplier *= 0.85; 
       }
 
       raw *= marginMultiplier;

@@ -2,6 +2,9 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 import type { CompetitionIntelligence, ExtractedFeatures, ProductProfile } from "@/lib/types";
 import { generateContentWithRetry } from "@/lib/gemini-retry";
 
+export const dynamic = "force-dynamic";
+export const maxDuration = 60;
+
 // ─── System prompt ─────────────────────────────────────────────────────────────
 
 const systemPrompt = `You are a market intelligence analyst specialising in Indian consumer goods competitive landscapes.
@@ -78,6 +81,7 @@ Return ONLY the JSON object as specified.`;
       systemInstruction: systemPrompt,
       generationConfig: {
         temperature: 0.2,
+        maxOutputTokens: 2000,
         responseMimeType: "application/json",
       },
     });
@@ -86,12 +90,24 @@ Return ONLY the JSON object as specified.`;
     const raw = result.response.text().trim();
 
     // Parse and validate the response
-    const parsed = JSON.parse(raw) as CompetitionIntelligence;
+    let parsed: CompetitionIntelligence;
+    try {
+      // In case Gemini returns markdown blocks despite responseMimeType
+      const trimmed = raw.trim();
+      const start = trimmed.indexOf("{");
+      const end = trimmed.lastIndexOf("}");
+      parsed = JSON.parse(start !== -1 && end !== -1 ? trimmed.slice(start, end + 1) : trimmed) as CompetitionIntelligence;
+    } catch (e) {
+      throw new Error("Failed to parse competition JSON: " + e);
+    }
 
-    // Clamp penalties to safe bounds
-    parsed.competition_penalty.tier1 = Math.max(0, Math.min(15, parsed.competition_penalty.tier1));
-    parsed.competition_penalty.tier2 = Math.max(0, Math.min(8,  parsed.competition_penalty.tier2));
-    parsed.competition_penalty.tier3 = Math.max(0, Math.min(4,  parsed.competition_penalty.tier3));
+    // Safely Clamp penalties to safe bounds, avoiding undefined errors
+    if (!parsed.competition_penalty) {
+      parsed.competition_penalty = { tier1: 5, tier2: 2, tier3: 0 };
+    }
+    parsed.competition_penalty.tier1 = Math.max(0, Math.min(15, parsed.competition_penalty.tier1 ?? 5));
+    parsed.competition_penalty.tier2 = Math.max(0, Math.min(8,  parsed.competition_penalty.tier2 ?? 2));
+    parsed.competition_penalty.tier3 = Math.max(0, Math.min(4,  parsed.competition_penalty.tier3 ?? 0));
 
     return Response.json(parsed);
   } catch (error) {

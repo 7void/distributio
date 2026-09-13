@@ -841,8 +841,19 @@ export default function OnboardingPage() {
         new Promise((r) => setTimeout(r, 600)) // minimum phase visibility
       ]);
 
-      // Competition API never throws — it returns a safe fallback on error
-      const competitionIntelligence = (await competitionRes.json()) as CompetitionIntelligence;
+      // Competition API usually never throws — it returns a safe fallback on error inside the route.
+      // However, we check .ok in case of a hard 504 server timeout or deployment platform crash.
+      let competitionIntelligence: CompetitionIntelligence;
+      if (competitionRes.ok) {
+        competitionIntelligence = (await competitionRes.json()) as CompetitionIntelligence;
+      } else {
+        competitionIntelligence = {
+          proxy_hhi: 2500,
+          competition_penalty: { tier1: 5, tier2: 2, tier3: 0 },
+          five_forces_analysis: "Fallback triggered due to upstream timeout.",
+          top_competitors: []
+        };
+      }
       setPhaseIndex(2);
 
       // Phase 3: Score all cities using features + dynamic competition penalties

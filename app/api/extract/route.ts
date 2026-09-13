@@ -6,6 +6,9 @@ import { buildEmbeddingInput, generateEmbedding } from "@/lib/embeddings";
 import { findSimilarAnalysis } from "@/db/queries";
 import { generateContentWithRetry } from "@/lib/gemini-retry";
 
+export const dynamic = "force-dynamic";
+export const maxDuration = 60;
+
 // ─── System prompt ────────────────────────────────────────────────────────────
 
 const systemPrompt = `You are a distribution intelligence engine for Indian consumer markets.
@@ -142,7 +145,7 @@ function parseJson(text: string): ExtractedFeatures {
   const end = trimmed.lastIndexOf("}");
 
   if (start === -1 || end === -1 || end <= start) {
-    throw new Error("Gemini did not return a JSON object.");
+    throw new Error("Gemini did not return a JSON object. Raw response: " + text.slice(0, 100));
   }
 
   return JSON.parse(trimmed.slice(start, end + 1)) as ExtractedFeatures;
@@ -262,6 +265,7 @@ Use this as a starting reference for consistency, but adjust every field based o
       systemInstruction: activeSystemPrompt,
       generationConfig: {
         temperature: 0.1,
+        maxOutputTokens: 2000,
         responseMimeType: "application/json",
       },
     });

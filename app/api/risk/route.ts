@@ -2,6 +2,9 @@ import { GoogleGenerativeAI, Schema, SchemaType } from "@google/generative-ai";
 import type { ExtractedFeatures, ScoredCity } from "@/lib/types";
 import { generateContentWithRetry } from "@/lib/gemini-retry";
 
+export const dynamic = "force-dynamic";
+export const maxDuration = 60;
+
 interface Payload {
   features: ExtractedFeatures;
   scores: ScoredCity[];
@@ -63,6 +66,8 @@ export async function POST(request: Request) {
     const model = genAI.getGenerativeModel({
       model: modelName,
       generationConfig: {
+        temperature: 0.2,
+        maxOutputTokens: 2000,
         responseMimeType: "application/json",
         responseSchema: riskSchema,
       },
