@@ -103,7 +103,12 @@ export default function ScenarioSimulator({
       priceINR: price,
       warehouseCity: warehouse,
     };
-    return scoreCities(newFeatures, newProfile, originalResult.competitionIntelligence);
+    return scoreCities(
+      newFeatures,
+      newProfile,
+      originalResult.competitionIntelligence,
+      originalResult.scores
+    );
   }, [margin, price, warehouse, hasChanges, originalResult, originalPrice, originalAffordability]);
 
   const handleApply = useCallback(() => {

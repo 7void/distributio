@@ -845,9 +845,30 @@ export default function OnboardingPage() {
       const competitionIntelligence = (await competitionRes.json()) as CompetitionIntelligence;
       setPhaseIndex(2);
 
-      // Phase 3: Score all cities using features + dynamic competition penalties
-      await new Promise((r) => setTimeout(r, 300));
-      const scores = scoreCities(features, data, competitionIntelligence);
+      // Phase 3: Score all cities using features + dynamic competition penalties (queries PostgreSQL via /api/score)
+      let scores: ScoredCity[];
+      try {
+        const [scoreRes] = await Promise.all([
+          fetch("/api/score", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              features,
+              profile: data,
+              competitionIntelligence
+            })
+          }),
+          new Promise((r) => setTimeout(r, 300)) // minimum phase visibility
+        ]);
+
+        if (!scoreRes.ok) {
+          throw new Error(`Score API returned status ${scoreRes.status}`);
+        }
+        scores = (await scoreRes.json()) as ScoredCity[];
+      } catch (err) {
+        console.warn("Score API request failed, using local scoring fallback:", err);
+        scores = scoreCities(features, data, competitionIntelligence);
+      }
       setPhaseIndex(3);
 
       const promptSummary = `${data.productName} — ${data.subcategory} at ₹${data.priceINR} (${data.marginPercent}% margin). dispatch from: ${data.warehouseCity}. Target: ${data.targetCustomer}.`;

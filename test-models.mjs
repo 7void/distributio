@@ -1,17 +1,25 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import dotenv from "dotenv";
+import fs from "node:fs";
 
-dotenv.config({ path: ".env.local" });
+if (fs.existsSync(".env.local")) {
+  const envContent = fs.readFileSync(".env.local", "utf8");
+  for (const line of envContent.split("\n")) {
+    const [key, ...rest] = line.trim().split("=");
+    if (key && rest.length > 0 && !process.env[key]) {
+      process.env[key] = rest.join("=");
+    }
+  }
+}
 
 async function run() {
   const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-  // Just try to instantiate gemini-1.5-flash-latest
+  const modelName = process.env.GEMINI_MODEL || "gemini-2.5-flash";
   try {
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest" });
+    const model = genAI.getGenerativeModel({ model: modelName });
     const result = await model.generateContent("hello");
-    console.log("SUCCESS with gemini-1.5-flash-latest");
+    console.log(`SUCCESS with ${modelName}`);
   } catch(e) {
-    console.log("FAILED gemini-1.5-flash-latest:", e.message);
+    console.log(`FAILED ${modelName}:`, e.message);
   }
 }
 run();

@@ -30,7 +30,10 @@ export async function POST(request: Request) {
 
     let cityData;
     try {
-      cityData = await getCities();
+      const dbCities = await getCities();
+      if (dbCities && dbCities.length > 0) {
+        cityData = dbCities;
+      }
     } catch {
       // Fallback handled inside scoreCities default parameter
     }

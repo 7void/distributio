@@ -52,8 +52,9 @@ Return ONLY a valid JSON array of objects. Do not wrap it in markdown code block
 }`;
 
   const genAI = new GoogleGenerativeAI(apiKey);
+  const modelName = process.env.GEMINI_MODEL || "gemini-2.5-flash";
   const model = genAI.getGenerativeModel({
-    model: "gemini-2.5-flash",
+    model: modelName,
     generationConfig: {
       responseMimeType: "application/json"
     }

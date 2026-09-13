@@ -256,7 +256,7 @@ Use this as a starting reference for consistency, but adjust every field based o
 
     // 3. CALL GEMINI FOR EXTRACTION
     const genAI = new GoogleGenerativeAI(apiKey);
-    const modelName = process.env.GEMINI_MODEL || "gemini-1.5-flash";
+    const modelName = process.env.GEMINI_MODEL || "gemini-2.5-flash";
     const model = genAI.getGenerativeModel({
       model: modelName,
       systemInstruction: activeSystemPrompt,

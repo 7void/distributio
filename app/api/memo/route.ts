@@ -102,7 +102,8 @@ export async function POST(request: Request) {
           console.error("[PGVECTOR] Failed to generate embedding for analysis persistence:", err);
         }
       }
-      await createAnalysis(prompt, payload.features, memo, "gemini-2.5-flash", embedding);
+      const modelName = process.env.GEMINI_MODEL || "gemini-2.5-flash";
+      await createAnalysis(prompt, payload.features, memo, modelName, embedding);
     })().catch((err) => {
       console.error("Failed to persist analysis to database:", err);
     });

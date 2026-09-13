@@ -131,7 +131,7 @@ export async function createAnalysis(
   prompt: string,
   extractedFeatures: ExtractedFeatures,
   memo: string,
-  modelVersion: string = "gemini-2.5-flash",
+  modelVersion: string = process.env.GEMINI_MODEL || "gemini-2.5-flash",
   embedding?: number[]
 ): Promise<void> {
   await db.insert(analyses).values({

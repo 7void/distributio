@@ -69,7 +69,8 @@ Rules:
 
   try {
     const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
+    const modelName = process.env.GEMINI_MODEL || "gemini-2.5-flash";
+    const model = genAI.getGenerativeModel({ model: modelName });
     const result = await model.generateContent(prompt);
     const responseText = result.response.text();
     const data = parseJson(responseText);
