@@ -242,17 +242,22 @@ export async function POST(request: Request) {
       }
     }
 
-    let activeSystemPrompt = systemPrompt;
     if (similarMatch) {
-      console.log(`[CACHE SIMILAR MATCH] similarity score: ${similarMatch.similarity.toFixed(4)}`);
-      activeSystemPrompt = `${systemPrompt}
-
-REFERENCE CONTEXT: A similar product was previously analyzed with this extracted profile:
-${JSON.stringify(similarMatch.features, null, 2)}
-Use this as a starting reference for consistency, but adjust every field based on what is actually different in the new product description below — particularly any differences in price, target audience, distribution channels, or product specifics. Do not copy the reference blindly; it exists only to keep similar products scored consistently, not to override genuine differences.`;
-    } else {
-      console.log(`[CACHE MISS - FRESH EXTRACTION]`);
+      console.log(`[CACHE SIMILAR MATCH - BYPASSING GEMINI] similarity score: ${similarMatch.similarity.toFixed(4)}`);
+      // Short-circuit: return the matched extracted features directly from PostgreSQL
+      if (redis) {
+        try {
+          const SEVEN_DAYS_IN_SECONDS = 7 * 24 * 60 * 60;
+          await redis.set(cacheKey, similarMatch.features, { ex: SEVEN_DAYS_IN_SECONDS });
+        } catch (error) {
+          console.error(`[CACHE ERROR] Failed to set Redis exact key ${cacheKey}:`, error);
+        }
+      }
+      return Response.json(similarMatch.features);
     }
+
+    console.log(`[CACHE MISS - FRESH EXTRACTION]`);
+    const activeSystemPrompt = systemPrompt;
 
     // 3. CALL GEMINI FOR EXTRACTION
     const genAI = new GoogleGenerativeAI(apiKey);

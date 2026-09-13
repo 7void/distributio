@@ -2,7 +2,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 import type { ExtractedFeatures, ScoredCity } from "@/lib/types";
 import { createAnalysis } from "@/db/queries";
 import { getOrSet, generateCacheKey } from "@/lib/cache";
-import { generateEmbedding } from "@/lib/embeddings";
+import { generateEmbedding, buildEmbeddingInput } from "@/lib/embeddings";
 import { generateContentWithRetry } from "@/lib/gemini-retry";
 
 interface MemoPayload {
@@ -96,7 +96,7 @@ export async function POST(request: Request) {
       let embedding: number[] | undefined;
       if (process.env.PGVECTOR_DISABLED !== "true") {
         try {
-          const embedText = `Product: ${payload.features.productName}\nCategory: ${payload.features.category}\nPrice: ₹${payload.features.priceINR}\nCold chain: ${payload.features.needsColdChain ? "Required" : "Not required"}\nTarget customer: ${payload.features.targetAudience}`;
+          const embedText = buildEmbeddingInput(payload.features);
           embedding = await generateEmbedding(embedText);
         } catch (err) {
           console.error("[PGVECTOR] Failed to generate embedding for analysis persistence:", err);
