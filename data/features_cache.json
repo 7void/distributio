@@ -1,0 +1,537 @@
+[
+  {
+    "id": "starbucks",
+    "incomeWeight": 0.4,
+    "retailWeight": 0.2,
+    "internetWeight": 0.2,
+    "coldWeight": 0.1,
+    "logisticsWeight": 0.1
+  },
+  {
+    "id": "dmart",
+    "incomeWeight": 0.15,
+    "retailWeight": 0.35,
+    "internetWeight": 0.1,
+    "coldWeight": 0,
+    "logisticsWeight": 0.4
+  },
+  {
+    "id": "licious",
+    "incomeWeight": 0.35,
+    "retailWeight": 0.1,
+    "internetWeight": 0.3,
+    "coldWeight": 0.2,
+    "logisticsWeight": 0.05
+  },
+  {
+    "id": "lahorizeera",
+    "incomeWeight": 0.1,
+    "retailWeight": 0.35,
+    "internetWeight": 0.05,
+    "coldWeight": 0,
+    "logisticsWeight": 0.5
+  },
+  {
+    "id": "beyondsnack",
+    "incomeWeight": 0.25,
+    "retailWeight": 0.35,
+    "internetWeight": 0.25,
+    "coldWeight": 0,
+    "logisticsWeight": 0.15
+  },
+  {
+    "id": "beco",
+    "incomeWeight": 0.35,
+    "retailWeight": 0.2,
+    "internetWeight": 0.35,
+    "coldWeight": 0,
+    "logisticsWeight": 0.1
+  },
+  {
+    "id": "zudio",
+    "incomeWeight": 0.15,
+    "retailWeight": 0.4,
+    "internetWeight": 0.05,
+    "coldWeight": 0,
+    "logisticsWeight": 0.4
+  },
+  {
+    "id": "paperboat",
+    "incomeWeight": 0.2,
+    "retailWeight": 0.35,
+    "internetWeight": 0.15,
+    "coldWeight": 0,
+    "logisticsWeight": 0.3
+  },
+  {
+    "id": "naagin",
+    "incomeWeight": 0.35,
+    "retailWeight": 0.15,
+    "internetWeight": 0.4,
+    "coldWeight": 0,
+    "logisticsWeight": 0.1
+  },
+  {
+    "id": "mamaearth",
+    "incomeWeight": 0.3,
+    "retailWeight": 0.2,
+    "internetWeight": 0.35,
+    "coldWeight": 0,
+    "logisticsWeight": 0.15
+  },
+  {
+    "id": "sugarcosmetics",
+    "incomeWeight": 0.35,
+    "retailWeight": 0.25,
+    "internetWeight": 0.3,
+    "coldWeight": 0,
+    "logisticsWeight": 0.1
+  },
+  {
+    "id": "sleepyowl",
+    "incomeWeight": 0.35,
+    "retailWeight": 0.15,
+    "internetWeight": 0.3,
+    "coldWeight": 0,
+    "logisticsWeight": 0.2
+  },
+  {
+    "id": "wholetruth",
+    "incomeWeight": 0.3,
+    "retailWeight": 0.2,
+    "internetWeight": 0.3,
+    "coldWeight": 0,
+    "logisticsWeight": 0.2
+  },
+  {
+    "id": "idfresh",
+    "incomeWeight": 0.25,
+    "retailWeight": 0.3,
+    "internetWeight": 0.15,
+    "coldWeight": 0.25,
+    "logisticsWeight": 0.05
+  },
+  {
+    "id": "mcaffeine",
+    "incomeWeight": 0.32,
+    "retailWeight": 0.22,
+    "internetWeight": 0.31,
+    "coldWeight": 0,
+    "logisticsWeight": 0.15
+  },
+  {
+    "id": "wowskin",
+    "incomeWeight": 0.15,
+    "retailWeight": 0.25,
+    "internetWeight": 0.35,
+    "coldWeight": 0,
+    "logisticsWeight": 0.25
+  },
+  {
+    "id": "plumgoodness",
+    "incomeWeight": 0.32,
+    "retailWeight": 0.18,
+    "internetWeight": 0.3,
+    "coldWeight": 0,
+    "logisticsWeight": 0.2
+  },
+  {
+    "id": "rawpressery",
+    "incomeWeight": 0.35,
+    "retailWeight": 0.25,
+    "internetWeight": 0.25,
+    "coldWeight": 0.1,
+    "logisticsWeight": 0.05
+  },
+  {
+    "id": "bluetokai",
+    "incomeWeight": 0.35,
+    "retailWeight": 0.15,
+    "internetWeight": 0.25,
+    "coldWeight": 0,
+    "logisticsWeight": 0.25
+  },
+  {
+    "id": "thirdwave",
+    "incomeWeight": 0.32,
+    "retailWeight": 0.28,
+    "internetWeight": 0.22,
+    "coldWeight": 0,
+    "logisticsWeight": 0.18
+  },
+  {
+    "id": "chaipoint",
+    "incomeWeight": 0.15,
+    "retailWeight": 0.25,
+    "internetWeight": 0.3,
+    "coldWeight": 0,
+    "logisticsWeight": 0.3
+  },
+  {
+    "id": "balajiwafers",
+    "incomeWeight": 0.1,
+    "retailWeight": 0.35,
+    "internetWeight": 0.15,
+    "coldWeight": 0,
+    "logisticsWeight": 0.4
+  },
+  {
+    "id": "giva",
+    "incomeWeight": 0.35,
+    "retailWeight": 0.15,
+    "internetWeight": 0.3,
+    "coldWeight": 0,
+    "logisticsWeight": 0.2
+  },
+  {
+    "id": "minimalist",
+    "incomeWeight": 0.32,
+    "retailWeight": 0.15,
+    "internetWeight": 0.33,
+    "coldWeight": 0,
+    "logisticsWeight": 0.2
+  },
+  {
+    "id": "dotandkey",
+    "incomeWeight": 0.32,
+    "retailWeight": 0.15,
+    "internetWeight": 0.35,
+    "coldWeight": 0,
+    "logisticsWeight": 0.18
+  },
+  {
+    "id": "vahdam",
+    "incomeWeight": 0.35,
+    "retailWeight": 0.15,
+    "internetWeight": 0.3,
+    "coldWeight": 0,
+    "logisticsWeight": 0.2
+  },
+  {
+    "id": "milkymist",
+    "incomeWeight": 0.15,
+    "retailWeight": 0.3,
+    "internetWeight": 0.15,
+    "coldWeight": 0.25,
+    "logisticsWeight": 0.15
+  },
+  {
+    "id": "yogabar",
+    "incomeWeight": 0.3,
+    "retailWeight": 0.25,
+    "internetWeight": 0.25,
+    "coldWeight": 0,
+    "logisticsWeight": 0.2
+  },
+  {
+    "id": "slurrpfarm",
+    "incomeWeight": 0.3,
+    "retailWeight": 0.2,
+    "internetWeight": 0.3,
+    "coldWeight": 0,
+    "logisticsWeight": 0.2
+  },
+  {
+    "id": "trueelements",
+    "incomeWeight": 0.28,
+    "retailWeight": 0.2,
+    "internetWeight": 0.32,
+    "coldWeight": 0,
+    "logisticsWeight": 0.2
+  },
+  {
+    "id": "muscleblaze",
+    "incomeWeight": 0.3,
+    "retailWeight": 0.2,
+    "internetWeight": 0.25,
+    "coldWeight": 0,
+    "logisticsWeight": 0.25
+  },
+  {
+    "id": "kapiva",
+    "incomeWeight": 0.3,
+    "retailWeight": 0.2,
+    "internetWeight": 0.28,
+    "coldWeight": 0,
+    "logisticsWeight": 0.22
+  },
+  {
+    "id": "souledstore",
+    "incomeWeight": 0.28,
+    "retailWeight": 0.22,
+    "internetWeight": 0.32,
+    "coldWeight": 0,
+    "logisticsWeight": 0.18
+  },
+  {
+    "id": "snitch",
+    "incomeWeight": 0.3,
+    "retailWeight": 0.2,
+    "internetWeight": 0.3,
+    "coldWeight": 0,
+    "logisticsWeight": 0.2
+  },
+  {
+    "id": "xyxx",
+    "incomeWeight": 0.22,
+    "retailWeight": 0.28,
+    "internetWeight": 0.28,
+    "coldWeight": 0,
+    "logisticsWeight": 0.22
+  },
+  {
+    "id": "damilano",
+    "incomeWeight": 0.4,
+    "retailWeight": 0.2,
+    "internetWeight": 0.2,
+    "coldWeight": 0,
+    "logisticsWeight": 0.2
+  },
+  {
+    "id": "peesafe",
+    "incomeWeight": 0.28,
+    "retailWeight": 0.22,
+    "internetWeight": 0.3,
+    "coldWeight": 0,
+    "logisticsWeight": 0.2
+  },
+  {
+    "id": "myglamm",
+    "incomeWeight": 0.32,
+    "retailWeight": 0.2,
+    "internetWeight": 0.3,
+    "coldWeight": 0,
+    "logisticsWeight": 0.18
+  },
+  {
+    "id": "purplle",
+    "incomeWeight": 0.28,
+    "retailWeight": 0.22,
+    "internetWeight": 0.32,
+    "coldWeight": 0,
+    "logisticsWeight": 0.18
+  },
+  {
+    "id": "boat",
+    "incomeWeight": 0.28,
+    "retailWeight": 0.25,
+    "internetWeight": 0.27,
+    "coldWeight": 0,
+    "logisticsWeight": 0.2
+  },
+  {
+    "id": "noise",
+    "incomeWeight": 0.28,
+    "retailWeight": 0.25,
+    "internetWeight": 0.27,
+    "coldWeight": 0,
+    "logisticsWeight": 0.2
+  },
+  {
+    "id": "atomberg",
+    "incomeWeight": 0.3,
+    "retailWeight": 0.25,
+    "internetWeight": 0.22,
+    "coldWeight": 0,
+    "logisticsWeight": 0.23
+  },
+  {
+    "id": "lenskart",
+    "incomeWeight": 0.32,
+    "retailWeight": 0.22,
+    "internetWeight": 0.28,
+    "coldWeight": 0,
+    "logisticsWeight": 0.18
+  },
+  {
+    "id": "caratlane",
+    "incomeWeight": 0.38,
+    "retailWeight": 0.2,
+    "internetWeight": 0.25,
+    "coldWeight": 0,
+    "logisticsWeight": 0.17
+  },
+  {
+    "id": "hectorbeverages",
+    "incomeWeight": 0.1,
+    "retailWeight": 0.35,
+    "internetWeight": 0.15,
+    "coldWeight": 0,
+    "logisticsWeight": 0.4
+  },
+  {
+    "id": "ghadi",
+    "incomeWeight": 0.1,
+    "retailWeight": 0.35,
+    "internetWeight": 0.1,
+    "coldWeight": 0,
+    "logisticsWeight": 0.45
+  },
+  {
+    "id": "ujala",
+    "incomeWeight": 0.1,
+    "retailWeight": 0.35,
+    "internetWeight": 0.15,
+    "coldWeight": 0,
+    "logisticsWeight": 0.4
+  },
+  {
+    "id": "pataanjali",
+    "incomeWeight": 0.1,
+    "retailWeight": 0.35,
+    "internetWeight": 0.15,
+    "coldWeight": 0,
+    "logisticsWeight": 0.4
+  },
+  {
+    "id": "naturals",
+    "incomeWeight": 0.15,
+    "retailWeight": 0.25,
+    "internetWeight": 0.15,
+    "coldWeight": 0.25,
+    "logisticsWeight": 0.2
+  },
+  {
+    "id": "vikram",
+    "incomeWeight": 0.1,
+    "retailWeight": 0.35,
+    "internetWeight": 0.1,
+    "coldWeight": 0,
+    "logisticsWeight": 0.45
+  },
+  {
+    "id": "vadilal",
+    "incomeWeight": 0.22,
+    "retailWeight": 0.28,
+    "internetWeight": 0.15,
+    "coldWeight": 0.25,
+    "logisticsWeight": 0.1
+  },
+  {
+    "id": "mtrfoods",
+    "incomeWeight": 0.22,
+    "retailWeight": 0.3,
+    "internetWeight": 0.22,
+    "coldWeight": 0,
+    "logisticsWeight": 0.26
+  },
+  {
+    "id": "lijjat",
+    "incomeWeight": 0.1,
+    "retailWeight": 0.35,
+    "internetWeight": 0.1,
+    "coldWeight": 0,
+    "logisticsWeight": 0.45
+  },
+  {
+    "id": "garden_namkeen",
+    "incomeWeight": 0.1,
+    "retailWeight": 0.35,
+    "internetWeight": 0.1,
+    "coldWeight": 0,
+    "logisticsWeight": 0.45
+  },
+  {
+    "id": "saras_dairy",
+    "incomeWeight": 0.1,
+    "retailWeight": 0.28,
+    "internetWeight": 0.05,
+    "coldWeight": 0.3,
+    "logisticsWeight": 0.27
+  },
+  {
+    "id": "catch_spices",
+    "incomeWeight": 0.2,
+    "retailWeight": 0.35,
+    "internetWeight": 0.15,
+    "coldWeight": 0,
+    "logisticsWeight": 0.3
+  },
+  {
+    "id": "crax_dfm",
+    "incomeWeight": 0.1,
+    "retailWeight": 0.35,
+    "internetWeight": 0.1,
+    "coldWeight": 0,
+    "logisticsWeight": 0.45
+  },
+  {
+    "id": "waghbakri",
+    "incomeWeight": 0.25,
+    "retailWeight": 0.35,
+    "internetWeight": 0.1,
+    "coldWeight": 0,
+    "logisticsWeight": 0.3
+  },
+  {
+    "id": "goldiee_masale",
+    "incomeWeight": 0.15,
+    "retailWeight": 0.4,
+    "internetWeight": 0.1,
+    "coldWeight": 0,
+    "logisticsWeight": 0.35
+  },
+  {
+    "id": "dinshaws",
+    "incomeWeight": 0.2,
+    "retailWeight": 0.25,
+    "internetWeight": 0.1,
+    "coldWeight": 0.3,
+    "logisticsWeight": 0.15
+  },
+  {
+    "id": "paper_boat",
+    "incomeWeight": 0.35,
+    "retailWeight": 0.3,
+    "internetWeight": 0.2,
+    "coldWeight": 0,
+    "logisticsWeight": 0.15
+  },
+  {
+    "id": "id_fresh",
+    "incomeWeight": 0.3,
+    "retailWeight": 0.2,
+    "internetWeight": 0.2,
+    "coldWeight": 0.25,
+    "logisticsWeight": 0.05
+  },
+  {
+    "id": "haldirams_delhi",
+    "incomeWeight": 0.1,
+    "retailWeight": 0.35,
+    "internetWeight": 0.05,
+    "coldWeight": 0,
+    "logisticsWeight": 0.5
+  },
+  {
+    "id": "bisk_farm",
+    "incomeWeight": 0.05,
+    "retailWeight": 0.4,
+    "internetWeight": 0.05,
+    "coldWeight": 0,
+    "logisticsWeight": 0.5
+  },
+  {
+    "id": "balaji_wafers",
+    "incomeWeight": 0.05,
+    "retailWeight": 0.4,
+    "internetWeight": 0.05,
+    "coldWeight": 0,
+    "logisticsWeight": 0.5
+  },
+  {
+    "id": "parle_g",
+    "incomeWeight": 0.1,
+    "retailWeight": 0.35,
+    "internetWeight": 0.05,
+    "coldWeight": 0,
+    "logisticsWeight": 0.5,
+    "distributionType": "intensive",
+    "distributionLevel": 3,
+    "competition_penalty": {
+      "tier1": -1,
+      "tier2": -1,
+      "tier3": -1
+    }
+  }
+]

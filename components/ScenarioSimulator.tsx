@@ -170,7 +170,7 @@ export default function ScenarioSimulator({
             <div className="grid gap-2">
               <div className="flex items-center justify-between">
                 <label className="text-[9px] uppercase tracking-[0.15em] text-[#2e4d30]">
-                  Net Margin to Brand
+                  Unit Contribution Margin
                 </label>
                 <span className="font-heading text-sm font-bold text-accent">
                   {margin}%

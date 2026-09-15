@@ -95,7 +95,10 @@ const WAREHOUSE_CITIES = [
   "Surat",
   "Jaipur",
   "Lucknow",
-  "Kochi"
+  "Kochi",
+  "Chandigarh",
+  "Indore",
+  "Guwahati"
 ];
 
 const RADIUS_OPTIONS = [
@@ -460,7 +463,7 @@ function Step1({
         </FieldWrap>
 
         <FieldWrap>
-          <Label>Net margin to brand (%) *</Label>
+          <Label>Unit Contribution Margin (%) *</Label>
           <TextInput
             type="number"
             value={data.marginPercent}

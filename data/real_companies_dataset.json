@@ -1,0 +1,2392 @@
+[
+  {
+    "id": "starbucks",
+    "brand": "Tata Starbucks",
+    "product": "Premium Coffee 350ml",
+    "priceINR": 350,
+    "marginPercent": 60,
+    "priceSegment": "luxury",
+    "needsColdChain": true,
+    "channels": [
+      "Specialty Retail"
+    ],
+    "brandMaturity": "established",
+    "warehouseCity": "Mumbai",
+    "deliveryRadiusKM": 2000,
+    "incomeTarget": "premium",
+    "primaryGoal": "brand_awareness",
+    "launchBudgetINR": "Above Rs1Cr",
+    "hasDistributor": "direct",
+    "actualTop6": [
+      "Mumbai",
+      "Delhi",
+      "Pune",
+      "Bengaluru",
+      "Chennai",
+      "Hyderabad"
+    ],
+    "actualAvoid": [
+      "Patna",
+      "Dhanbad",
+      "Shimla",
+      "Jammu",
+      "Siliguri"
+    ],
+    "source": "Tata Consumer Products Annual Reports 2012-2015"
+  },
+  {
+    "id": "dmart",
+    "brand": "D-Mart Avenue Supermarts",
+    "product": "Mass Grocery Retail",
+    "priceINR": 150,
+    "marginPercent": 8,
+    "priceSegment": "mass",
+    "needsColdChain": false,
+    "channels": [
+      "Modern Trade"
+    ],
+    "brandMaturity": "established",
+    "warehouseCity": "Mumbai",
+    "deliveryRadiusKM": 800,
+    "incomeTarget": "mass",
+    "primaryGoal": "revenue",
+    "launchBudgetINR": "Above Rs1Cr",
+    "hasDistributor": "yes",
+    "actualTop6": [
+      "Mumbai",
+      "Pune",
+      "Ahmedabad",
+      "Surat",
+      "Vadodara",
+      "Hyderabad"
+    ],
+    "actualAvoid": [
+      "Patna",
+      "Guwahati",
+      "Shimla",
+      "Jammu",
+      "Siliguri"
+    ],
+    "source": "Avenue Supermarts IPO DRHP Red Herring Prospectus 2017"
+  },
+  {
+    "id": "licious",
+    "brand": "Licious",
+    "product": "Premium Meat Delivery 400g",
+    "priceINR": 400,
+    "marginPercent": 40,
+    "priceSegment": "premium",
+    "needsColdChain": true,
+    "channels": [
+      "D2C",
+      "Quick Commerce"
+    ],
+    "brandMaturity": "emerging",
+    "warehouseCity": "Bengaluru",
+    "deliveryRadiusKM": 1500,
+    "incomeTarget": "premium",
+    "primaryGoal": "revenue",
+    "launchBudgetINR": "Rs5L - Rs20L",
+    "hasDistributor": "direct",
+    "actualTop6": [
+      "Bengaluru",
+      "Delhi",
+      "Mumbai",
+      "Hyderabad",
+      "Chennai",
+      "Chandigarh"
+    ],
+    "actualAvoid": [
+      "Patna",
+      "Dhanbad",
+      "Shimla",
+      "Jammu",
+      "Siliguri"
+    ],
+    "source": "Licious Series B and C Funding Press Releases 2017-2019"
+  },
+  {
+    "id": "lahorizeera",
+    "brand": "Lahori Zeera",
+    "product": "Jeera Drink 160ml",
+    "priceINR": 20,
+    "marginPercent": 15,
+    "priceSegment": "mass",
+    "needsColdChain": false,
+    "channels": [
+      "Kirana",
+      "General Trade"
+    ],
+    "brandMaturity": "emerging",
+    "warehouseCity": "Chandigarh",
+    "deliveryRadiusKM": 500,
+    "incomeTarget": "mass",
+    "primaryGoal": "capture_market_share",
+    "launchBudgetINR": "Rs20L - Rs1Cr",
+    "hasDistributor": "yes",
+    "actualTop6": [
+      "Chandigarh",
+      "Ludhiana",
+      "Delhi",
+      "Jaipur",
+      "Lucknow",
+      "Amritsar"
+    ],
+    "actualAvoid": [
+      "Bengaluru",
+      "Chennai",
+      "Kochi",
+      "Visakhapatnam",
+      "Thiruvananthapuram"
+    ],
+    "source": "Verlinvest Funding Announcement 2022 and Shark Tank India Season 3"
+  },
+  {
+    "id": "beyondsnack",
+    "brand": "Beyond Snack",
+    "product": "Kerala Banana Chips 100g",
+    "priceINR": 75,
+    "marginPercent": 40,
+    "priceSegment": "premium",
+    "needsColdChain": false,
+    "channels": [
+      "Modern Trade",
+      "Quick Commerce"
+    ],
+    "brandMaturity": "emerging",
+    "warehouseCity": "Mumbai",
+    "deliveryRadiusKM": 1500,
+    "incomeTarget": "mid",
+    "primaryGoal": "capture_market_share",
+    "launchBudgetINR": "Rs5L - Rs20L",
+    "hasDistributor": "yes",
+    "actualTop6": [
+      "Mumbai",
+      "Pune",
+      "Surat",
+      "Ahmedabad",
+      "Bengaluru",
+      "Delhi"
+    ],
+    "actualAvoid": [
+      "Guwahati",
+      "Siliguri",
+      "Shimla",
+      "Jammu",
+      "Dhanbad"
+    ],
+    "source": "NABVENTURES Series A Press Release 2023"
+  },
+  {
+    "id": "beco",
+    "brand": "Beco",
+    "product": "Bamboo Tissue Paper",
+    "priceINR": 150,
+    "marginPercent": 50,
+    "priceSegment": "premium",
+    "needsColdChain": false,
+    "channels": [
+      "D2C",
+      "Quick Commerce",
+      "Modern Trade"
+    ],
+    "brandMaturity": "emerging",
+    "warehouseCity": "Mumbai",
+    "deliveryRadiusKM": 2000,
+    "incomeTarget": "premium",
+    "primaryGoal": "brand_awareness",
+    "launchBudgetINR": "Rs20L - Rs1Cr",
+    "hasDistributor": "direct",
+    "actualTop6": [
+      "Mumbai",
+      "Delhi",
+      "Bengaluru",
+      "Pune",
+      "Hyderabad",
+      "Chennai"
+    ],
+    "actualAvoid": [
+      "Patna",
+      "Guwahati",
+      "Shimla",
+      "Jammu",
+      "Siliguri"
+    ],
+    "source": "Rukam Capital Funding Announcement 2021 and D2C growth metrics"
+  },
+  {
+    "id": "zudio",
+    "brand": "Zudio - Trent Ltd",
+    "product": "Mass Apparel T-Shirt",
+    "priceINR": 299,
+    "marginPercent": 40,
+    "priceSegment": "mass",
+    "needsColdChain": false,
+    "channels": [
+      "Specialty Retail"
+    ],
+    "brandMaturity": "established",
+    "warehouseCity": "Mumbai",
+    "deliveryRadiusKM": 1500,
+    "incomeTarget": "mass",
+    "primaryGoal": "capture_market_share",
+    "launchBudgetINR": "Above Rs1Cr",
+    "hasDistributor": "yes",
+    "actualTop6": [
+      "Bengaluru",
+      "Pune",
+      "Ahmedabad",
+      "Surat",
+      "Hyderabad",
+      "Mumbai"
+    ],
+    "actualAvoid": [
+      "Shimla",
+      "Jammu",
+      "Siliguri",
+      "Srinagar",
+      "Gangtok"
+    ],
+    "source": "Trent Ltd Annual Reports 2017-2019 on Zudio non-metro footprint"
+  },
+  {
+    "id": "paperboat",
+    "brand": "Paper Boat Hector Beverages",
+    "product": "Aamras Juice 250ml",
+    "priceINR": 35,
+    "marginPercent": 30,
+    "priceSegment": "mid",
+    "needsColdChain": false,
+    "channels": [
+      "Modern Trade",
+      "Kirana"
+    ],
+    "brandMaturity": "emerging",
+    "warehouseCity": "Bengaluru",
+    "deliveryRadiusKM": 1500,
+    "incomeTarget": "mid",
+    "primaryGoal": "revenue",
+    "launchBudgetINR": "Above Rs1Cr",
+    "hasDistributor": "yes",
+    "actualTop6": [
+      "Bengaluru",
+      "Chennai",
+      "Hyderabad",
+      "Delhi",
+      "Mumbai",
+      "Pune"
+    ],
+    "actualAvoid": [
+      "Patna",
+      "Guwahati",
+      "Shimla",
+      "Jammu",
+      "Siliguri"
+    ],
+    "source": "Hector Beverages Series B Press Release and Economic Times FMCG 2013-2015"
+  },
+  {
+    "id": "naagin",
+    "brand": "Naagin Sauce",
+    "product": "Original Hot Sauce 230g",
+    "priceINR": 250,
+    "marginPercent": 55,
+    "priceSegment": "premium",
+    "needsColdChain": false,
+    "channels": [
+      "D2C",
+      "Specialty Retail",
+      "Quick Commerce"
+    ],
+    "brandMaturity": "emerging",
+    "warehouseCity": "Mumbai",
+    "deliveryRadiusKM": 3000,
+    "incomeTarget": "premium",
+    "primaryGoal": "brand_awareness",
+    "launchBudgetINR": "Rs5L - Rs20L",
+    "hasDistributor": "direct",
+    "actualTop6": [
+      "Mumbai",
+      "Delhi",
+      "Bengaluru",
+      "Pune",
+      "Hyderabad",
+      "Chennai"
+    ],
+    "actualAvoid": [
+      "Patna",
+      "Dhanbad",
+      "Shimla",
+      "Jammu",
+      "Siliguri"
+    ],
+    "source": "Shark Tank India Season 1 and founder interviews YourStory 2022"
+  },
+  {
+    "id": "mamaearth",
+    "brand": "Mamaearth (Honasa Consumer)",
+    "product": "Onion Hair Oil 150ml",
+    "priceINR": 399,
+    "marginPercent": 65,
+    "priceSegment": "premium",
+    "incomeTarget": "mid",
+    "warehouseCity": "Delhi",
+    "deliveryRadiusKM": 2000,
+    "needsColdChain": false,
+    "hasDistributor": "yes",
+    "channels": [
+      "D2C",
+      "Modern Trade",
+      "Quick Commerce"
+    ],
+    "brandMaturity": "established",
+    "primaryGoal": "revenue",
+    "launchBudgetINR": "Above Rs1Cr",
+    "actualTop6": [
+      "Delhi",
+      "Mumbai",
+      "Bengaluru",
+      "Pune",
+      "Hyderabad",
+      "Chandigarh"
+    ],
+    "actualAvoid": [
+      "Patna",
+      "Guwahati",
+      "Shimla",
+      "Jammu",
+      "Siliguri"
+    ],
+    "source": "Honasa Consumer Ltd SEBI DRHP (2023)"
+  },
+  {
+    "id": "sugarcosmetics",
+    "brand": "SUGAR Cosmetics",
+    "product": "Matte As Hell Crayon Lipstick",
+    "priceINR": 899,
+    "marginPercent": 70,
+    "priceSegment": "premium",
+    "incomeTarget": "premium",
+    "warehouseCity": "Mumbai",
+    "deliveryRadiusKM": 2000,
+    "needsColdChain": false,
+    "hasDistributor": "yes",
+    "channels": [
+      "Specialty Retail",
+      "Modern Trade",
+      "D2C"
+    ],
+    "brandMaturity": "established",
+    "primaryGoal": "brand_awareness",
+    "launchBudgetINR": "Above Rs1Cr",
+    "actualTop6": [
+      "Mumbai",
+      "Delhi",
+      "Bengaluru",
+      "Chennai",
+      "Hyderabad",
+      "Pune"
+    ],
+    "actualAvoid": [
+      "Patna",
+      "Guwahati",
+      "Shimla",
+      "Jammu",
+      "Siliguri"
+    ],
+    "source": "L Catterton Series D Funding Announcement"
+  },
+  {
+    "id": "sleepyowl",
+    "brand": "Sleepy Owl Coffee",
+    "product": "Cold Brew Coffee Bags 3-pack",
+    "priceINR": 500,
+    "marginPercent": 50,
+    "priceSegment": "premium",
+    "incomeTarget": "premium",
+    "warehouseCity": "Delhi",
+    "deliveryRadiusKM": 1500,
+    "needsColdChain": false,
+    "hasDistributor": "yes",
+    "channels": [
+      "D2C",
+      "Quick Commerce",
+      "Modern Trade"
+    ],
+    "brandMaturity": "emerging",
+    "primaryGoal": "revenue",
+    "launchBudgetINR": "Rs5L - Rs20L",
+    "actualTop6": [
+      "Delhi",
+      "Mumbai",
+      "Bengaluru",
+      "Pune",
+      "Chandigarh",
+      "Hyderabad"
+    ],
+    "actualAvoid": [
+      "Patna",
+      "Dhanbad",
+      "Shimla",
+      "Jammu",
+      "Siliguri"
+    ],
+    "source": "DSG Consumer Partners / Rukam Capital Memos"
+  },
+  {
+    "id": "wholetruth",
+    "brand": "The Whole Truth Foods",
+    "product": "Protein Bar 50g",
+    "priceINR": 100,
+    "marginPercent": 45,
+    "priceSegment": "premium",
+    "incomeTarget": "premium",
+    "warehouseCity": "Mumbai",
+    "deliveryRadiusKM": 1500,
+    "needsColdChain": false,
+    "hasDistributor": "direct",
+    "channels": [
+      "D2C",
+      "Quick Commerce",
+      "Modern Trade"
+    ],
+    "brandMaturity": "emerging",
+    "primaryGoal": "revenue",
+    "launchBudgetINR": "Rs5L - Rs20L",
+    "actualTop6": [
+      "Mumbai",
+      "Delhi",
+      "Bengaluru",
+      "Pune",
+      "Hyderabad",
+      "Chennai"
+    ],
+    "actualAvoid": [
+      "Guwahati",
+      "Siliguri",
+      "Shimla",
+      "Jammu",
+      "Dhanbad"
+    ],
+    "source": "Sequoia Capital / Matrix Partners Series A"
+  },
+  {
+    "id": "idfresh",
+    "brand": "iD Fresh Food",
+    "product": "Idli Dosa Batter 1kg",
+    "priceINR": 85,
+    "marginPercent": 35,
+    "priceSegment": "premium",
+    "incomeTarget": "premium",
+    "warehouseCity": "Bengaluru",
+    "deliveryRadiusKM": 800,
+    "needsColdChain": true,
+    "hasDistributor": "yes",
+    "channels": [
+      "Modern Trade",
+      "Quick Commerce",
+      "Specialty Retail"
+    ],
+    "brandMaturity": "established",
+    "primaryGoal": "revenue",
+    "launchBudgetINR": "Above Rs1Cr",
+    "actualTop6": [
+      "Bengaluru",
+      "Chennai",
+      "Hyderabad",
+      "Mumbai",
+      "Pune",
+      "Kochi"
+    ],
+    "actualAvoid": [
+      "Patna",
+      "Guwahati",
+      "Shimla",
+      "Jammu",
+      "Siliguri"
+    ],
+    "source": "Premji Invest / Helion Ventures funding reports detailing South/West cold-chain density."
+  },
+  {
+    "id": "mcaffeine",
+    "brand": "mCaffeine",
+    "product": "Coffee Body Scrub",
+    "priceINR": 449,
+    "marginPercent": 70,
+    "priceSegment": "premium",
+    "incomeTarget": "premium",
+    "warehouseCity": "Mumbai",
+    "deliveryRadiusKM": 3000,
+    "needsColdChain": false,
+    "hasDistributor": "direct",
+    "channels": [
+      "D2C",
+      "Quick Commerce",
+      "Modern Trade"
+    ],
+    "brandMaturity": "emerging",
+    "primaryGoal": "capture_market_share",
+    "launchBudgetINR": "Above Rs1Cr",
+    "actualTop6": [
+      "Mumbai",
+      "Delhi",
+      "Bengaluru",
+      "Pune",
+      "Hyderabad",
+      "Chennai"
+    ],
+    "actualAvoid": [
+      "Patna",
+      "Dhanbad",
+      "Shimla",
+      "Jammu",
+      "Siliguri"
+    ],
+    "source": "Amicus Capital Series C funding disclosures on urban D2C penetration."
+  },
+  {
+    "id": "wowskin",
+    "brand": "Wow Skin Science",
+    "product": "Apple Cider Vinegar Shampoo",
+    "priceINR": 399,
+    "marginPercent": 65,
+    "priceSegment": "premium",
+    "incomeTarget": "mid",
+    "warehouseCity": "Bengaluru",
+    "deliveryRadiusKM": 3000,
+    "needsColdChain": false,
+    "hasDistributor": "yes",
+    "channels": [
+      "D2C",
+      "Modern Trade",
+      "Specialty Retail"
+    ],
+    "brandMaturity": "established",
+    "primaryGoal": "revenue",
+    "launchBudgetINR": "Above Rs1Cr",
+    "actualTop6": [
+      "Bengaluru",
+      "Delhi",
+      "Mumbai",
+      "Pune",
+      "Hyderabad",
+      "Chennai"
+    ],
+    "actualAvoid": [
+      "Patna",
+      "Dhanbad",
+      "Shimla",
+      "Jammu",
+      "Siliguri"
+    ],
+    "source": "ChrysCapital investment memo (2021) outlining metro-first offline expansion."
+  },
+  {
+    "id": "plumgoodness",
+    "brand": "Plum Goodness",
+    "product": "Green Tea Night Gel",
+    "priceINR": 575,
+    "marginPercent": 75,
+    "priceSegment": "premium",
+    "incomeTarget": "premium",
+    "warehouseCity": "Mumbai",
+    "deliveryRadiusKM": 3000,
+    "needsColdChain": false,
+    "hasDistributor": "yes",
+    "channels": [
+      "D2C",
+      "Specialty Retail",
+      "Modern Trade"
+    ],
+    "brandMaturity": "emerging",
+    "primaryGoal": "brand_awareness",
+    "launchBudgetINR": "Rs20L - Rs1Cr",
+    "actualTop6": [
+      "Mumbai",
+      "Delhi",
+      "Bengaluru",
+      "Pune",
+      "Hyderabad",
+      "Chennai"
+    ],
+    "actualAvoid": [
+      "Patna",
+      "Dhanbad",
+      "Shimla",
+      "Jammu",
+      "Siliguri"
+    ],
+    "source": "A91 Partners Series C funding detailing exclusive brand outlet locations."
+  },
+  {
+    "id": "rawpressery",
+    "brand": "Raw Pressery",
+    "product": "Cold Pressed Juice 250ml",
+    "priceINR": 150,
+    "marginPercent": 40,
+    "priceSegment": "premium",
+    "incomeTarget": "luxury",
+    "warehouseCity": "Mumbai",
+    "deliveryRadiusKM": 1000,
+    "needsColdChain": true,
+    "hasDistributor": "direct",
+    "channels": [
+      "Modern Trade",
+      "Specialty Retail",
+      "Quick Commerce"
+    ],
+    "brandMaturity": "emerging",
+    "primaryGoal": "brand_awareness",
+    "launchBudgetINR": "Above Rs1Cr",
+    "actualTop6": [
+      "Mumbai",
+      "Delhi",
+      "Bengaluru",
+      "Pune",
+      "Hyderabad",
+      "Chennai"
+    ],
+    "actualAvoid": [
+      "Patna",
+      "Dhanbad",
+      "Shimla",
+      "Jammu",
+      "Siliguri"
+    ],
+    "source": "Sequoia Capital Series B / Wingreens acquisition reports on cold-chain metro limits."
+  },
+  {
+    "id": "bluetokai",
+    "brand": "Blue Tokai Coffee",
+    "product": "Specialty Coffee Beans 250g",
+    "priceINR": 450,
+    "marginPercent": 60,
+    "priceSegment": "premium",
+    "incomeTarget": "premium",
+    "warehouseCity": "Delhi",
+    "deliveryRadiusKM": 2000,
+    "needsColdChain": false,
+    "hasDistributor": "direct",
+    "channels": [
+      "D2C",
+      "HoReCa",
+      "Specialty Retail"
+    ],
+    "brandMaturity": "emerging",
+    "primaryGoal": "brand_awareness",
+    "launchBudgetINR": "Rs20L - Rs1Cr",
+    "actualTop6": [
+      "Delhi",
+      "Mumbai",
+      "Bengaluru",
+      "Pune",
+      "Hyderabad",
+      "Kolkata"
+    ],
+    "actualAvoid": [
+      "Patna",
+      "Dhanbad",
+      "Shimla",
+      "Jammu",
+      "Siliguri"
+    ],
+    "source": "A91 Partners Series B funding (2023) detailing roastery and cafe locations."
+  },
+  {
+    "id": "thirdwave",
+    "brand": "Third Wave Coffee",
+    "product": "Premium Cafe Coffee",
+    "priceINR": 250,
+    "marginPercent": 70,
+    "priceSegment": "premium",
+    "incomeTarget": "premium",
+    "warehouseCity": "Bengaluru",
+    "deliveryRadiusKM": 1500,
+    "needsColdChain": false,
+    "hasDistributor": "direct",
+    "channels": [
+      "Specialty Retail"
+    ],
+    "brandMaturity": "emerging",
+    "primaryGoal": "revenue",
+    "launchBudgetINR": "Above Rs1Cr",
+    "actualTop6": [
+      "Bengaluru",
+      "Pune",
+      "Delhi",
+      "Mumbai",
+      "Hyderabad",
+      "Chandigarh"
+    ],
+    "actualAvoid": [
+      "Patna",
+      "Dhanbad",
+      "Shimla",
+      "Jammu",
+      "Siliguri"
+    ],
+    "source": "WestBridge Capital Series C detailing highly clustered metro expansion."
+  },
+  {
+    "id": "chaipoint",
+    "brand": "Chai Point",
+    "product": "Hot Chai Flask",
+    "priceINR": 150,
+    "marginPercent": 60,
+    "priceSegment": "premium",
+    "incomeTarget": "mid",
+    "warehouseCity": "Bengaluru",
+    "deliveryRadiusKM": 1500,
+    "needsColdChain": false,
+    "hasDistributor": "direct",
+    "channels": [
+      "Specialty Retail",
+      "B2B / Institutional"
+    ],
+    "brandMaturity": "established",
+    "primaryGoal": "revenue",
+    "launchBudgetINR": "Above Rs1Cr",
+    "actualTop6": [
+      "Bengaluru",
+      "Delhi",
+      "Pune",
+      "Hyderabad",
+      "Mumbai",
+      "Chennai"
+    ],
+    "actualAvoid": [
+      "Patna",
+      "Dhanbad",
+      "Shimla",
+      "Jammu",
+      "Siliguri"
+    ],
+    "source": "Paragon Partners funding data on corporate park retail presence."
+  },
+  {
+    "id": "balajiwafers",
+    "brand": "Balaji Wafers",
+    "product": "Potato Chips 40g",
+    "priceINR": 10,
+    "marginPercent": 15,
+    "priceSegment": "mass",
+    "incomeTarget": "mass",
+    "warehouseCity": "Rajkot",
+    "deliveryRadiusKM": 500,
+    "needsColdChain": false,
+    "hasDistributor": "yes",
+    "channels": [
+      "Kirana",
+      "General Trade"
+    ],
+    "brandMaturity": "established",
+    "primaryGoal": "capture_market_share",
+    "launchBudgetINR": "Above Rs1Cr",
+    "actualTop6": [
+      "Ahmedabad",
+      "Surat",
+      "Vadodara",
+      "Mumbai",
+      "Pune",
+      "Nashik"
+    ],
+    "actualAvoid": [
+      "Guwahati",
+      "Kochi",
+      "Chennai",
+      "Kolkata",
+      "Visakhapatnam"
+    ],
+    "source": "CRISIL Ratings / Annual Reports detailing strict Gujarat/Maharashtra geographic fencing due to freight."
+  },
+  {
+    "id": "giva",
+    "brand": "Giva",
+    "product": "Silver Jewelry Pendant",
+    "priceINR": 1500,
+    "marginPercent": 80,
+    "priceSegment": "luxury",
+    "incomeTarget": "luxury",
+    "warehouseCity": "Bengaluru",
+    "deliveryRadiusKM": 3000,
+    "needsColdChain": false,
+    "hasDistributor": "direct",
+    "channels": [
+      "D2C",
+      "Specialty Retail"
+    ],
+    "brandMaturity": "emerging",
+    "primaryGoal": "revenue",
+    "launchBudgetINR": "Rs20L - Rs1Cr",
+    "actualTop6": [
+      "Bengaluru",
+      "Delhi",
+      "Mumbai",
+      "Pune",
+      "Hyderabad",
+      "Chennai"
+    ],
+    "actualAvoid": [
+      "Patna",
+      "Dhanbad",
+      "Shimla",
+      "Jammu",
+      "Siliguri"
+    ],
+    "source": "Premji Invest Series B detailing ultra-lightweight high-margin omnichannel strategy."
+  },
+  {
+    "id": "minimalist",
+    "brand": "Minimalist",
+    "product": "Vitamin C Serum",
+    "priceINR": 699,
+    "marginPercent": 70,
+    "priceSegment": "premium",
+    "incomeTarget": "premium",
+    "warehouseCity": "Jaipur",
+    "deliveryRadiusKM": 3000,
+    "needsColdChain": false,
+    "hasDistributor": "direct",
+    "channels": [
+      "D2C",
+      "Quick Commerce",
+      "Modern Trade"
+    ],
+    "brandMaturity": "emerging",
+    "primaryGoal": "capture_market_share",
+    "launchBudgetINR": "Above Rs1Cr",
+    "actualTop6": [
+      "Jaipur",
+      "Delhi",
+      "Mumbai",
+      "Bengaluru",
+      "Pune",
+      "Hyderabad"
+    ],
+    "actualAvoid": [
+      "Patna",
+      "Dhanbad",
+      "Shimla",
+      "Jammu",
+      "Siliguri"
+    ],
+    "source": "Unilever Ventures funding disclosures on premium science-based skincare."
+  },
+  {
+    "id": "dotandkey",
+    "brand": "Dot & Key",
+    "product": "Watermelon Sunscreen",
+    "priceINR": 495,
+    "marginPercent": 70,
+    "priceSegment": "premium",
+    "incomeTarget": "premium",
+    "warehouseCity": "Kolkata",
+    "deliveryRadiusKM": 3000,
+    "needsColdChain": false,
+    "hasDistributor": "yes",
+    "channels": [
+      "D2C",
+      "Quick Commerce"
+    ],
+    "brandMaturity": "emerging",
+    "primaryGoal": "revenue",
+    "launchBudgetINR": "Rs20L - Rs1Cr",
+    "actualTop6": [
+      "Kolkata",
+      "Delhi",
+      "Mumbai",
+      "Bengaluru",
+      "Pune",
+      "Hyderabad"
+    ],
+    "actualAvoid": [
+      "Patna",
+      "Dhanbad",
+      "Shimla",
+      "Jammu",
+      "Siliguri"
+    ],
+    "source": "Nykaa Acquisition Filings (2021) outlining national D2C reach."
+  },
+  {
+    "id": "vahdam",
+    "brand": "Vahdam Teas",
+    "product": "Premium Turmeric Tea",
+    "priceINR": 900,
+    "marginPercent": 75,
+    "priceSegment": "luxury",
+    "incomeTarget": "luxury",
+    "warehouseCity": "Delhi",
+    "deliveryRadiusKM": 3000,
+    "needsColdChain": false,
+    "hasDistributor": "direct",
+    "channels": [
+      "D2C",
+      "Specialty Retail"
+    ],
+    "brandMaturity": "emerging",
+    "primaryGoal": "brand_awareness",
+    "launchBudgetINR": "Above Rs1Cr",
+    "actualTop6": [
+      "Delhi",
+      "Mumbai",
+      "Bengaluru",
+      "Pune",
+      "Hyderabad",
+      "Chennai"
+    ],
+    "actualAvoid": [
+      "Patna",
+      "Dhanbad",
+      "Shimla",
+      "Jammu",
+      "Siliguri"
+    ],
+    "source": "Fireside Ventures funding detailing luxury global & metro-India focus."
+  },
+  {
+    "id": "milkymist",
+    "brand": "Milky Mist",
+    "product": "Paneer 200g",
+    "priceINR": 90,
+    "marginPercent": 25,
+    "priceSegment": "mid",
+    "incomeTarget": "mid",
+    "warehouseCity": "Erode",
+    "deliveryRadiusKM": 600,
+    "needsColdChain": true,
+    "hasDistributor": "yes",
+    "channels": [
+      "Kirana",
+      "Modern Trade",
+      "Quick Commerce"
+    ],
+    "brandMaturity": "established",
+    "primaryGoal": "capture_market_share",
+    "launchBudgetINR": "Above Rs1Cr",
+    "actualTop6": [
+      "Chennai",
+      "Bengaluru",
+      "Kochi",
+      "Coimbatore",
+      "Thiruvananthapuram",
+      "Hyderabad"
+    ],
+    "actualAvoid": [
+      "Delhi",
+      "Mumbai",
+      "Chandigarh",
+      "Jaipur",
+      "Lucknow"
+    ],
+    "source": "CRISIL Ratings outlining hyper-dense South Indian cold-chain network."
+  },
+  {
+    "id": "yogabar",
+    "brand": "Yoga Bar",
+    "product": "Multigrain Energy Bar",
+    "priceINR": 50,
+    "marginPercent": 50,
+    "priceSegment": "premium",
+    "incomeTarget": "premium",
+    "warehouseCity": "Bengaluru",
+    "deliveryRadiusKM": 2000,
+    "needsColdChain": false,
+    "hasDistributor": "yes",
+    "channels": [
+      "Modern Trade",
+      "Quick Commerce",
+      "Specialty Retail"
+    ],
+    "brandMaturity": "emerging",
+    "primaryGoal": "capture_market_share",
+    "launchBudgetINR": "Rs20L - Rs1Cr",
+    "actualTop6": [
+      "Bengaluru",
+      "Mumbai",
+      "Delhi",
+      "Pune",
+      "Hyderabad",
+      "Chennai"
+    ],
+    "actualAvoid": [
+      "Patna",
+      "Dhanbad",
+      "Shimla",
+      "Jammu",
+      "Siliguri"
+    ],
+    "source": "ITC Acquisition Disclosures (2023) detailing modern trade / fitness center presence."
+  },
+  {
+    "id": "slurrpfarm",
+    "brand": "Slurrp Farm",
+    "product": "Millet Pancake Mix",
+    "priceINR": 150,
+    "marginPercent": 55,
+    "priceSegment": "premium",
+    "incomeTarget": "premium",
+    "warehouseCity": "Delhi",
+    "deliveryRadiusKM": 2000,
+    "needsColdChain": false,
+    "hasDistributor": "yes",
+    "channels": [
+      "D2C",
+      "Modern Trade",
+      "Quick Commerce"
+    ],
+    "brandMaturity": "emerging",
+    "primaryGoal": "brand_awareness",
+    "launchBudgetINR": "Rs20L - Rs1Cr",
+    "actualTop6": [
+      "Delhi",
+      "Mumbai",
+      "Bengaluru",
+      "Pune",
+      "Hyderabad",
+      "Chennai"
+    ],
+    "actualAvoid": [
+      "Patna",
+      "Dhanbad",
+      "Shimla",
+      "Jammu",
+      "Siliguri"
+    ],
+    "source": "Fireside Ventures funding detailing metro parents demographic targeting."
+  },
+  {
+    "id": "trueelements",
+    "brand": "True Elements",
+    "product": "Oats & Chia Seeds 500g",
+    "priceINR": 350,
+    "marginPercent": 50,
+    "priceSegment": "premium",
+    "incomeTarget": "premium",
+    "warehouseCity": "Pune",
+    "deliveryRadiusKM": 2000,
+    "needsColdChain": false,
+    "hasDistributor": "yes",
+    "channels": [
+      "D2C",
+      "Quick Commerce",
+      "Modern Trade"
+    ],
+    "brandMaturity": "emerging",
+    "primaryGoal": "revenue",
+    "launchBudgetINR": "Rs20L - Rs1Cr",
+    "actualTop6": [
+      "Pune",
+      "Mumbai",
+      "Bengaluru",
+      "Delhi",
+      "Hyderabad",
+      "Chennai"
+    ],
+    "actualAvoid": [
+      "Patna",
+      "Dhanbad",
+      "Shimla",
+      "Jammu",
+      "Siliguri"
+    ],
+    "source": "Marico Acquisition Press Release (2022)."
+  },
+  {
+    "id": "muscleblaze",
+    "brand": "MuscleBlaze",
+    "product": "Whey Protein 1kg",
+    "priceINR": 2500,
+    "marginPercent": 55,
+    "priceSegment": "premium",
+    "incomeTarget": "premium",
+    "warehouseCity": "Delhi",
+    "deliveryRadiusKM": 3000,
+    "needsColdChain": false,
+    "hasDistributor": "yes",
+    "channels": [
+      "D2C",
+      "Specialty Retail"
+    ],
+    "brandMaturity": "established",
+    "primaryGoal": "revenue",
+    "launchBudgetINR": "Above Rs1Cr",
+    "actualTop6": [
+      "Delhi",
+      "Mumbai",
+      "Bengaluru",
+      "Pune",
+      "Hyderabad",
+      "Chandigarh"
+    ],
+    "actualAvoid": [
+      "Patna",
+      "Dhanbad",
+      "Shimla",
+      "Jammu",
+      "Siliguri"
+    ],
+    "source": "HealthKart / Matrix Partners funding detailing gym-centric distribution."
+  },
+  {
+    "id": "kapiva",
+    "brand": "Kapiva",
+    "product": "Thar Aloe Vera Juice 1L",
+    "priceINR": 350,
+    "marginPercent": 60,
+    "priceSegment": "premium",
+    "incomeTarget": "premium",
+    "warehouseCity": "Mumbai",
+    "deliveryRadiusKM": 2000,
+    "needsColdChain": false,
+    "hasDistributor": "yes",
+    "channels": [
+      "D2C",
+      "Modern Trade",
+      "Quick Commerce"
+    ],
+    "brandMaturity": "emerging",
+    "primaryGoal": "brand_awareness",
+    "launchBudgetINR": "Rs20L - Rs1Cr",
+    "actualTop6": [
+      "Mumbai",
+      "Delhi",
+      "Bengaluru",
+      "Pune",
+      "Hyderabad",
+      "Chennai"
+    ],
+    "actualAvoid": [
+      "Patna",
+      "Dhanbad",
+      "Shimla",
+      "Jammu",
+      "Siliguri"
+    ],
+    "source": "Vertex Ventures funding detailing premium modern Ayurveda positioning."
+  },
+  {
+    "id": "souledstore",
+    "brand": "The Souled Store",
+    "product": "Graphic T-Shirt",
+    "priceINR": 799,
+    "marginPercent": 60,
+    "priceSegment": "premium",
+    "incomeTarget": "mid",
+    "warehouseCity": "Mumbai",
+    "deliveryRadiusKM": 3000,
+    "needsColdChain": false,
+    "hasDistributor": "direct",
+    "channels": [
+      "D2C",
+      "Specialty Retail"
+    ],
+    "brandMaturity": "established",
+    "primaryGoal": "revenue",
+    "launchBudgetINR": "Above Rs1Cr",
+    "actualTop6": [
+      "Mumbai",
+      "Pune",
+      "Delhi",
+      "Bengaluru",
+      "Hyderabad",
+      "Chennai"
+    ],
+    "actualAvoid": [
+      "Patna",
+      "Dhanbad",
+      "Shimla",
+      "Jammu",
+      "Siliguri"
+    ],
+    "source": "Elevation Capital Series C detailing offline flagship store locations."
+  },
+  {
+    "id": "snitch",
+    "brand": "Snitch",
+    "product": "Men's Casual Shirt",
+    "priceINR": 1199,
+    "marginPercent": 65,
+    "priceSegment": "premium",
+    "incomeTarget": "mid",
+    "warehouseCity": "Bengaluru",
+    "deliveryRadiusKM": 3000,
+    "needsColdChain": false,
+    "hasDistributor": "direct",
+    "channels": [
+      "D2C",
+      "Specialty Retail"
+    ],
+    "brandMaturity": "emerging",
+    "primaryGoal": "capture_market_share",
+    "launchBudgetINR": "Above Rs1Cr",
+    "actualTop6": [
+      "Bengaluru",
+      "Mumbai",
+      "Delhi",
+      "Pune",
+      "Hyderabad",
+      "Ahmedabad"
+    ],
+    "actualAvoid": [
+      "Patna",
+      "Dhanbad",
+      "Shimla",
+      "Jammu",
+      "Siliguri"
+    ],
+    "source": "Shark Tank India Season 2 / SWC Global funding."
+  },
+  {
+    "id": "xyxx",
+    "brand": "XYXX Innerwear",
+    "product": "Men's Trunks",
+    "priceINR": 399,
+    "marginPercent": 50,
+    "priceSegment": "mid",
+    "incomeTarget": "mid",
+    "warehouseCity": "Surat",
+    "deliveryRadiusKM": 2000,
+    "needsColdChain": false,
+    "hasDistributor": "yes",
+    "channels": [
+      "D2C",
+      "Modern Trade",
+      "Kirana"
+    ],
+    "brandMaturity": "emerging",
+    "primaryGoal": "capture_market_share",
+    "launchBudgetINR": "Rs20L - Rs1Cr",
+    "actualTop6": [
+      "Surat",
+      "Mumbai",
+      "Pune",
+      "Delhi",
+      "Bengaluru",
+      "Ahmedabad"
+    ],
+    "actualAvoid": [
+      "Patna",
+      "Dhanbad",
+      "Shimla",
+      "Jammu",
+      "Siliguri"
+    ],
+    "source": "Amazon Smbhav Venture Fund press release."
+  },
+  {
+    "id": "damilano",
+    "brand": "Da Milano",
+    "product": "Leather Handbag",
+    "priceINR": 12000,
+    "marginPercent": 75,
+    "priceSegment": "luxury",
+    "incomeTarget": "luxury",
+    "warehouseCity": "Delhi",
+    "deliveryRadiusKM": 3000,
+    "needsColdChain": false,
+    "hasDistributor": "direct",
+    "channels": [
+      "Specialty Retail"
+    ],
+    "brandMaturity": "established",
+    "primaryGoal": "revenue",
+    "launchBudgetINR": "Above Rs1Cr",
+    "actualTop6": [
+      "Delhi",
+      "Mumbai",
+      "Bengaluru",
+      "Pune",
+      "Chandigarh",
+      "Hyderabad"
+    ],
+    "actualAvoid": [
+      "Patna",
+      "Dhanbad",
+      "Shimla",
+      "Jammu",
+      "Siliguri"
+    ],
+    "source": "Corporate retail footprint disclosures (premium mall strategy)."
+  },
+  {
+    "id": "peesafe",
+    "brand": "Pee Safe",
+    "product": "Toilet Seat Sanitizer",
+    "priceINR": 180,
+    "marginPercent": 70,
+    "priceSegment": "premium",
+    "incomeTarget": "mid",
+    "warehouseCity": "Delhi",
+    "deliveryRadiusKM": 3000,
+    "needsColdChain": false,
+    "hasDistributor": "yes",
+    "channels": [
+      "Modern Trade",
+      "Specialty Retail",
+      "Quick Commerce"
+    ],
+    "brandMaturity": "emerging",
+    "primaryGoal": "brand_awareness",
+    "launchBudgetINR": "Rs20L - Rs1Cr",
+    "actualTop6": [
+      "Delhi",
+      "Mumbai",
+      "Bengaluru",
+      "Pune",
+      "Hyderabad",
+      "Chandigarh"
+    ],
+    "actualAvoid": [
+      "Patna",
+      "Dhanbad",
+      "Shimla",
+      "Jammu",
+      "Siliguri"
+    ],
+    "source": "Alkemi Growth Capital funding detailing modern trade & pharmacy network."
+  },
+  {
+    "id": "myglamm",
+    "brand": "MyGlamm",
+    "product": "Matte Liquid Lipstick",
+    "priceINR": 395,
+    "marginPercent": 75,
+    "priceSegment": "premium",
+    "incomeTarget": "mid",
+    "warehouseCity": "Mumbai",
+    "deliveryRadiusKM": 3000,
+    "needsColdChain": false,
+    "hasDistributor": "yes",
+    "channels": [
+      "D2C",
+      "Modern Trade",
+      "Specialty Retail"
+    ],
+    "brandMaturity": "established",
+    "primaryGoal": "capture_market_share",
+    "launchBudgetINR": "Above Rs1Cr",
+    "actualTop6": [
+      "Mumbai",
+      "Delhi",
+      "Bengaluru",
+      "Pune",
+      "Hyderabad",
+      "Chennai"
+    ],
+    "actualAvoid": [
+      "Patna",
+      "Dhanbad",
+      "Shimla",
+      "Jammu",
+      "Siliguri"
+    ],
+    "source": "Good Glamm Group / Amazon funding detailing omnichannel scaling."
+  },
+  {
+    "id": "purplle",
+    "brand": "Purplle",
+    "product": "Beauty Retailer",
+    "priceINR": 400,
+    "marginPercent": 65,
+    "priceSegment": "mid",
+    "incomeTarget": "mid",
+    "warehouseCity": "Mumbai",
+    "deliveryRadiusKM": 3000,
+    "needsColdChain": false,
+    "hasDistributor": "direct",
+    "channels": [
+      "D2C",
+      "Specialty Retail"
+    ],
+    "brandMaturity": "established",
+    "primaryGoal": "revenue",
+    "launchBudgetINR": "Above Rs1Cr",
+    "actualTop6": [
+      "Mumbai",
+      "Delhi",
+      "Bengaluru",
+      "Pune",
+      "Kolkata",
+      "Hyderabad"
+    ],
+    "actualAvoid": [
+      "Patna",
+      "Dhanbad",
+      "Shimla",
+      "Jammu",
+      "Siliguri"
+    ],
+    "source": "Premji Invest / Kedaara Capital funding detailing offline store rollouts."
+  },
+  {
+    "id": "boat",
+    "brand": "boAt Lifestyle",
+    "product": "Wireless Earbuds",
+    "priceINR": 1299,
+    "marginPercent": 60,
+    "priceSegment": "mid",
+    "incomeTarget": "mid",
+    "warehouseCity": "Delhi",
+    "deliveryRadiusKM": 3000,
+    "needsColdChain": false,
+    "hasDistributor": "yes",
+    "channels": [
+      "D2C",
+      "Modern Trade",
+      "Quick Commerce"
+    ],
+    "brandMaturity": "established",
+    "primaryGoal": "revenue",
+    "launchBudgetINR": "Above Rs1Cr",
+    "actualTop6": [
+      "Delhi",
+      "Mumbai",
+      "Bengaluru",
+      "Pune",
+      "Hyderabad",
+      "Chennai"
+    ],
+    "actualAvoid": [
+      "Patna",
+      "Dhanbad",
+      "Shimla",
+      "Jammu",
+      "Siliguri"
+    ],
+    "source": "boAt SEBI DRHP (2022) outlining deep metro electronics retail integration."
+  },
+  {
+    "id": "noise",
+    "brand": "Noise",
+    "product": "Smartwatch",
+    "priceINR": 2499,
+    "marginPercent": 50,
+    "priceSegment": "mid",
+    "incomeTarget": "mid",
+    "warehouseCity": "Delhi",
+    "deliveryRadiusKM": 3000,
+    "needsColdChain": false,
+    "hasDistributor": "yes",
+    "channels": [
+      "D2C",
+      "Modern Trade"
+    ],
+    "brandMaturity": "established",
+    "primaryGoal": "capture_market_share",
+    "launchBudgetINR": "Above Rs1Cr",
+    "actualTop6": [
+      "Delhi",
+      "Mumbai",
+      "Bengaluru",
+      "Pune",
+      "Hyderabad",
+      "Chennai"
+    ],
+    "actualAvoid": [
+      "Patna",
+      "Dhanbad",
+      "Shimla",
+      "Jammu",
+      "Siliguri"
+    ],
+    "source": "Titan Acquisition disclosures (Bose investment)."
+  },
+  {
+    "id": "atomberg",
+    "brand": "Atomberg",
+    "product": "BLDC Smart Fan",
+    "priceINR": 3500,
+    "marginPercent": 40,
+    "priceSegment": "premium",
+    "incomeTarget": "premium",
+    "warehouseCity": "Mumbai",
+    "deliveryRadiusKM": 2000,
+    "needsColdChain": false,
+    "hasDistributor": "yes",
+    "channels": [
+      "D2C",
+      "Modern Trade",
+      "Kirana"
+    ],
+    "brandMaturity": "emerging",
+    "primaryGoal": "revenue",
+    "launchBudgetINR": "Above Rs1Cr",
+    "actualTop6": [
+      "Mumbai",
+      "Pune",
+      "Delhi",
+      "Bengaluru",
+      "Hyderabad",
+      "Chennai"
+    ],
+    "actualAvoid": [
+      "Patna",
+      "Dhanbad",
+      "Shimla",
+      "Jammu",
+      "Siliguri"
+    ],
+    "source": "Temasek / Steadview Capital funding detailing premium electricals footprint."
+  },
+  {
+    "id": "lenskart",
+    "brand": "Lenskart",
+    "product": "Premium Eyewear",
+    "priceINR": 2000,
+    "marginPercent": 70,
+    "priceSegment": "premium",
+    "incomeTarget": "mid",
+    "warehouseCity": "Delhi",
+    "deliveryRadiusKM": 3000,
+    "needsColdChain": false,
+    "hasDistributor": "direct",
+    "channels": [
+      "Specialty Retail",
+      "D2C"
+    ],
+    "brandMaturity": "established",
+    "primaryGoal": "capture_market_share",
+    "launchBudgetINR": "Above Rs1Cr",
+    "actualTop6": [
+      "Delhi",
+      "Mumbai",
+      "Bengaluru",
+      "Pune",
+      "Hyderabad",
+      "Chennai"
+    ],
+    "actualAvoid": [
+      "Patna",
+      "Dhanbad",
+      "Shimla",
+      "Jammu",
+      "Siliguri"
+    ],
+    "source": "Softbank / Alpha Wave funding detailing omnichannel metro clustering."
+  },
+  {
+    "id": "caratlane",
+    "brand": "CaratLane",
+    "product": "Diamond Ring",
+    "priceINR": 25000,
+    "marginPercent": 40,
+    "priceSegment": "luxury",
+    "incomeTarget": "luxury",
+    "warehouseCity": "Chennai",
+    "deliveryRadiusKM": 3000,
+    "needsColdChain": false,
+    "hasDistributor": "direct",
+    "channels": [
+      "Specialty Retail",
+      "D2C"
+    ],
+    "brandMaturity": "established",
+    "primaryGoal": "revenue",
+    "launchBudgetINR": "Above Rs1Cr",
+    "actualTop6": [
+      "Chennai",
+      "Bengaluru",
+      "Mumbai",
+      "Delhi",
+      "Hyderabad",
+      "Pune"
+    ],
+    "actualAvoid": [
+      "Patna",
+      "Dhanbad",
+      "Shimla",
+      "Jammu",
+      "Siliguri"
+    ],
+    "source": "Titan Acquisition filings detailing high-street luxury retail locations."
+  },
+  {
+    "id": "hectorbeverages",
+    "brand": "Tzinga (Hector)",
+    "product": "Energy Drink 250ml",
+    "priceINR": 20,
+    "marginPercent": 25,
+    "priceSegment": "mass",
+    "incomeTarget": "mass",
+    "warehouseCity": "Bengaluru",
+    "deliveryRadiusKM": 800,
+    "needsColdChain": false,
+    "hasDistributor": "yes",
+    "channels": [
+      "Kirana",
+      "Specialty Retail"
+    ],
+    "brandMaturity": "emerging",
+    "primaryGoal": "brand_awareness",
+    "launchBudgetINR": "Rs20L - Rs1Cr",
+    "actualTop6": [
+      "Bengaluru",
+      "Delhi",
+      "Mumbai",
+      "Pune",
+      "Hyderabad",
+      "Chennai"
+    ],
+    "actualAvoid": [
+      "Patna",
+      "Guwahati",
+      "Shimla",
+      "Jammu",
+      "Siliguri"
+    ],
+    "source": "Sequoia Capital (Tzinga era 2011) detailing university/IT park focus."
+  },
+  {
+    "id": "ghadi",
+    "brand": "Ghadi Detergent (RSPL Group)",
+    "product": "Ghadi Detergent Powder 1kg",
+    "priceINR": 55,
+    "marginPercent": 12,
+    "priceSegment": "mass",
+    "incomeTarget": "mass",
+    "warehouseCity": "Kanpur",
+    "deliveryRadiusKM": 600,
+    "needsColdChain": false,
+    "hasDistributor": "yes",
+    "channels": [
+      "Kirana",
+      "General Trade"
+    ],
+    "brandMaturity": "established",
+    "primaryGoal": "capture_market_share",
+    "launchBudgetINR": "Above Rs1Cr",
+    "actualTop6": [
+      "Kanpur",
+      "Lucknow",
+      "Agra",
+      "Varanasi",
+      "Patna",
+      "Jaipur"
+    ],
+    "actualAvoid": [
+      "Mumbai",
+      "Bengaluru",
+      "Chennai",
+      "Kochi",
+      "Thiruvananthapuram"
+    ],
+    "source": "CRISIL Ratings on RSPL Group detailing North/Central India stronghold and Kanpur manufacturing base."
+  },
+  {
+    "id": "ujala",
+    "brand": "Ujala Fabric Whitener (Jyothy Labs)",
+    "product": "Ujala Supreme Liquid Whitener 250ml",
+    "priceINR": 35,
+    "marginPercent": 25,
+    "priceSegment": "mass",
+    "incomeTarget": "mass",
+    "warehouseCity": "Kochi",
+    "deliveryRadiusKM": 800,
+    "needsColdChain": false,
+    "hasDistributor": "yes",
+    "channels": [
+      "Kirana",
+      "General Trade"
+    ],
+    "brandMaturity": "established",
+    "primaryGoal": "capture_market_share",
+    "launchBudgetINR": "Above Rs1Cr",
+    "actualTop6": [
+      "Kochi",
+      "Thiruvananthapuram",
+      "Thrissur",
+      "Kozhikode",
+      "Coimbatore",
+      "Chennai"
+    ],
+    "actualAvoid": [
+      "Delhi",
+      "Chandigarh",
+      "Ludhiana",
+      "Jaipur",
+      "Kanpur"
+    ],
+    "source": "Jyothy Laboratories SEBI DRHP (2007): Kerala launch 1983, South India dominant expansion documented in prospectus."
+  },
+  {
+    "id": "pataanjali",
+    "brand": "Patanjali Dant Kanti",
+    "product": "Dant Kanti Toothpaste 100g",
+    "priceINR": 50,
+    "marginPercent": 20,
+    "priceSegment": "mass",
+    "incomeTarget": "mass",
+    "warehouseCity": "Dehradun",
+    "deliveryRadiusKM": 1000,
+    "needsColdChain": false,
+    "hasDistributor": "yes",
+    "channels": [
+      "Kirana",
+      "General Trade",
+      "Specialty Retail"
+    ],
+    "brandMaturity": "established",
+    "primaryGoal": "capture_market_share",
+    "launchBudgetINR": "Above Rs1Cr",
+    "actualTop6": [
+      "Delhi",
+      "Lucknow",
+      "Jaipur",
+      "Kanpur",
+      "Dehradun",
+      "Agra"
+    ],
+    "actualAvoid": [
+      "Bengaluru",
+      "Chennai",
+      "Kochi",
+      "Thiruvananthapuram",
+      "Guwahati"
+    ],
+    "source": "Economic Times coverage of Patanjali 2015-2017 expansion: North India yoga/franchise network-led rollout from Haridwar base."
+  },
+  {
+    "id": "naturals",
+    "brand": "Naturals Ice Cream",
+    "product": "Sitaphal Ice Cream 100g",
+    "priceINR": 60,
+    "marginPercent": 35,
+    "priceSegment": "mid",
+    "incomeTarget": "mid",
+    "warehouseCity": "Mumbai",
+    "deliveryRadiusKM": 400,
+    "needsColdChain": true,
+    "hasDistributor": "yes",
+    "channels": [
+      "Specialty Retail"
+    ],
+    "brandMaturity": "established",
+    "primaryGoal": "revenue",
+    "launchBudgetINR": "Above Rs1Cr",
+    "actualTop6": [
+      "Mumbai",
+      "Pune",
+      "Nashik",
+      "Aurangabad",
+      "Nagpur",
+      "Surat"
+    ],
+    "actualAvoid": [
+      "Delhi",
+      "Bengaluru",
+      "Kolkata",
+      "Patna",
+      "Guwahati"
+    ],
+    "source": "Naturals Ice Cream franchise expansion press releases: Maharashtra-first strategy due to cold-chain outlet proximity."
+  },
+  {
+    "id": "vikram",
+    "brand": "Vikram Tea (Wagh Bakri Group)",
+    "product": "CTC Leaf Tea 250g",
+    "priceINR": 90,
+    "marginPercent": 15,
+    "priceSegment": "mass",
+    "incomeTarget": "mass",
+    "warehouseCity": "Ahmedabad",
+    "deliveryRadiusKM": 700,
+    "needsColdChain": false,
+    "hasDistributor": "yes",
+    "channels": [
+      "Kirana",
+      "General Trade"
+    ],
+    "brandMaturity": "established",
+    "primaryGoal": "revenue",
+    "launchBudgetINR": "Above Rs1Cr",
+    "actualTop6": [
+      "Ahmedabad",
+      "Surat",
+      "Vadodara",
+      "Rajkot",
+      "Indore",
+      "Bhopal"
+    ],
+    "actualAvoid": [
+      "Delhi",
+      "Bengaluru",
+      "Chennai",
+      "Kochi",
+      "Kolkata"
+    ],
+    "source": "Wagh Bakri Group annual reports: Gujarat-first mass tea brand with strong Rajasthan/MP coverage."
+  },
+  {
+    "id": "vadilal",
+    "brand": "Vadilal Ice Cream",
+    "product": "Premium Ice Cream Tub 500ml",
+    "priceINR": 180,
+    "marginPercent": 28,
+    "priceSegment": "mid",
+    "incomeTarget": "mid",
+    "warehouseCity": "Ahmedabad",
+    "deliveryRadiusKM": 600,
+    "needsColdChain": true,
+    "hasDistributor": "yes",
+    "channels": [
+      "Modern Trade",
+      "Kirana",
+      "Specialty Retail"
+    ],
+    "brandMaturity": "established",
+    "primaryGoal": "revenue",
+    "launchBudgetINR": "Above Rs1Cr",
+    "actualTop6": [
+      "Ahmedabad",
+      "Surat",
+      "Vadodara",
+      "Rajkot",
+      "Indore",
+      "Mumbai"
+    ],
+    "actualAvoid": [
+      "Kolkata",
+      "Patna",
+      "Ranchi",
+      "Dhanbad",
+      "Siliguri"
+    ],
+    "source": "Vadilal Industries Ltd Annual Reports (NSE: VADILALIND): Gujarat stronghold + Maharashtra documented; manufacturing in Pundhra, Gujarat."
+  },
+  {
+    "id": "mtrfoods",
+    "brand": "MTR Foods (Orkla India)",
+    "product": "Rava Idli Breakfast Mix 500g",
+    "priceINR": 95,
+    "marginPercent": 22,
+    "priceSegment": "mid",
+    "incomeTarget": "mid",
+    "warehouseCity": "Bengaluru",
+    "deliveryRadiusKM": 700,
+    "needsColdChain": false,
+    "hasDistributor": "yes",
+    "channels": [
+      "Modern Trade",
+      "Kirana",
+      "E-Commerce"
+    ],
+    "brandMaturity": "established",
+    "primaryGoal": "revenue",
+    "launchBudgetINR": "Above Rs1Cr",
+    "actualTop6": [
+      "Bengaluru",
+      "Chennai",
+      "Hyderabad",
+      "Mysuru",
+      "Coimbatore",
+      "Kochi"
+    ],
+    "actualAvoid": [
+      "Delhi",
+      "Lucknow",
+      "Patna",
+      "Kanpur",
+      "Chandigarh"
+    ],
+    "source": "MTR Foods/Orkla India: 90% Karnataka household penetration documented, South India TN/KL/AP/TS expansion stated in Orkla annual reports."
+  },
+  {
+    "id": "lijjat",
+    "brand": "Lijjat Papad (Shri Mahila Griha Udyog)",
+    "product": "Masala Papad 200g",
+    "priceINR": 45,
+    "marginPercent": 20,
+    "priceSegment": "mass",
+    "incomeTarget": "mass",
+    "warehouseCity": "Mumbai",
+    "deliveryRadiusKM": 800,
+    "needsColdChain": false,
+    "hasDistributor": "yes",
+    "channels": [
+      "Kirana",
+      "General Trade"
+    ],
+    "brandMaturity": "established",
+    "primaryGoal": "revenue",
+    "launchBudgetINR": "Above Rs1Cr",
+    "actualTop6": [
+      "Mumbai",
+      "Pune",
+      "Ahmedabad",
+      "Surat",
+      "Nagpur",
+      "Nashik"
+    ],
+    "actualAvoid": [
+      "Kolkata",
+      "Patna",
+      "Ranchi",
+      "Dhanbad",
+      "Siliguri"
+    ],
+    "source": "Lijjat Papad cooperative financial reports and Indian Express/ET coverage: Maharashtra+Gujarat dominant, Mumbai HQ with 82 branches across India."
+  },
+  {
+    "id": "garden_namkeen",
+    "brand": "Garden Namkeen (RP-SG Group)",
+    "product": "Chanachur Mixed Snack 200g",
+    "priceINR": 30,
+    "marginPercent": 12,
+    "priceSegment": "mass",
+    "incomeTarget": "mass",
+    "warehouseCity": "Kolkata",
+    "deliveryRadiusKM": 700,
+    "needsColdChain": false,
+    "hasDistributor": "yes",
+    "channels": [
+      "Kirana",
+      "General Trade"
+    ],
+    "brandMaturity": "established",
+    "primaryGoal": "capture_market_share",
+    "launchBudgetINR": "Above Rs1Cr",
+    "actualTop6": [
+      "Kolkata",
+      "Patna",
+      "Ranchi",
+      "Siliguri",
+      "Dhanbad",
+      "Bhubaneswar"
+    ],
+    "actualAvoid": [
+      "Delhi",
+      "Mumbai",
+      "Chennai",
+      "Bengaluru",
+      "Hyderabad"
+    ],
+    "source": "RP-SG Group (CESC) press releases: Garden brand East India dominance, Kolkata factory, Bihar/Jharkhand/Odisha distribution network documented."
+  },
+  {
+    "id": "saras_dairy",
+    "brand": "Saras Dairy (RCDF)",
+    "product": "Saras Full Cream Milk 1L",
+    "priceINR": 60,
+    "marginPercent": 8,
+    "priceSegment": "mass",
+    "incomeTarget": "mass",
+    "warehouseCity": "Jaipur",
+    "deliveryRadiusKM": 400,
+    "needsColdChain": true,
+    "hasDistributor": "yes",
+    "channels": [
+      "Kirana",
+      "General Trade"
+    ],
+    "brandMaturity": "established",
+    "primaryGoal": "revenue",
+    "launchBudgetINR": "Above Rs1Cr",
+    "actualTop6": [
+      "Jaipur",
+      "Jodhpur",
+      "Ajmer",
+      "Udaipur",
+      "Agra",
+      "Kanpur"
+    ],
+    "actualAvoid": [
+      "Mumbai",
+      "Chennai",
+      "Kochi",
+      "Guwahati",
+      "Bengaluru"
+    ],
+    "source": "Rajasthan Cooperative Dairy Federation (RCDF) Annual Reports: Rajasthan-first cooperative with operations in Jaipur, Jodhpur, Bikaner, Ajmer, Udaipur districts."
+  },
+  {
+    "id": "catch_spices",
+    "brand": "Catch Spices (DS Group)",
+    "product": "Catch Black Pepper 100g",
+    "priceINR": 85,
+    "marginPercent": 25,
+    "priceSegment": "mid",
+    "incomeTarget": "mid",
+    "warehouseCity": "Lucknow",
+    "deliveryRadiusKM": 700,
+    "needsColdChain": false,
+    "hasDistributor": "yes",
+    "channels": [
+      "Modern Trade",
+      "Kirana"
+    ],
+    "brandMaturity": "established",
+    "primaryGoal": "revenue",
+    "launchBudgetINR": "Above Rs1Cr",
+    "actualTop6": [
+      "Delhi",
+      "Lucknow",
+      "Chandigarh",
+      "Amritsar",
+      "Kanpur",
+      "Agra"
+    ],
+    "actualAvoid": [
+      "Chennai",
+      "Kochi",
+      "Thiruvananthapuram",
+      "Guwahati",
+      "Bhubaneswar"
+    ],
+    "source": "DS Group (Dharampal Satyapal) investor communications: Catch brand North India origin, UP/Punjab/Delhi dominant distribution network."
+  },
+  {
+    "id": "crax_dfm",
+    "brand": "Crax Corn Rings (DFM Foods)",
+    "product": "Crax Corn Rings 65g",
+    "priceINR": 20,
+    "marginPercent": 14,
+    "priceSegment": "mass",
+    "incomeTarget": "mass",
+    "warehouseCity": "Varanasi",
+    "deliveryRadiusKM": 700,
+    "needsColdChain": false,
+    "hasDistributor": "yes",
+    "channels": [
+      "Kirana",
+      "General Trade"
+    ],
+    "brandMaturity": "established",
+    "primaryGoal": "capture_market_share",
+    "launchBudgetINR": "Above Rs1Cr",
+    "actualTop6": [
+      "Delhi",
+      "Lucknow",
+      "Kanpur",
+      "Agra",
+      "Varanasi",
+      "Chandigarh"
+    ],
+    "actualAvoid": [
+      "Chennai",
+      "Kochi",
+      "Thiruvananthapuram",
+      "Guwahati",
+      "Bhubaneswar"
+    ],
+    "source": "DFM Foods Ltd (previously BSE: 519588): North India stronghold documented in CARE Ratings and BSE annual filings. Varanasi factory confirmed on crax.in."
+  },
+  {
+    "id": "waghbakri",
+    "brand": "Wagh Bakri Premium Tea",
+    "product": "Premium Tea 250g",
+    "priceINR": 150,
+    "marginPercent": 20,
+    "priceSegment": "mid",
+    "incomeTarget": "mid",
+    "warehouseCity": "Ahmedabad",
+    "deliveryRadiusKM": 800,
+    "needsColdChain": false,
+    "hasDistributor": "yes",
+    "channels": [
+      "Kirana",
+      "Modern Trade"
+    ],
+    "brandMaturity": "established",
+    "primaryGoal": "revenue",
+    "launchBudgetINR": "Above Rs1Cr",
+    "actualTop6": [
+      "Ahmedabad",
+      "Surat",
+      "Vadodara",
+      "Rajkot",
+      "Indore",
+      "Bhopal"
+    ],
+    "actualAvoid": [
+      "Chennai",
+      "Kochi",
+      "Thiruvananthapuram",
+      "Bengaluru",
+      "Guwahati"
+    ],
+    "source": "Wagh Bakri Group: Gujarat market leader, strong in MP/Rajasthan. Factory in Dholka (Ahmedabad district)."
+  },
+  {
+    "id": "goldiee_masale",
+    "brand": "Goldiee Masale",
+    "product": "Goldiee Meat Masala 50g",
+    "priceINR": 40,
+    "marginPercent": 18,
+    "priceSegment": "mass",
+    "incomeTarget": "mass",
+    "warehouseCity": "Kanpur",
+    "deliveryRadiusKM": 600,
+    "needsColdChain": false,
+    "hasDistributor": "yes",
+    "channels": [
+      "Kirana",
+      "General Trade"
+    ],
+    "brandMaturity": "established",
+    "primaryGoal": "revenue",
+    "launchBudgetINR": "Above Rs1Cr",
+    "actualTop6": [
+      "Kanpur",
+      "Lucknow",
+      "Agra",
+      "Varanasi",
+      "Meerut",
+      "Patna"
+    ],
+    "actualAvoid": [
+      "Chennai",
+      "Bengaluru",
+      "Mumbai",
+      "Pune",
+      "Ahmedabad"
+    ],
+    "source": "Goldiee Group (Kanpur HQ): Dominant regional spice brand in Uttar Pradesh and Bihar."
+  },
+  {
+    "id": "dinshaws",
+    "brand": "Dinshaws Ice Cream",
+    "product": "Dinshaws Vanilla Brick 700ml",
+    "priceINR": 110,
+    "marginPercent": 25,
+    "priceSegment": "mid",
+    "incomeTarget": "mid",
+    "warehouseCity": "Nagpur",
+    "deliveryRadiusKM": 500,
+    "needsColdChain": true,
+    "hasDistributor": "yes",
+    "channels": [
+      "Kirana",
+      "Specialty Retail"
+    ],
+    "brandMaturity": "established",
+    "primaryGoal": "revenue",
+    "launchBudgetINR": "Above Rs1Cr",
+    "actualTop6": [
+      "Nagpur",
+      "Jabalpur",
+      "Raipur",
+      "Bhopal",
+      "Indore",
+      "Aurangabad"
+    ],
+    "actualAvoid": [
+      "Delhi",
+      "Kolkata",
+      "Chennai",
+      "Guwahati",
+      "Ludhiana"
+    ],
+    "source": "Dinshaws Dairy Foods (Nagpur HQ): Major ice cream and dairy player in Vidarbha, MP, and Chhattisgarh."
+  },
+  {
+    "id": "paper_boat",
+    "brand": "Paper Boat (Hector Beverages)",
+    "product": "Aamras 250ml",
+    "priceINR": 35,
+    "marginPercent": 35,
+    "priceSegment": "premium",
+    "incomeTarget": "premium",
+    "warehouseCity": "Mysuru",
+    "deliveryRadiusKM": 1200,
+    "needsColdChain": false,
+    "hasDistributor": "yes",
+    "channels": [
+      "Modern Trade",
+      "Quick Commerce"
+    ],
+    "brandMaturity": "established",
+    "primaryGoal": "revenue",
+    "launchBudgetINR": "Above Rs1Cr",
+    "actualTop6": [
+      "Bengaluru",
+      "Chennai",
+      "Hyderabad",
+      "Kochi",
+      "Coimbatore",
+      "Mysuru"
+    ],
+    "actualAvoid": [
+      "Patna",
+      "Ranchi",
+      "Guwahati",
+      "Lucknow",
+      "Kanpur"
+    ],
+    "source": "Hector Beverages (Paper Boat): Factory in Mysore SEZ. Primary markets are South and West India premium urban consumers. Source: Hector Beverages investment rounds, Drink Paper Boat brand data 2023."
+  },
+  {
+    "id": "id_fresh",
+    "brand": "iD Fresh Food",
+    "product": "Idli Dosa Batter 1kg",
+    "priceINR": 85,
+    "marginPercent": 40,
+    "priceSegment": "premium",
+    "incomeTarget": "premium",
+    "warehouseCity": "Bengaluru",
+    "deliveryRadiusKM": 900,
+    "needsColdChain": true,
+    "hasDistributor": "direct",
+    "channels": [
+      "Modern Trade",
+      "Quick Commerce"
+    ],
+    "brandMaturity": "established",
+    "primaryGoal": "revenue",
+    "launchBudgetINR": "Above Rs1Cr",
+    "actualTop6": [
+      "Bengaluru",
+      "Chennai",
+      "Hyderabad",
+      "Mumbai",
+      "Pune",
+      "Kochi"
+    ],
+    "actualAvoid": [
+      "Delhi",
+      "Chandigarh",
+      "Lucknow",
+      "Patna",
+      "Kolkata"
+    ],
+    "source": "iD Fresh Food: Bengaluru factory. Extremely strict cold chain requirements dictate their top 6 tier-1/2 markets."
+  },
+  {
+    "id": "haldirams_delhi",
+    "brand": "Haldiram Snacks (Delhi)",
+    "product": "Aloo Bhujia 400g",
+    "priceINR": 85,
+    "marginPercent": 20,
+    "priceSegment": "mid",
+    "incomeTarget": "mass",
+    "warehouseCity": "Delhi",
+    "deliveryRadiusKM": 600,
+    "needsColdChain": false,
+    "hasDistributor": "yes",
+    "channels": [
+      "Kirana",
+      "General Trade"
+    ],
+    "brandMaturity": "established",
+    "primaryGoal": "revenue",
+    "launchBudgetINR": "Above Rs1Cr",
+    "actualTop6": [
+      "Delhi",
+      "Meerut",
+      "Chandigarh",
+      "Agra",
+      "Lucknow",
+      "Jaipur"
+    ],
+    "actualAvoid": [
+      "Chennai",
+      "Kochi",
+      "Bengaluru",
+      "Thiruvananthapuram",
+      "Guwahati"
+    ],
+    "source": "Haldiram Snacks (Delhi entity): Noida factory, mapped to Delhi in dataset. North India dominant across NCR/UP/Rajasthan/Punjab — per company website and NielsenIQ 2023 coverage."
+  },
+  {
+    "id": "bisk_farm",
+    "brand": "Bisk Farm (SAJ Food)",
+    "product": "Googly Biscuits 200g",
+    "priceINR": 20,
+    "marginPercent": 15,
+    "priceSegment": "mass",
+    "incomeTarget": "mass",
+    "warehouseCity": "Kolkata, Bhubaneswar",
+    "deliveryRadiusKM": 700,
+    "needsColdChain": false,
+    "hasDistributor": "yes",
+    "channels": [
+      "Kirana",
+      "General Trade"
+    ],
+    "brandMaturity": "established",
+    "primaryGoal": "revenue",
+    "launchBudgetINR": "Above Rs1Cr",
+    "actualTop6": [
+      "Kolkata",
+      "Patna",
+      "Bhubaneswar",
+      "Ranchi",
+      "Dhanbad",
+      "Guwahati"
+    ],
+    "actualAvoid": [
+      "Mumbai",
+      "Delhi",
+      "Chennai",
+      "Bengaluru",
+      "Pune"
+    ],
+    "source": "SAJ Food Products: Main factory in Howrah (mapped to Kolkata). Secondary unit near Bhubaneswar. East India dominant - Kolkata, Bihar, Odisha, Jharkhand, Assam per CARE Ratings 2023."
+  },
+  {
+    "id": "balaji_wafers",
+    "brand": "Balaji Wafers",
+    "product": "Potato Wafers 65g",
+    "priceINR": 10,
+    "marginPercent": 10,
+    "priceSegment": "mass",
+    "incomeTarget": "mass",
+    "warehouseCity": "Rajkot",
+    "deliveryRadiusKM": 600,
+    "needsColdChain": false,
+    "hasDistributor": "yes",
+    "channels": [
+      "Kirana",
+      "General Trade"
+    ],
+    "brandMaturity": "established",
+    "primaryGoal": "revenue",
+    "launchBudgetINR": "Above Rs1Cr",
+    "actualTop6": [
+      "Rajkot",
+      "Ahmedabad",
+      "Surat",
+      "Vadodara",
+      "Mumbai",
+      "Pune"
+    ],
+    "actualAvoid": [
+      "Kolkata",
+      "Delhi",
+      "Patna",
+      "Lucknow",
+      "Chennai"
+    ],
+    "source": "Balaji Wafers: Rajkot origin. Absolute dominance in Gujarat and Maharashtra mass markets."
+  },
+  {
+    "id": "parle_g",
+    "brand": "Parle-G",
+    "category": "FMCG",
+    "priceSegment": "mass",
+    "priceINR": 5,
+    "marginPercent": 12,
+    "needsColdChain": false,
+    "brandMaturity": "established",
+    "primaryGoal": "revenue",
+    "hasDistributor": "yes",
+    "preferredRegion": "all",
+    "warehouseCity": "Mumbai, Delhi, Kanpur, Bengaluru, Hyderabad, Kolkata",
+    "actualTop6": [
+      "Mumbai",
+      "Delhi",
+      "Kolkata",
+      "Bengaluru",
+      "Chennai",
+      "Hyderabad"
+    ],
+    "actualAvoid": [
+      "Shimla",
+      "Srinagar",
+      "Gangtok",
+      "Port Blair",
+      "Leh"
+    ],
+    "source": "Parle Products corporate footprint. Multi-factory FMCG giant."
+  }
+]
