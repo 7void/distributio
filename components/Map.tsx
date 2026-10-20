@@ -114,13 +114,21 @@ export default function DistributionMap({
         zoom={4}
         minZoom={4}
         maxZoom={9}
-        className="h-full min-h-[420px] w-full"
+        className={`h-full min-h-[420px] w-full ${!process.env.NEXT_PUBLIC_CARTO_API_KEY ? "dark-tiles-mode" : ""}`}
         zoomControl={false}
       >
-      <TileLayer
-        attribution="&copy; CartoDB"
-        url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
-      />
+      {process.env.NEXT_PUBLIC_CARTO_API_KEY ? (
+        <TileLayer
+          attribution='&copy; <a href="https://carto.com/attributions" target="_blank" rel="noopener noreferrer">CARTO</a>'
+          url={`https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png?key=${process.env.NEXT_PUBLIC_CARTO_API_KEY}`}
+        />
+      ) : (
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          className="dark-map-tiles"
+        />
+      )}
       <MapBehavior cities={cities} selectedCityId={selectedCityId} />
 
       {cities.map((city) => {
